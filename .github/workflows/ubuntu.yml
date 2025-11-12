@@ -356,8 +356,16 @@ jobs:
             git commit -m "Create persistent storage"
             git push origin save_historical_data
           fi
-          git checkout $branch_name
-          git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+          # Handle fork PRs by staying on current working branch instead of switching
+          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
+            # For PRs, we're already on the right commit from actions/checkout
+            # Just get the file from save_historical_data branch
+            git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+          else
+            # For push events, switch to the branch and get the file
+            git checkout $branch_name
+            git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+          fi
 
       - name: append test data
         run: |
@@ -379,8 +387,15 @@ jobs:
       - name: Recover stash
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git checkout $branch_name
-          git stash apply
+          # Handle fork PRs by staying on current working branch instead of switching
+          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
+            # For PRs, we're already on the right branch/commit
+            git stash apply
+          else
+            # For push events, switch back to the working branch
+            git checkout $branch_name
+            git stash apply
+          fi
       
       - name: Move test report
         run: |
@@ -441,8 +456,16 @@ jobs:
             git commit -m "Create persistent storage"
             git push origin save_historical_data
           fi
-          git checkout $branch_name
-          git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+          # Handle fork PRs by staying on current working branch instead of switching
+          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
+            # For PRs, we're already on the right commit from actions/checkout
+            # Just get the file from save_historical_data branch
+            git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+          else
+            # For push events, switch to the branch and get the file
+            git checkout $branch_name
+            git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+          fi
 
       - name: append test data
         run: |
@@ -464,8 +487,15 @@ jobs:
       - name: Recover stash
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git checkout $branch_name
-          git stash apply
+          # Handle fork PRs by staying on current working branch instead of switching
+          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
+            # For PRs, we're already on the right branch/commit
+            git stash apply
+          else
+            # For push events, switch back to the working branch
+            git checkout $branch_name
+            git stash apply
+          fi
       
       - name: Move test report
         run: |
@@ -526,8 +556,16 @@ jobs:
             git commit -m "Create persistent storage"
             git push origin save_historical_data
           fi
-          git checkout $branch_name
-          git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+          # Handle fork PRs by staying on current working branch instead of switching
+          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
+            # For PRs, we're already on the right commit from actions/checkout
+            # Just get the file from save_historical_data branch
+            git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+          else
+            # For push events, switch to the branch and get the file
+            git checkout $branch_name
+            git checkout save_historical_data -- TSF/MemoryEfficientTestResultData.db
+          fi
 
       - name: append test data
         run: |
@@ -549,8 +587,15 @@ jobs:
       - name: Recover stash
         if: github.event_name == 'schedule' || (github.event_name == 'push' && github.ref_name == 'main')
         run: |
-          git checkout $branch_name
-          git stash apply
+          # Handle fork PRs by staying on current working branch instead of switching
+          if [[ "$GITHUB_EVENT_NAME" == "pull_request" ]]; then
+            # For PRs, we're already on the right branch/commit
+            git stash apply
+          else
+            # For push events, switch back to the working branch
+            git checkout $branch_name
+            git stash apply
+          fi
       
       - name: Move test report
         run: |
