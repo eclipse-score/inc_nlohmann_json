@@ -1,20 +1,22 @@
 
-### TRUSTABLE-SOFTWARE 
-
-This release of JSON-Library also reffered in the documentation as nlohmann/json library is Trustable.
+### TRUSTABLE-SOFTWARE | Reviewed: ⨯ | Score: 0.0 
+This release of JSON-Library also referred in the documentation as nlohmann/json library is Trustable.
 
 
 **Supported Requests:**
 
+_None_
 
 **Supporting Items:**
 
-- [TT-CHANGES](TT.md#tt-changes)
-- [TT-CONFIDENCE](TT.md#tt-confidence)
-- [TT-CONSTRUCTION](TT.md#tt-construction)
-- [TT-EXPECTATIONS](TT.md#tt-expectations)
-- [TT-PROVENANCE](TT.md#tt-provenance)
-- [TT-RESULTS](TT.md#tt-results)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-CHANGES](TT.md#tt-changes)  | The nlohmann/json library is actively maintained, with regular updates to dependencies, and changes are verified to prevent regressions. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TT-CONFIDENCE](TT.md#tt-confidence)  | Confidence in the nlohmann/json library is achieved by measuring and analysing behaviour and evidence over time within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TT-CONSTRUCTION](TT.md#tt-construction)  | Tools are provided to build the nlohmann/json library from trusted sources (also provided) with full reproducibility. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TT-EXPECTATIONS](TT.md#tt-expectations)  | Documentation is provided within eclipse-score/inc_nlohmann_json, specifying what the nlohmann/json library is expected to do, and what it must not do, and how this is verified. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TT-PROVENANCE](TT.md#tt-provenance)  | All inputs (and attestations for claims) for the nlohmann/json library are provided with known provenance. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TT-RESULTS](TT.md#tt-results)  | Evidence is provided within eclipse-score/inc_nlohmann_json to demonstrate that the nlohmann/json library does what it is supposed to do, and does not do what it must not do. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -30,4 +32,10 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TRUSTABLE-SOFTWARE.svg)
+
+|date-time|TRUSTABLE-SOFTWARE|TT-CHANGES|TT-CONFIDENCE|TT-CONSTRUCTION|TT-EXPECTATIONS|TT-PROVENANCE|TT-RESULTS|
+|-|-|-|-|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+

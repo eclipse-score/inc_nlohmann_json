@@ -1,92 +1,26 @@
 
-### TA-ANALYSIS 
-
-Collected data from tests and monitoring of deployed software is analysed according to specified objectives.
+### TA-ANALYSIS | Reviewed: ⨯ | Score: 0.0 
+Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives.
 
 
 **Supported Requests:**
 
-- [TT-RESULTS](TT.md#tt-results)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-RESULTS](TT.md#tt-results)  | Evidence is provided within eclipse-score/inc_nlohmann_json to demonstrate that the nlohmann/json library does what it is supposed to do, and does not do what it must not do. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [JLS-17](JLS.md#jls-17)
-- [AOU-19](AOU.md#aou-19)
-- [JLS-26](JLS.md#jls-26)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-17](JLS.md#jls-17)  | A github workflow calculates the fraction of expectations covered by tests in eclipse-score/inc_nlohmann_json (TODO). | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-26](JLS.md#jls-26)  | Any failed CI pipeline executions in the master branch of the nlohmann/json repository are analyzed and fixed. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-ANALYSIS-CHECKLIST.md`
-
-
-#### Checklist for TA-ANALYSIS from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-* What fraction of Expectations are covered by the test data?
-
-    **Answer**: The two expectations are JLEX-01 and JLEX-02. Every statement supporting both of the expectations is ultimately supported by a test, except for WFJ-06. For WFJ-06 it is impossible to provide a direct tests, since this is a statement on infinitely many cases. Indirect tests are provided by the rejection of ill-formed json data.
-
-* What fraction of Misbehaviours are covered by the monitored indicator data?
-
-    **Answer**: For the intended use-case, no misbehaviours have been identified. Furthermore, no indicator data are collected.
-
-* How confident are we that the indicator data are accurate and timely?
-
-    **Answer**:  No indicator data are collected.
-
-* How reliable is the monitoring process?
-
-    **Answer**: Due to no indicator data being collected, there is no monitoring process.
-
-* How well does the production data correlate with our test data?
-
-    **Answer**:  Due to the general nature of the library, there are no production data.
-
-* Are we publishing our data analysis?
-
-    **Answer**:  Since we have no production data with which to compare our not collected indicator data or our test data, no data analysis is done, which is not published.
-
-* Are we comparing and analysing production data vs test?
-
-    **Answer**:  There are no production data.
-
-* Are our results getting better, or worse?
-
-    **Answer**:  Neither.
-
-* Are we addressing spikes/regressions?
-    **Answer**:  There are no spikes in the non-existent indicator data. If a test ever fails, then the spike is investigated. The results of fuzz testing are investigated in the original nlohmann/json.
-
-* Do we have sensible/appropriate target failure rates?
-
-    **Answer**:  For the unit and integration tests, zero. The target failure rate of fuzz testing is not under our control.
-
-* Do we need to check the targets?
-
-    **Answer**:  For the unit and integration tests, no. Since the fuzz testing runs and is investigated in the original nlohmann/json, there is no need to check the target.
-
-* Are we achieving the targets?
-
-    **Answer**:  For the unit and integration tests, yes. The achieving of the targets for the fuzz-testing is evaluated within the original nlohmann/json.
-
-* Are all underlying assumptions and target conditions for the analysis specified?
-
-    **Answer**:  Since none of the unit and integration tests are expected to fail, there is no further analysis of the results besides verifying the expectation. In case any test fails ever, the failure of the CI-pipeline encourages the maintainer to investigate.
-
-* Have the underlying assumptions been verified using known good data?
-
-    **Answer**:  The assumption that all unit and integration tests succeed under the expected conditions is demonstrated by the non-failure of the CI-Pipeline.
-
-* Has the Misbehaviour identification process been verified using known bad data?
-
-    **Answer**: Misbehaviours published on nlohmann/json usually provide minimal working examples for reproducing the faulty behaviour, enabling everyone to verify the identified misbehaviours. There is, however, no automatic process for the identification of misbehaviours. 
-
-* Are results shown to be reproducible?
-
-    **Answer**: It is expected that the tests can be reproduced on every modern sufficiently powerful machine.
-
-
+_None_
 
 
 
@@ -96,89 +30,132 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-ANALYSIS.svg)
+
+|date-time|TA-ANALYSIS|JLS-17|JLS-26|
+|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### TA-BEHAVIOURS 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
-Expected or required behaviours for nlohmann/json library are identified, specified, verified and validated based on analysis.
+**Guidance**
+
+This assertion is satisfied to the extent that test data, and data collected
+from monitoring of deployed versions of nlohmann/json, has been analysed, and the results
+used to inform the refinement of Expectations and risk analysis.
+
+The extent of the analysis is with sufficient precision to confirm that:
+
+- all Expectations (TA-BEHAVIOURS) are met
+- all Misbehaviours (TA-MISBEHAVIOURS) are detected or mitigated
+- all advance warning indicators (TA-INDICATORS) are monitored
+- failure rates (calculated directly or inferred by statistics) are
+  within acceptable tolerance
+
+When tests reveal Misbehaviours missing from our analysis (TA-ANALYSIS), we update our Expectations (TA-BEHAVIOURS, TA-MISBEHAVIOURS).
+Guided by confidence evaluations (TA-CONFIDENCE), we refine and repeat the analysis as needed.
+Analysis results also inform confidence evaluations, allowing automatic generation through statistical modelling and defining Key Performance Indicators (KPIs) for consistent use across the TSF.
+
+For increased confidence in the analysis specification and results, they should be evaluated in terms of their reliability, relevance, and understandability.
+
+- Reliability: The analysis methods must be verified against both known good and bad data to ensure sufficient detection of false negatives and false positives.
+  Accuracy degradation across methods should be tracked and aggregated, making outcomes more easily verifiable and providing visibility into how changes to the system under test or to the analysis mechanisms affect the results.
+- Relevance: The results must account for hardware and hardware/software interactions.
+  Calibration should address capacity, scalability, response time, latency, and throughput where applicable.
+  To further increase confidence in estimated failure rates, the analysis should also cover testing sufficiency (with statistical methods where appropriate), cascading failures including sequencing and concurrency, bug analysis, and comparison against expected results and variability. 
+  The analysis should be automated and exercised repeatedly for timely feedback.
+- Understandability: Both methods and results should be mapped to other analyses performed on the system (linked to TT_EXPECTATIONS) to ensure alignment with scope, abstraction levels, and partitioning, thereby guiding prioritisation.
+  Effectiveness also depends on user-friendliness and presentation (involving semi-formal structured forms, supported by diagrams and figures with clear legends).
+
+To gain increased confidence, test results should be shown to be reproducible. 
+Even with non-deterministic software, representative test setups must be ensured to produced reproducible results
+within a defined threshold as specified by TT-EXPECTATIONS.
+Reproducible test results also supports verification of toolchain updates (together with other measures in TA-FIXES),
+by confirming that test results remain unchanged when no changes are intended.
+
+**Evidence**
+
+- Analysis of test data, including thresholds in relation to appropriate statistical properties.
+  - **Answer**: 
+- Analysis of failures
+  - **Answer**: 
+- Analysis of spikes and trends
+  - **Answer**: 
+- Validation of analysis methods used
+  - **Answer**: 
+
+**Confidence scoring**
+
+Confidence scoring for TA-ANALYSIS is based on KPIs
+that may indicate problems in development, test, or production.
+
+**CHECKLIST**
+
+- What fraction of Expectations are covered by the test data?
+  - **Answer**: 
+- What fraction of Misbehaviours are covered by the monitored indicator data?
+  - **Answer**: 
+- How confident are we that the indicator data are accurate and timely?
+  - **Answer**: 
+- How reliable is the monitoring process?
+  - **Answer**: 
+- How well does the production data correlate with our test data?
+  - **Answer**: 
+- Are we publishing our data analysis?
+  - **Answer**: 
+- Are we comparing and analysing production data vs test?
+  - **Answer**: 
+- Are our results getting better, or worse?
+  - **Answer**: 
+- Are we addressing spikes/regressions?
+  - **Answer**: 
+- Do we have sensible/appropriate target failure rates?
+  - **Answer**: 
+- Do we need to check the targets?
+  - **Answer**: 
+- Are we achieving the targets?
+  - **Answer**: 
+- Are all underlying assumptions and target conditions for the analysis specified?
+  - **Answer**: 
+- Have the underlying assumptions been verified using known good data?
+  - **Answer**: 
+- Has the Misbehaviour identification process been verified using known bad data?
+  - **Answer**: 
+- Are results shown to be reproducible?
+  - **Answer**:
+
+
+---
+
+### TA-BEHAVIOURS | Reviewed: ⨯ | Score: 0.0 
+Expected or required behaviours for the nlohmann/json library are identified, specified, verified and validated based on analysis.
 
 
 **Supported Requests:**
 
-- [TT-EXPECTATIONS](TT.md#tt-expectations)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-EXPECTATIONS](TT.md#tt-expectations)  | Documentation is provided within eclipse-score/inc_nlohmann_json, specifying what the nlohmann/json library is expected to do, and what it must not do, and how this is verified. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [JLEX-01](JLEX.md#jlex-01)
-- [JLEX-02](JLEX.md#jlex-02)
-- [JLS-03](JLS.md#jls-03)
-- [AOU-23](AOU.md#aou-23)
-- [AOU-24](AOU.md#aou-24)
-- [AOU-25](AOU.md#aou-25)
-- [JLS-27](JLS.md#jls-27)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLEX-01](JLEX.md#jlex-01)  | The requirement regarding [JSON Validation](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation) is fulfilled. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLEX-02](JLEX.md#jlex-02)  | The requirement regarding [JSON Deserialization](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__deserialization) is fulfilled. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-03](JLS.md#jls-03)  | Automated tests within the TSF documentation are reviewed by a Subject Matter Expert to verify they test the properties they claim to. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-27](JLS.md#jls-27)  | The test coverage for this version of nlohmann/json is monitored using Coveralls and is not decreasing over time, unless reasonably justified. | 0.00 | ⨯ Item Reviewed<br>✔ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-BEHAVIOURS-CHECKLIST.md`
-
-
-#### Checklist for TA-BEHAVIOURS from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-* How has the list of Expectations varied over time?
-
-    **Answer**: The list of expectations is taken from [here](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html), whose development can be retraced using git.
-
-* How confident can we be that this list is comprehensive?
-
-    **Answer**:  The list of expectations has been collected amongst the stakeholders in S-CORE, so that we are very confident that the list is comprehensive. 
-    The expectation to serialize user data into JSON format 
-
-* Could some participants have incentives to manipulate information?
-
-    **Answer**:  We can not imagine any reason.
-
-* Could there be whole categories of Expectations still undiscovered?
-
-    **Answer**:  It is unlikely, but the parsing of CBOR could become relevant at some time.
-
-* Can we identify Expectations that have been understood but not specified?
-
-    **Answer**:  No.
-
-* Can we identify some new Expectations, right now? 
-
-    **Answer**:  No.
-
-* How confident can we be that this list covers all critical requirements?
-
-    **Answer**:  We can not think of any more critical requirement of a JSON parser in the sense of RFC8259 than to parse JSON data in the sense of RFC8259.
-
-* How comprehensive is the list of tests? 
-
-    **Answer**:  Currently, the branch coverage is 93.865% and the line coverage is 99.186%, cf. JLS-27.
-
-* Is every Expectation covered by at least one implemented test? 
-
-    **Answer**:  Yes, both of the expectations are covered by at least one implemented test. Moreover, each statement supporting the expectations is covered by a test with the exception of WFJ-06.
-
-* Are there any Expectations where we believe more coverage would help?
-
-    **Answer**: No.
-
-* How do dependencies affect Expectations, and are their properties verifiable?
-
-    **Answer**: The library nlohmann/json does not have external dependencies, so that there are in particular none that affect Expectations.
-
-* Are input analysis findings from components, tools, and data considered in relation to Expectations?
-
-    **Answer**:  No findings have been found.
-
-
+_None_
 
 
 
@@ -188,52 +165,129 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-BEHAVIOURS.svg)
+
+|date-time|TA-BEHAVIOURS|JLEX-01|JLEX-02|JLS-03|JLS-27|
+|-|-|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### TA-CONFIDENCE 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
-Confidence in nlohmann/json library is measured based on results of analysis.
+Although it is practically impossible to specify all of the necessary behaviours
+and required properties for complex software, we must clearly specify the most
+important of these (e.g. where harm could result if given criteria are not met),
+and verify that these are correctly provided by nlohmann/json.
+
+**Guidance**
+
+This assertion is satisfied to the extent that we have:
+
+- Determined which Behaviours are critical for consumers of nlohmann/json and recorded
+  them as Expectations.
+- Verified these Behaviours are achieved.
+
+Expectations could be verified by:
+
+- Functional testing for the system.
+- Functional soak testing for the system.
+- Specifying architecture and verifying its implementation with pre-merge
+  integration testing for components.
+- Specifying components and verifying their implementation using pre-merge unit
+  testing.
+
+The number and combination of the above verification strategies will depend on
+the scale of the project. For example, unit testing is more suitable for the
+development of a small library than an OS. 
+Similarly, the verification strategy must align with the chosen development
+methods and be supported by appropriate verification approaches and tools.
+
+Regardless of the chosen strategy, the reasoning behind it must be recorded in a
+traceable way, linking breakdown and verification methods to the relevant
+reasoning, abstraction levels, and design partitioning (including system
+interfaces with users and hardware, or other system boundaries).
+
+Finally, the resulting system must be validated, with the foundation of
+validation being a working system that has appropriately considered calibration
+targets such as capacity, scalability, response time, latency, and throughput,
+where applicable.
+Without this, specification and verification efforts cannot be considered
+sufficient.
+
+**Evidence**
+
+- List of Expectations
+  - **Answer**: 
+- Argument of sufficiency for break-down of expected behaviour for all 
+  Expectations
+  - **Answer**: 
+- Validation and verification of expected behaviour
+  - **Answer**: 
+
+
+**Confidence scoring**
+
+Confidence scoring for TA-BEHAVIOURS is based on our confidence that the list of
+Expectations is accurate and complete, that Expectations are verified by tests,
+and that the resulting system and tests are validated by appropriate strategies.
+
+**Checklist**
+
+- How has the list of Expectations varied over time?
+  - **Answer**: 
+- How confident can we be that this list is comprehensive?
+  - **Answer**: 
+- Could some participants have incentives to manipulate information?
+  - **Answer**: 
+- Could there be whole categories of Expectations still undiscovered?
+  - **Answer**: 
+- Can we identify Expectations that have been understood but not specified?
+  - **Answer**: 
+- Can we identify some new Expectations, right now?
+  - **Answer**: 
+- How confident can we be that this list covers all critical requirements?
+  - **Answer**: 
+- How comprehensive is the list of tests?
+  - **Answer**: 
+- Is every Expectation covered by at least one implemented test?
+  - **Answer**: 
+- Are there any Expectations where we believe more coverage would help?
+  - **Answer**: 
+- How do dependencies affect Expectations, and are their properties verifiable?
+  - **Answer**: 
+- Are input analysis findings from components, tools, and data considered in relation to Expectations?
+  - **Answer**:
+
+
+---
+
+### TA-CONFIDENCE | Reviewed: ⨯ | Score: 0.0 
+Confidence in the nlohmann/json library is measured based on results of analysis.
 
 
 **Supported Requests:**
 
-- [TT-CONFIDENCE](TT.md#tt-confidence)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-CONFIDENCE](TT.md#tt-confidence)  | Confidence in the nlohmann/json library is achieved by measuring and analysing behaviour and evidence over time within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [JLS-08](JLS.md#jls-08)
-- [JLS-09](JLS.md#jls-09)
-- [AOU-10_COMBINED](AOU.md#aou-10_combined)
-- [JLS-20](JLS.md#jls-20)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-08](JLS.md#jls-08)  | Each statement within the TSF documentation is scored based on SME reviews or automatic validation functions. (TODO) | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-09](JLS.md#jls-09)  | Scores within the TSF documentation are reasonably, systematically and repeatably accumulated. (TODO) | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-20](JLS.md#jls-20)  | A github workflow of eclipse-score/inc_nlohmann_json saves the history of scores in the trustable graph to derive trends. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-CONFIDENCE-CHECKLIST.md`
-
-
-#### Checklist for TA-CONFIDENCE from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-* What is the algorithm for combining/comparing the scores?
-
-    **Answer**:  It is the standard algorithm of trudag.
-
-* How confident are we that this algorithm is fit for purpose?
-
-    **Answer**:  We have no reason to assume that the standard algorithm is not fit for our purpose.
-
-* What are the trends for each score?
-
-    **Answer**:  CAN NOT BE ANSWERED NOW
-
-* How well do our scores correlate with external feedback signals?
-
-    **Answer**:  CAN NOT BE ANSWERED NOW
-
+_None_
 
 
 
@@ -243,68 +297,111 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-CONFIDENCE.svg)
+
+|date-time|TA-CONFIDENCE|JLS-08|JLS-09|JLS-20|
+|-|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### TA-CONSTRAINTS 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
-Constraints on adaptation and deployment of nlohmann/json library are specified.
+**Guidance**
+
+To quantify confidence, either a subjective assessment or a statistical argument must be presented for each statement and then systematically and repeatably aggregated to assess whether the final deliverable is fit for purpose.
+
+To improve the accuracy of confidence evaluations in reflecting reality, the following steps are necessary:
+
+- Break down high-level claims into smaller, recursive requests.
+- Provide automated evaluations whenever possible, and rely on subjective assessments from appropriate parties when automation is not feasible.
+- Aggregate confidence scores from evidence nodes.
+- Continuously adjust prior confidence measures with new evidence, building on established values.
+
+Any confidence scores, whether tracked manually or statistically, must be based on documented review guidelines that are themselves reviewed and applied by appropriate parties.
+These guidelines should focus on detecting inconsistencies in the reasoning and evidence linked to related Expectations, and on assessing the relevancy of all aspects considered.
+As a result, the argument structure must reflect the project scope, which in turn should be captured in the set Expectations and linked to the project’s analysis, design considerations, and partitioning.
+Within this structure, Statements must be ordered or weighted so that their relative importance and supporting reasoning are clear, with iteration scores capturing strengths and weaknesses and guiding decisions.
+
+As subjective assessments are replaced with statistical arguments and confidence scores are refined with new evidence, evaluation accuracy improves.
+Over time, these scores reveal the project's capability to deliver on its objectives.
+The process itself should be analysed to determine score maturity, with meta-analysis used to assess long-term trends in sourcing, accumulation, and weighting.
+
+**Evidence**
+
+- Confidence scores from other TA items
+  - **Answer**: 
+
+**Confidence scoring**
+
+Confidence scoring for TA-CONFIDENCE is based on quality of the confidence
+scores given to Statements
+
+**Checklist**
+
+- What is the algorithm for combining/comparing the scores?
+  - **Answer**: 
+- How confident are we that this algorithm is fit for purpose?
+  - **Answer**: 
+- What are the trends for each score?
+  - **Answer**: 
+- How well do our scores correlate with external feedback signals?
+  - **Answer**:
+
+
+---
+
+### TA-CONSTRAINTS | Reviewed: ⨯ | Score: 0.0 
+Constraints on adaptation and deployment of eclipse-score/inc_nlohmann_json are specified.
 
 
 **Supported Requests:**
 
-- [TT-EXPECTATIONS](TT.md#tt-expectations)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-EXPECTATIONS](TT.md#tt-expectations)  | Documentation is provided within eclipse-score/inc_nlohmann_json, specifying what the nlohmann/json library is expected to do, and what it must not do, and how this is verified. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [AOU-04](AOU.md#aou-04)
-- [AOU-05](AOU.md#aou-05)
-- [AOU-06](AOU.md#aou-06)
-- [AOU-07](AOU.md#aou-07)
-- [AOU-14](AOU.md#aou-14)
-- [AOU-16](AOU.md#aou-16)
-- [AOU-20](AOU.md#aou-20)
-- [AOU-21](AOU.md#aou-21)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [AOU-04](AOU.md#aou-04)  | The integrator shall ensure that exceptions are properly handled or turned off in eclipse-score/inc_nlohmann_json, whenever eclipse-score/inc_nlohmann_json's implementation of nlohmann/json is used. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-05](AOU.md#aou-05)  | The integrator shall ensure that in eclipse-score/inc_nlohmann_json, input is encoded as UTF-8 (as required by RFC8259) and that in case other string formats are used, thrown exceptions are properly handled. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-06](AOU.md#aou-06)  | The integrator shall ensure that in eclipse-score/inc_nlohmann_json brace initialization (e.g. json j{true};) is not used with the types basic_json, json, or ordered_json, unless an object or array is created. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-07](AOU.md#aou-07)  | The integrator shall ensure in eclipse-score/inc_nlohmann_json that exceptions, which are expected during parsing with default parameters, are properly handled whenever the input is no valid JSON. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-14](AOU.md#aou-14)  | The integrator shall ensure that the eclipse-score/inc_nlohmann_json is built with tools from the provided matrix specification, whenever nlohmann/json is used within eclipse-score/inc_nlohmann_json. (not yet provided) | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-16](AOU.md#aou-16)  | The integrator shall use C++ versions and compilers that are tested in the CI pipeline, whenever nlohmann/json is used within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-20](AOU.md#aou-20)  | The integrator shall ensure that the keys within an object are unique, whenever an object is to be parsed by eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-21](AOU.md#aou-21)  | The integrator shall ensure that a string does not contain escaped unpaired utf-16 surrogate characters, and that exceptions are properly handled in eclipse-score/inc_nlohmann_json, whenever a string is to be parsed. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-01](AOU.md#aou-01)  | The integrator shall report problems with eclipse-score/inc_nlohmann_json's implementation to the upstream nlohmann/json repository whenever a problem is detected. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-02](AOU.md#aou-02)  | The integrator shall ensure that the build environment used for eclipse-score/inc_nlohmann_json is supplied with consistent dependencies in every integrating system. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-03](AOU.md#aou-03)  | The integrator shall ensure that integrator-controlled mirrors of the dependencies of the nlohmann/json repository are persistently and accessibly stored as long as the nlohmann/json library is used within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-08](AOU.md#aou-08)  | The integrator shall ensure that all necessary source files and built tools are mirrored in eclipse-score/inc_nlohmann_json, e.g. using a built server without internet access, as long as nlohmann/json is actively used within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-09](AOU.md#aou-09)  | The integrator shall ensure inside eclipse-score/inc_nlohmann_json that advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-15](AOU.md#aou-15)  | The integrator shall maintain mirrors for all code and tools utilized in testing as long as nlohmann/json is actively used within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-17](AOU.md#aou-17)  | The integrator shall identify misbehaviours for the nlohmann/json library, define appropriate mitigations, and ensure that these mitigations are thoroughly validated, whenever using eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-18](AOU.md#aou-18)  | The integrator shall ensure that monitoring data from deployed software is accurately captured, securely stored, and well-documented for analysis within eclipse-score/inc_nlohmann_json, as long as the nlohmann/json library is actively used within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-19](AOU.md#aou-19)  | The integrator shall analyze monitoring data systematically to detect trends and identify issues,  as long as the nlohmann/json library is actively used within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-22](AOU.md#aou-22)  | The integrator shall ensure that numbers are written in base 10, and that exceptions and misbehaviours in case that any other base is used are properly handled and mitigated within eclipse-score/inc_nlohmann_json, whenever a number is parsed. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-23](AOU.md#aou-23)  | The integrator shall ensure that data are complete and error-free, whenever they are transmitted to eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-24](AOU.md#aou-24)  | The integrator shall ensure that the data do not change during reading, whenever transmitted to eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-25](AOU.md#aou-25)  | The integrator shall convince themselves that the behaviour of the used C++ standard library is known, verified and validated. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-26](AOU.md#aou-26)  | The integrator shall convince themselves that the misbehaviours of the C++ standard library and mitigations are known, verified and validated. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-27](AOU.md#aou-27)  | The integrator shall ensure that the 'Release management' and 'Update concepts' in TSF/README.md are followed whenever any changes are done in eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-28](AOU.md#aou-28)  | The integrator shall ensure that the known open bugs of the nlohmann/json repository are regularly reviewed on their impact on the use of the documented version of nlohmann/json, as long as the nlohmann/json library is actively used within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-29](AOU.md#aou-29)  | The integrator shall check the security tab in the GitHub UI on a regular basis, analyze and either fix or dismiss any outstanding CVEs. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-10](AOU.md#aou-10)  | The integrator shall, whenever possible, turn any remaining Assumptions-of-Use (AOU) items into statements and add suitable references and/or validators. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-11](AOU.md#aou-11)  | The integrator shall, whenever possible, replace outdated and/or provide additional references and validators that would further improve the trustability of a statement. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [AOU-30](AOU.md#aou-30)  | The integrator shall review the answers to each of the TSF evidence lists in the TA_CONTEXT files (see e.g., TSF/trustable/assertions/TA-ANALYSIS_CONTEXT.md). For each point that has not already been fulfilled, the integrator shall evaluate it and provide the relevant evidence if possible. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-CONSTRAINTS-CHECKLIST.md`
-
-
-#### Checklist for TA-CONSTRAINTS from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-* Are the constraints grounded in realistic expectations, backed by real-world examples?
-
-    **Answer**:  The constraints originate from S-CORE (e.g. AOU-04, AOU-05, AOU-07, AOU-21), the standard RFC-8259 (e.g. AOU-05, AOU-20, AOU-21) and the library nlohmann/json itself (AOU-06, AOU-20) in order to ensure that the expectations are met.
-
-* Do they effectively guide downstream consumers in expanding upon existing Statements?
-
-    **Answer**:  ?????
-
-* Do they provide clear guidance for upstreams on reusing components with well-defined claims?
-
-    **Answer**:  ?????
-
-* Are any Statements explicitly designated as not reusable or adaptable?
-
-    **Answer**:  No statement has been intentionally designated as not reusable or adaptable.
-
-* Are there worked examples from downstream or upstream users demonstrating these constraints in practice?
-
-    **Answer**:  ????
-
-* Have there been any documented misunderstandings from users, and are these visibly resolved?
-
-    **Answer**:  Yes, it is documented that the [brace initialisation](https://json.nlohmann.me/home/faq/) (cf. AOU-06) regularly leads to confusion, cf. [here](https://github.com/nlohmann/json/issues/4898).
-
-* Do external users actively keep up with updates, and are they properly notified of any changes?
-
-    **Answer**:  External users of the library are not necessarily automatically notified of an update, and are neither assumed nor required to keep up to date. If the external user forks the github repository, however, then github shows automatically whenever the upstream changes.
-
+_None_
 
 
 
@@ -314,74 +411,129 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-CONSTRAINTS.svg)
+
+|date-time|TA-CONSTRAINTS|AOU-04|AOU-05|AOU-06|AOU-07|AOU-14|AOU-16|AOU-20|AOU-21|AOU-01|AOU-02|AOU-03|AOU-08|AOU-09|AOU-15|AOU-17|AOU-18|AOU-19|AOU-22|AOU-23|AOU-24|AOU-25|AOU-26|AOU-27|AOU-28|AOU-29|AOU-10|AOU-11|AOU-30|
+|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### TA-DATA 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
-Data is collected from tests, and from monitoring of deployed software, according to specified objectives.
+**Guidance**
+
+Constraints on reuse, reconfiguration, modification, and deployment are
+specified to enhance the trustability of outputs. To ensure clarity, boundaries
+on what the output cannot do - especially where common domain assumptions may
+not hold - must be explicitly documented. These constraints are distinct from
+misbehaviour mitigations; instead, they define the context within which the
+system is designed to operate, including all modes and environmental
+considerations. This upfront documentation clarifies intended use, highlights
+known limitations, and prevents misinterpretation.
+
+These constraints, categorised into explicit limitations and assumptions of use,
+guide both stakeholders and users (integrators, maintainers, operators, and
+end-users). They define the intended scope and provide a clear interface for how
+upstream and downstream systems can integrate, modify, install, reuse, or
+reconfigure to achieve the desired output. The documentation must also specify
+the contexts in which the integrity of existing Statements is preserved and
+whether reimplementation is required, considering device maintenance
+assumptions, including software updates and vulnerability mitigation.
+
+Crucially, these limitations are not unresolved defects from triage decisions
+but deliberate exclusions based on design choices. Each omission should be
+supported by a clear rationale (linked to relevant Expectations and analyses 
+with the appropriate architectural and abstraction levels) to ensure
+transparency for future scope expansion and to guide both upstream and
+downstream modifications.
+
+To remain effective in practice, constraints must consider user-friendliness in
+relation to associated Misbehaviours (TA-MISBEHAVIOURS) and AWIs
+(TA-INDICATORS):
+
+- Include mechanisms to prevent misuse (e.g., protecting runtime parameters from
+  corruption or unauthorized modification during both development and
+  operation), explicitly linking them to relevant Misbehaviours and their
+  analyses (as defined in TA-MISBEHAVIOURS).
+- Present constraint-related data with emphasis on availability, clarity, and
+  transparent communication of defined safe states, along with the mechanisms
+  that transition the system into those states, ensuring they are connected to
+  the relevant AWIs (as defined in TA-INDICATORS).
+
+Finally, the documentation must establish and promote a clear process for
+reporting bugs, issues, and requests.
+
+**Suggested evidence**
+
+- Installation manuals with worked examples
+  - **Answer**: 
+- Configuration manuals with worked examples
+  - **Answer**: 
+- Specification documentation with a clearly defined scope
+  - **Answer**: 
+- User guides detailing limitations in interfaces designed for expandability or
+  modularity
+  - **Answer**: 
+- Documented strategies used by external users to address constraints and
+  work with existing Statements
+  - **Answer**: 
+
+**Confidence scoring**
+
+The reliability of these constraints should be assessed based on the absence of
+contradictions and obvious pitfalls within the defined Statements.
+
+**Checklist**
+
+- Are the constraints grounded in realistic expectations, backed by real-world
+  examples?
+  - **Answer**: 
+- Do they effectively guide downstream consumers in expanding upon existing
+  Statements?
+  - **Answer**: 
+- Do they provide clear guidance for upstreams on reusing components with
+  well-defined claims?
+  - **Answer**: 
+- Are any Statements explicitly designated as not reusable or adaptable?
+  - **Answer**: 
+- Are there worked examples from downstream or upstream users demonstrating
+  these constraints in practice?
+  - **Answer**: 
+- Have there been any documented misunderstandings from users, and are these
+  visibly resolved?
+  - **Answer**: 
+- Do external users actively keep up with updates, and are they properly
+  notified of any changes?
+  - **Answer**:
+
+
+---
+
+### TA-DATA | Reviewed: ⨯ | Score: 0.0 
+Data in eclipse-score/inc_nlohmann_json is collected from tests, and from monitoring of deployed software, according to specified objectives.
 
 
 **Supported Requests:**
 
-- [TT-RESULTS](TT.md#tt-results)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-RESULTS](TT.md#tt-results)  | Evidence is provided within eclipse-score/inc_nlohmann_json to demonstrate that the nlohmann/json library does what it is supposed to do, and does not do what it must not do. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [JLS-18](JLS.md#jls-18)
-- [AOU-18](AOU.md#aou-18)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-18](JLS.md#jls-18)  | Results from tests are accurately captured. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-DATA-CHECKLIST.md`
-
-
-#### Checklist for TA-DATA from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-* Is all test data stored with long-term accessibility?
-
-    **Answer**:  If we assume that github is long-term accessible, then yes.
-
-* Is all monitoring data stored with long-term accessibility?
-
-    **Answer**:  There are no monitoring data.
-
-* Are extensible data models implemented?
-
-    **Answer**:  The data are stored in an sqlite database.
-
-* Is sensitive data handled correctly (broadcasted, stored, discarded, or anonymised) with appropriate encryption and redundancy?
-
-    **Answer**:  There are no sensitive data produced, collected or stored.
-
-* Are proper backup mechanisms in place?
-
-    **Answer**:  Not more than the default mechanisms of github.
-
-* Are storage and backup limits tested?
-
-    **Answer**:  No.
-
-* Are all data changes traceable? 
-
-    **Answer**:  Yes, due to the usage of github.
-
-* Are concurrent changes correctly managed and resolved? 
-
-    **Answer**:  Yes, due to the usage of github.
-
-* Is data accessible only to intended parties?
-
-    **Answer**:  Since the library is open source, there are no unintended parties.
-
-* Are any subsets of our data being published?
-
-    **Answer**:  Yes, the collected data are publicly available.
-
+_None_
 
 
 
@@ -391,99 +543,108 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-DATA.svg)
+
+|date-time|TA-DATA|JLS-18|
+|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |
+
 
 
 ---
 
-### TA-FIXES 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
-Known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied.
+**Guidance**
+
+This assertion is satisfied if results from all tests and monitored deployments are captured accurately, ensuring:
+
+- Sufficient precision for meaningful analysis
+- Enough contextual information to reproduce the setup (e.g., runner ID, software version SHA), though not necessarily the exact results
+
+Monitored deployments run in both production and development, validating monitoring mechanisms across environments and ensuring comparable results.
+Collecting and retaining all data that support project claims (together with traceability to reasoning and specifications, and including both established and experimental indicators as well as test data from all environments) preserves evidence for selecting appropriate measures and enables historical analysis.
+
+To avoid misinterpretation, all data storage mechanisms and locations are documented, together with long-term storage strategies, so analyses can be reliably reproduced.
+How this data is made accessible is assessed as part of TA-ITERATIONS.
+
+Storage strategies should account for foreseeable malicious activities and privacy considerations when handling sensitive data, including how the data is managed during transit and at rest, and whether it can be accessed in plaintext or only through appropriate tools (also considered for TA-INPUTS and TA-TESTS).
+
+Appropriate storage strategies safeguard availability across the product lifecycle, with emphasis on release-related data, and account for decommissioning, infrastructure teardown, and post-project backups.
+
+**Evidence**
+
+- Time-stamped and traceable result records for each test execution, linked to associated system under test version and specification references.
+  - **Answer**: 
+- List of monitored indicators, linked to associated specification version references.
+  - **Answer**: 
+- Time-stamped and traceable test-derived data for each indicator, linked to associated system under test version and indicator specifications references.
+  - **Answer**: 
+- List of monitored deployments, linked to associated version and configuration references.
+  - **Answer**: 
+- Time-stamped and traceable production data for each indicator, linked to associated deployment metadata and specification references.
+  - **Answer**: 
+
+**Confidence scoring**
+
+Confidence scoring for TA-DATA quantifies the completeness of test results
+(including pass/fail and performance) and the availability of data from all
+monitored deployments.
+
+**Checklist**
+
+- Is all test data stored with long-term accessibility?
+  - **Answer**: 
+- Is all monitoring data stored with long-term accessibility?
+  - **Answer**: 
+- Are extensible data models implemented?
+  - **Answer**: 
+- Is sensitive data handled correctly (broadcasted, stored, discarded, or anonymised) with appropriate encryption and redundancy?
+  - **Answer**: 
+- Are proper backup mechanisms in place?
+  - **Answer**: 
+- Are storage and backup limits tested?
+  - **Answer**: 
+- Are all data changes traceable?
+  - **Answer**: 
+- Are concurrent changes correctly managed and resolved?
+  - **Answer**: 
+- Is data accessible only to intended parties?
+  - **Answer**: 
+- Are any subsets of our data being published?
+  - **Answer**:
+
+
+---
+
+### TA-FIXES | Reviewed: ⨯ | Score: 0.0 
+In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied.
 
 
 **Supported Requests:**
 
-- [TT-CHANGES](TT.md#tt-changes)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-CHANGES](TT.md#tt-changes)  | The nlohmann/json library is actively maintained, with regular updates to dependencies, and changes are verified to prevent regressions. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [JLS-05](JLS.md#jls-05)
-- [AOU-01](AOU.md#aou-01)
-- [JLS-04](JLS.md#jls-04)
-- [JLS-11](JLS.md#jls-11)
-- [AOU-10_COMBINED](AOU.md#aou-10_combined)
-- [AOU-28](AOU.md#aou-28)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-05](JLS.md#jls-05)  | The nlohmann/json library is widely used and actively maintained; bugs and misbehaviours are tracked publicly and transparently. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-04](JLS.md#jls-04)  | External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-11](JLS.md#jls-11)  | Outstanding bugs or misbehaviours are analyzed within eclipse-score/inc_nlohmann_json to determine whether they are relevant for S-CORE's use cases of the nlohmann/json library. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-30](JLS.md#jls-30)  | Outstanding CVEs are analyzed within eclipse-score/inc_nlohmann_json to determine whether they can be dismissed, and/or are relevant for S-CORE's use cases of the nlohmann/json library. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-29](JLS.md#jls-29)  | Known bugs, misbehaviours and CVEs are analyzed and either fixed or mitigated in the nlohmann/json repository. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-28](JLS.md#jls-28)  | Outstanding bugs and misbehaviours are triaged in the nlohmann/json repository. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-33](JLS.md#jls-33)  | Outstanding CVEs are triaged in the nlohmann/json repository. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-FIXES-CHECKLIST.md`
-
-
-#### Checklist for TA-FIXES from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-
-* How many faults have we identified in XYZ?
-
-    **Answer**:  There are no identifiable faults concerning the expectations. 
-
-* How many unknown faults remain to be found, based on the number that have been processed so far?
-
-    **Answer**:  It is unlikely that there are unknown faults concerning the expectations.
-
-* Is there any possibility that people could be motivated to manipulate the lists (e.g. bug bonus or pressure to close).
-
-    **Answer**:  Since the project is entirely open source, it is quite unlikely.
-
-* How many faults may be unrecorded (or incorrectly closed, or downplayed)?
-
-    **Answer**:  There may be none, at least when it concerns the expectations.
-
-* How do we collect lists of bugs and known vulnerabilities from components?
-
-    **Answer**:  We pull the list from the issues reported to nlohmann/json labelled as bug and open or opened since the last release. This list is then stored using github, thereby enabling a traceability of the list.
-
-* How (and how often) do we check these lists for relevant bugs and known vulnerabilities?
-
-    **Answer**:  Whenever we generate the documentation, the list is pulled. If there is an issue previously unrecorded, then the maintainer is encouraged by the change of the trustable score to check this issue on applicability.
-
-* How confident can we be that the lists are honestly maintained?
-
-    **Answer**:  We can not imagine a reason why the list could be dishonestly maintained.
-
-* Could some participants have incentives to manipulate information?
-
-    **Answer**:  We can not think of a reason why.
-
-* How confident are we that the lists are comprehensive? 
-
-    **Answer**:  We have no reason to assume that discovered bugs are not reported to nlohmann/json.
-
-* Could there be whole categories of bugs/vulnerabilities still undiscovered?
-
-    **Answer**:  There could be a mislabelling of issues, but it is unlikely that there are bugs or vulnerabilities not labelled as bug, instead it is likely that perceived issues due to a misunderstanding of how the library works are labelled as bug.
-
-* How effective is our triage/prioritisation? 
-
-    **Answer**: ????? Since it is not intended to fix the library within S-CORE, but instead leave the development to the original nlohmann/json, there is no need to have a triage or prioritisation. 
-
-* How many components have never been updated? 
-
-    **Answer**:  None, the single component is up to date.
-
-* How confident are we that we could update them? 
-
-    **Answer**:  If nlohmann/json would release an new version, we are very confident that we can update to that version.
-
-* How confident are we that outstanding fixes do not impact our Expectations?
-
-    **Answer**:  We have not found any outstanding fixes impacting our expectations.
-
-* How confident are we that outstanding fixes do not address Misbehaviours?
-
-    **Answer**: For all of the none identified misbehaviours, we are very confident that none of the outstanding fixes do not address them.
-
+_None_
 
 
 
@@ -493,81 +654,141 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-FIXES.svg)
+
+|date-time|TA-FIXES|JLS-05|JLS-04|JLS-11|JLS-30|JLS-29|JLS-28|JLS-33|
+|-|-|-|-|-|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### TA-INDICATORS 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
-Advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis.
+**Guidance**
+
+This assertion is satisfied to the extent that we have identified, triaged, and applied fixes or mitigations to faults in nlohmann/json, as well as to bugs and publicly disclosed vulnerabilities identified in upstream dependencies.
+
+Confidence can be improved by assessing known faults, bugs, and vulnerabilities to establish their relevance and impact for nlohmann/json.
+An important aspect is documenting how issues are discovered and tracked, including identifying additional Misbehaviours (TA-MISBEHAVIOURS) that may require immediate mitigation measures (including recalls), and how such issues are communicated to users.
+
+In principle, this analysis should include not only the code in nlohmann/json but also its dependencies (all the way down) and the tools and data used to construct the release.
+In practice, however, the cost/benefit of this work must be weighed against:
+
+- the volume and quality of available bug and vulnerability reports
+- the likelihood that our build, configuration, or use case is actually affected
+
+The triage process must be documented, reviewed, and evidenced as sufficient and consistently followed.
+Documentation must make clear how prioritisation, assignment, and rejection (e.g., for duplicates) are handled, and how mitigations are tracked to completion in a timely manner appropriate to the project's claims and the issues discovered.
+
+Field incidents are a key source of high-priority Misbehaviours.
+These require additional rigour to ensure appropriate and timely responses.
+For every iteration and associated change, related issue resolutions must be documented with their impact (e.g., whether new Misbehaviours were found or parts of the analysis had to be redone) and linked to the specific change, ensuring visible traceability.
+This information must remain available to support decision traceability throughout the project's lifetime (as considered in TA-DATA).
+
+As part of ongoing monitoring, the rate of incoming, resolved, and rejected issues across the project and its dependencies should be tracked for trends and anomalies, to identify shifts and to detect if a source of information is lost.
+
+**Evidence**
+
+- List of known bugs fixed since last release
+  - **Answer**: Provided in JLS-29
+- List of outstanding bugs still not fixed, with triage/prioritisation based
+  on severity/relevance/impact
+  - **Answer**: Provided in JLS-28 and JLS-11
+- List of known vulnerabilities fixed since last release
+  - **Answer**: Provided in JLS-29
+- List of outstanding known vulnerabilities still not fixed, with triage/prioritisation based
+  on severity/relevance/impact
+  - **Answer**: Provided in JLS-30, JLS-33 and AOU-29
+- List of nlohmann/json component versions, showing where a newer version exists upstream
+  - **Answer**: Not relevant since nlohmann/json has no external components, as stated in JLS-34
+- List of component version updates since last release
+  - **Answer**: Not relevant as nlohmann/json has no external components, as stated in JLS-34
+- List of fixes applied to developed code since last release
+  - **Answer**: Provided in JLS-29
+- List of fixes for developed code that are outstanding, not applied yet
+  - **Answer**: Provided in JLS-11
+- List of nlohmann/json faults outstanding (O)
+  - **Answer**: Provided in JLS-11
+- List of nlohmann/json faults fixed since last release (F)
+  - **Answer**: Provided in JLS-29
+- List of nlohmann/json faults mitigated since last release (M)
+  - **Answer**: Provided in JLS-29
+
+**Confidence scoring**
+
+Confidence scoring for TA-FIXES can be based on
+
+- some function of [O, F, M] for nlohmann/json
+- number of outstanding relevant bugs from components
+- bug triage results, accounting for undiscovered bugs
+- number of outstanding known vulnerabilities
+- triage results of publicly disclosed vulnerabilities, accounting for undiscovered bugs and vulnerabilities
+- confidence that known fixes have been applied
+- confidence that known mitigations have been applied
+- previous confidence score for TA-FIXES
+
+Each iteration, we should improve the algorithm based on measurements
+
+**Checklist**
+
+- How many faults have we identified in nlohmann/json?
+  - **Answer**: 58, but none are relevant for S-CORE's use case of the library (see JLS-11).
+- How many unknown faults remain to be found, based on the number that have
+  been processed so far?
+  - **Answer**: It is unlikely that there are unknown faults relevant to S-CORE.
+- Is there any possibility that people could be motivated to manipulate the
+  lists (e.g. bug bonus or pressure to close).
+  - **Answer**: It is unlikely that people would be motivated to manipulate the lists in nlohmann/json. The nlohmann/json project has no bug bounties, and since it is open source, third party individuals suggest fixes with no pressure/incentive to manipulate unfixed issues.
+- How many faults may be unrecorded (or incorrectly closed, or downplayed)?
+  - **Answer**: Few or none, considering the wide use of the nlohmann/json library (see JLS-05).
+- How do we collect lists of bugs and known vulnerabilities from components?
+  - **Answer**: We pull the list from the issues reported to nlohmann/json labelled as bug and are currently open or were opened since the last release. This list is then stored using GitHub, thereby enabling a traceability of the list.
+- How (and how often) do we check these lists for relevant bugs and known vulnerabilities?
+  - **Answer**: Whenever we generate the documentation, the list is pulled. If there is an issue previously unrecorded, then the maintainer is encouraged by the change of the trustable score to check the relevance of the issue.
+- How confident can we be that the lists are honestly maintained?
+  - **Answer**: Very confident, since the authors of the issues in the list mainly comprise independent downstream users.
+- Could some participants have incentives to manipulate information?
+  - **Answer**: No such incentives have been identified.
+- How confident are we that the lists are comprehensive?
+  - **Answer**: Fairly confident, considering the wide use of the library (see JLS-05) and that downstream users are likely to report discovered bugs.
+- Could there be whole categories of bugs/vulnerabilities still undiscovered?
+  - **Answer**: Unlikely, considering the wide use of the library (see JLS-05) and that downstream users are likely to report discovered bugs.
+- How effective is our triage/prioritisation?
+  - **Answer**: There is no development of the json library within S-CORE, and therefore no triage/prioritisation. Any identified bugs/vulnerabilities are reported to nlohmann/json. Within nlohmann/json, no formal triage process has been identified. Nevertheless, reported bugs and vulnerabilities seem to be handled in a timely manner.
+- How many components have never been updated?
+  - **Answer**: None, the nlohmann/json library consists of a single header file, which the only component. This component is up to date.
+- How confident are we that we could update them?
+  - **Answer**: Within nlohmann/json, there are no external components to update. Within S-CORE, if a new version of the nlohmann/json library is released, we are very confident that we can update to that version. (See the update process in TSF/README.md)
+- How confident are we that outstanding fixes do not impact our Expectations?
+  - **Answer**: No outstanding fixes that impact the Expectations have been identified.
+- How confident are we that outstanding fixes do not address Misbehaviours?
+  - **Answer**: Very confident, as no Misbehaviours have been identified.
+
+
+---
+
+### TA-INDICATORS | Reviewed: ⨯ | Score: 0.0 
+In eclipse-score/inc_nlohmann_json, advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis.
 
 
 **Supported Requests:**
 
-- [TT-EXPECTATIONS](TT.md#tt-expectations)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-EXPECTATIONS](TT.md#tt-expectations)  | Documentation is provided within eclipse-score/inc_nlohmann_json, specifying what the nlohmann/json library is expected to do, and what it must not do, and how this is verified. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [AOU-09](AOU.md#aou-09)
+_None_
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-INDICATORS-CHECKLIST.md`
-
-
-#### Checklist for TA-INDICATORS from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-* How appropriate/thorough are the analyses that led to the indicators?
-
-    **Answer**:  Since no misbehaviours for the use of the library for parsing and verification of JSON data according to RFC8259 have been identified, no warning indicators are implemented.
-
-* How confident can we be that the list of indicators is comprehensive? 
-
-    **Answer**:  There are no warning indicators implemented, of which we are very confident.
-
-* Could there be whole categories of warning indicators still missing?
-
-    **Answer**:  Yes, there could. Within S-CORE, however, any warning indicator that is not natively implemented within the original nlohmann/json should be implemented in the wrapper defining the interface between the library and the project using it.
-
-* How has the list of advance warning indicators varied over time?
-
-    **Answer**:  It has stayed constant.
-
-* How confident are we that the indicators are leading/predictive?
-
-    **Answer**: There are none.
-
-* Are there misbehaviours that have no advance warning indicators?
-
-    **Answer**:  There are no misbehaviours identified.
-
-* Can we collect data for all indicators? 
-
-    **Answer**:  There are currently no implemented indicators, so that no data are collected.
-
-* Are the monitoring mechanisms used included in our Trustable scope? 
-
-    **Answer**:  No, but there are also none.
-
-* Are there gaps or trends in the data? 
-
-    **Answer**:  There are no data where gaps or trends could be identified.
-
-* If there are gaps or trends, are they analysed and addressed?
-
-    **Answer**:  There are no data.
-
-* Is the data actually predictive/useful?
-
-    **Answer**:  There are no data.
-
-* Are indicators from code, component, tool, or data inspections taken into consideration?
-
-    **Answer**:  There are no indicators.
-
+_None_
 
 
 
@@ -577,96 +798,143 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-INDICATORS.svg)
+
+|date-time|TA-INDICATORS|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TA-INPUTS 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
-All inputs to nlohmann/json library are assessed, to identify potential risks and issues.
+Not all deviations from Expected Behaviour can be associated with a specific
+condition. Therefore, we must have a strategy for managing deviations that
+arise from unknown system states, process vulnerabilities or configurations.
+
+This is the role of _Advanced Warning Indicators (AWI)_. These are specific
+metrics which correlate with deviations from Expected Behaviour and can be
+monitored in real time. The system should return to a defined known-good
+state when AWIs exceed defined tolerances.
+
+**Guidance**
+
+This assertion is met to the extent that:
+
+- We have identified indicators that are strongly correlated with observed
+  deviations from Expected Behaviour in testing and/or production.
+- The system returns to a defined known-good state when AWIs exceed
+  defined tolerances.
+- The mechanism for returning to the known-good state is verified.
+- The selection of Advance Warning Indicators is validated against the set of
+  possible deviations from Expected behaviour.
+
+Note, the set of possible deviations from Expected behaviour _is not_ the same
+as the set of Misbehaviours identified in TA-MISBEHAVIOURS, as it includes
+deviations due to unknown causes.
+
+Deviations are easily determined by negating recorded Expectations. Potential
+AWIs could be identified using source code analysis, risk analysis or incident
+reports. A set of AWIs to be used in production should be identified by
+monitoring candidate signals in all tests (functional, soak, stress) and
+measuring correlation with deviations.
+
+Telematics, diagnostics, or manual proof testing are of little value without
+mitigation. As such, AWI monitoring and mitigation should be automatic,
+traceable back to analysis, and formally recorded to ensure information from
+previously unidentified misbehaviours is captured in a structured way.
+
+The known-good state should be chosen with regard to the system's intended
+consumers and/or context. Canonical examples are mechanisms like reboots,
+resets, relaunches and restarts. The mechanism for returning to a known-good
+state can be verified using fault induction tests. Incidences of AWIs triggering
+a return to the known-good state in either testing or production should be
+considered as a Misbehaviour in TA-MISBEHAVIOURS. Relying on AWIs alone is not
+an acceptable mitigation strategy. TA-MISBEHAVIOURS and TA-INDICATORS are
+treated separately for this reason.
+
+The selection of AWIs can be validated by analysing failure data. For instance,
+a high number of instances of deviations with all AWIs in tolerance implies the
+set of AWIs is incorrect, or the tolerance is too lax.
+
+**Evidence**
+
+- Risk analyses
+  - **Answer**: 
+- List of advance warning indicators
+  - **Answer**: 
+- List of Expectations for monitoring mechanisms
+  - **Answer**: 
+- List of implemented monitoring mechanisms
+  - **Answer**: 
+- List of identified misbehaviours without advance warning indicators
+  - **Answer**: 
+- List of advance warning indicators without implemented monitoring mechanisms
+  - **Answer**: 
+- Advance warning signal data as time series (see TA-DATA)
+  - **Answer**: 
+
+**Confidence scoring**
+
+Confidence scoring for TA-INDICATORS is based on confidence that the list of
+indicators is comprehensive / complete, that the indicators are useful, and that
+monitoring mechanisms have been implemented to collect the required data.
+
+**Checklist**
+
+- How appropriate/thorough are the analyses that led to the indicators?
+  - **Answer**: 
+- How confident can we be that the list of indicators is comprehensive?
+  - **Answer**: 
+- Could there be whole categories of warning indicators still missing?
+  - **Answer**: 
+- How has the list of advance warning indicators varied over time?
+  - **Answer**: 
+- How confident are we that the indicators are leading/predictive?
+  - **Answer**: 
+- Are there misbehaviours that have no advance warning indicators?
+  - **Answer**: 
+- Can we collect data for all indicators?
+  - **Answer**: 
+- Are the monitoring mechanisms used included in our Trustable scope?
+  - **Answer**: 
+- Are there gaps or trends in the data?
+  - **Answer**: 
+- If there are gaps or trends, are they analysed and addressed?
+  - **Answer**: 
+- Is the data actually predictive/useful?
+  - **Answer**: 
+- Are indicators from code, component, tool, or data inspections taken into
+consideration? 
+  - **Answer**:
+
+
+---
+
+### TA-INPUTS | Reviewed: ⨯ | Score: 0.0 
+All inputs to the nlohmann/json library are assessed, to identify potential risks and issues.
 
 
 **Supported Requests:**
 
-- [TT-PROVENANCE](TT.md#tt-provenance)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-PROVENANCE](TT.md#tt-provenance)  | All inputs (and attestations for claims) for the nlohmann/json library are provided with known provenance. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [JLS-04](JLS.md#jls-04)
-- [AOU-10_COMBINED](AOU.md#aou-10_combined)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-04](JLS.md#jls-04)  | External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-INPUTS-CHECKLIST.md`
-
-
-#### Checklist for TA-INPUTS from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-The single_include/nlohmann/json.hpp is the single and only component of the library.
-
-* Are there components that are not on the list?
-
-    **Answer**:  No.
-
-* Are there assessments for all components?
-
-    **Answer**:  ?????
-
-* Has an assessment been done for the current version of the component?
-
-    **Answer**:  ?????
-
-* Have sources of bug and/or vulnerability data been identified?
-
-    **Answer**:  There are no bug and/or vulnerability data.
-
-* Have additional tests and/or Expectations been documented and linked to component assessment?
-
-    **Answer**:  ??????
-
-* Are component tests run when integrating new versions of components?
-
-    **Answer**:  There are no further components.
-
-* Are there tools that are not on the list?
-
-    **Answer**:  The library does not use external tools, except for the tools provided by the C++ standard library.
-
-* Are there impact assessments for all tools?
-
-    **Answer**:  ?????? The library does not use external tools for which an impact assessment has to be done.
-
-* Have tools with high impact been qualified?
-
-    **Answer**: There are no tools with high impact.
-
-* Were assessments or reviews done for the current tool versions?
-
-    **Answer**:  ????? The library does not use external tools for which an impact assessment has to be done.
-
-* Have additional tests and/or Expectations been documented and linked to tool assessments?
-
-    **Answer**:  No.
-
-* Are tool tests run when integrating new versions of tools?
-
-    **Answer**:  The library does not use external tools for which a new version needs to be integrated.
-
-* Are tool and component tests included in release preparation?
-
-    **Answer**:  Yes, the tests of the library are included in the release.
-
-* Can patches be applied, and then upstreamed for long-term maintenance?
-
-    **Answer**:  Yes, if ever a misbehaviour is found and patched, then a pull-request to the original nlohmann/json repository can be opened to upstream the changes.
-
-* Do all dependencies comply with acceptable licensing terms?
-
-    **Answer**:  Yes, the library is licensed under MIT License .
-
+_None_
 
 
 
@@ -676,54 +944,157 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-INPUTS.svg)
+
+|date-time|TA-INPUTS|JLS-04|
+|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |
+
 
 
 ---
 
-### TA-ITERATIONS 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
-All constructed iterations of nlohmann/json library include source code, build instructions, tests, results and attestations.
+**Guidance**
+
+Anything that can influence the output of the nlohmann/json project is considered an input.
+This includes:
+
+- Software components used to implement specified features and meet defined Expectations
+- Software tools, and their outputs, used for design, construction and verification
+- Infrastructure that supports development and release processes
+
+All inputs (components, tools, data) and their dependencies (recursively) used to build and verify nlohmann/json releases must be identified and assessed, since they are untrusted by default.
+
+Each input should be evaluated on verifiable merits, regardless of any claims it makes (including adherence to standards or guidance).
+Evaluation must include the project's defined Expectations to ensure that inputs meet requirements, and that risks are recorded and addressed appropriately.
+
+For components, we need to consider how their misbehaviour might impact achieving project nlohmann/json's Expectations.
+Sources (e.g. bug databases, advisories) for known risks should be identified, their update frequency recorded, and tests defined for detecting them.
+These form the inputs to TA-FIXES.
+
+For the tools used to construct and verify nlohmann/json, we need to consider how their misbehaviour could:
+
+- Introduce unintended changes
+- Fail to detect Misbehaviours during testing
+- Produce misleading data used to design or verify the next iteration
+
+Where any input impacts are identified, consider:
+
+- How serious their impact might be, and whether Expectations or analysis outcomes are affected (severity)
+- Whether they are detected by another tool, test, or manual check (detectability)
+
+Confidence in assessing severity and detectability can be supported by analysing development history and practices of each input to evaluate upstream sources (both third-party and first-party) for maintainability and sustainability (including, for example, testability, modularity and configurability) to reduce failure impact and support safe change.
+
+These qualities can be estimated through evidence of software engineering best practice, applied through:
+
+- Processes defining and following design, documentation and review guidelines, carried out manually (advocating simple design, reuse, structured coding constructs, and competent release management)
+- Appropriate use of programming languages and their features, supported by tools such as static analysis, with regular improvement of their configurations
+
+For impacts with high severity or low detectability (or both), additional analysis should assess whether existing tests effectively detect Misbehaviours and their impacts.
+
+As a result, for example, any binary inputs without reproducible build steps or clear development history and maintenance processes should be treated as risks and mitigated appropriately.
+
+**Evidence**
+
+- List of components used to build nlohmann/json, including:
+  - Whether content is provided as source or binary
+    - **Answer**: 
+- Record of component assessments:
+  - Originating project and version
+    - **Answer**: 
+  - Date of assessments and identity of assessors
+    - **Answer**: 
+  - Role of component in nlohmann/json
+    - **Answer**: 
+  - Sources of bug and risk data
+    - **Answer**: 
+  - Potential misbehaviours and risks identified and assessed
+    - **Answer**: 
+- List of tools used to build and verify nlohmann/json
+  - **Answer**: 
+- Record of tool assessments:
+  - Originating project and tool version
+    - **Answer**: 
+  - Date of assessments and identity of assessors
+    - **Answer**: 
+  - Role of the tool in nlohmann/json releases
+    - **Answer**: 
+  - Potential misbehaviours and impacts
+    - **Answer**: 
+  - Detectability and severity of impacts
+    - **Answer**: 
+- Tests or measures to address identified impacts
+  - **Answer**: 
+
+**Confidence scoring**
+
+Confidence scoring for TA-INPUTS is based on the set of components and tools
+identified, how many of (and how often) these have been assessed for their risk
+and impact for nlohmann/json, and the sources of risk and issue data identified.
+
+**Checklist**
+
+- Are there components that are not on the list?
+  - **Answer**: 
+- Are there assessments for all components?
+  - **Answer**: 
+- Has an assessment been done for the current version of the component?
+  - **Answer**: 
+- Have sources of bug and/or vulnerability data been identified?
+  - **Answer**: 
+- Have additional tests and/or Expectations been documented and linked to
+  component assessment?
+  - **Answer**: 
+- Are component tests run when integrating new versions of components?
+  - **Answer**: 
+- Are there tools that are not on the list?
+  - **Answer**: 
+- Are there impact assessments for all tools?
+  - **Answer**: 
+- Have tools with high impact been qualified?
+  - **Answer**: 
+- Were assessments or reviews done for the current tool versions?
+  - **Answer**: 
+- Have additional tests and/or Expectations been documented and linked to
+  tool assessments?
+  - **Answer**: 
+- Are tool tests run when integrating new versions of tools?
+  - **Answer**: 
+- Are tool and component tests included in release preparation?
+  - **Answer**: 
+- Can patches be applied, and then upstreamed for long-term maintenance?
+  - **Answer**: 
+- Do all dependencies comply with acceptable licensing terms?
+  - **Answer**:
+
+
+---
+
+### TA-ITERATIONS | Reviewed: ⨯ | Score: 0.0 
+All constructed iterations of the nlohmann/json library include source code, build instructions, tests, results and attestations.
 
 
 **Supported Requests:**
 
-- [TT-CONSTRUCTION](TT.md#tt-construction)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-CONSTRUCTION](TT.md#tt-construction)  | Tools are provided to build the nlohmann/json library from trusted sources (also provided) with full reproducibility. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [JLS-10](JLS.md#jls-10)
-- [JLS-19](JLS.md#jls-19)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-10](JLS.md#jls-10)  | Every release of nlohmann/json includes source code, build instructions, tests and attestations. (TODO: Test result summary) | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-19](JLS.md#jls-19)  | All library components, build dependencies, and build tools in the nlohmann/json repository are declared in build system manifests. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-ITERATIONS-CHECKLIST.md`
-
-
-#### Checklist for TA-ITERATIONS from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-* How much of the software is provided as binary only, expressed as a fraction of the BoM list? 
-
-    **Answer**:  None.
-
-* How much is binary, expressed as a fraction of the total storage footprint?
-
-    **Answer**:  None.
-
-* For binaries, what claims are being made and how confident are we in the people/organisations making the claims?
-
-    **Answer**:  There are no binaries.
-
-* For third-party source code, what claims are we making, and how confident are we about these claims?
-
-    **Answer**:  There is no third-party source code in the library.
-
-* For software developed by us, what claims are we making, and how confident are we about these claims?
-
-    **Answer**:  This is the remainder of the documentation.
-
+_None_
 
 
 
@@ -733,76 +1104,114 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-ITERATIONS.svg)
+
+|date-time|TA-ITERATIONS|JLS-10|JLS-19|
+|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### TA-METHODOLOGIES 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
-Manual methodologies applied for nlohmann/json library by contributors, and their results, are managed according to specified objectives.
+**Guidance**
+
+This assertion is best satisfied by checking generated documentation to confirm that:
+
+- every iteration is a working product with evidence-backed, falsifiable Statements, together with documentation of confidence in those Statements and all required Trustable Statements.
+- every iteration includes instructions for building and using the product
+- all components, dependencies, tools, and data are identified in a manifest
+- the manifest provides links to source code
+- where source code is unavailable, the supplier is identified
+
+An iteration consists of each batch of changes accepted into the canonical version of the product.
+How the canonical version is managed must be documented (for TT-CHANGES) alongside the product's Expectations.
+
+Every iteration must be usable as a standalone product, with verification and validation completed so that a hotfix could be released at any point.
+Documentation generated alongside the product must include build and usage guidance together with the project's documented Expectations and supporting Statements, enabling any maintainer or user to reverify the state of the product and associated Statements.
+
+For each iteration, any changes must be accompanied by attestations and reasoning, explaining the tests performed and the review steps taken, together with their outcomes (e.g., results of source code inspections).
+Any attestations and impact assessments must be traceable to the specific changes, authors, reviewers, and the review process documentation used.
+
+Collating and making available all appropriate data and documentation for every iteration must be automatable, so that the product's build can be reproduced and its analysis repeated end-to-end independently (best achieved using generated documentation and configuration as code).
+All relevant data, including approval statuses and dates, must be stored long-term and analysed as part of TA-DATA.
+For complex systems, the resulting information must be presented in a user-friendly, searchable, and accessible form.
+
+Given such transparent documentation and attestations for every iteration, it becomes possible to analyse product and development trends over time.
+For releases, additional documentation should summarise all changes across the iterations since the previous release.
+
+**Evidence**
+
+- list of components with source
+  - source code
+    - **Answer**: 
+  - build instructions
+    - **Answer**: 
+  - test code
+    - **Answer**: 
+  - test results summary
+    - **Answer**: 
+  - attestations
+    - **Answer**: 
+
+- list of components where source code is not available
+  - risk analysis
+    - **Answer**: 
+  - attestations
+    - **Answer**: 
+
+**Confidence scoring**
+
+Confidence scoring for TA-ITERATIONS based on
+
+- number and importance of source components
+- number and importance of non-source components
+- assessment of attestations
+
+**Checklist**
+
+- How much of the software is provided as binary only, expressed as a
+  fraction of the BoM list?
+  - **Answer**: 
+- How much is binary, expressed as a fraction of the total storage footprint?
+  - **Answer**: 
+- For binaries, what claims are being made and how confident are we in the
+  people/organisations making the claims?
+  - **Answer**: 
+- For third-party source code, what claims are we making, and how confident
+  are we about these claims?
+  - **Answer**: 
+- For software developed by us, what claims are we making, and how confident
+  are we about these claims?
+  - **Answer**:
+
+
+---
+
+### TA-METHODOLOGIES | Reviewed: ⨯ | Score: 0.0 
+Manual methodologies applied for the nlohmann/json library by contributors, and their results, are managed according to specified objectives.
 
 
 **Supported Requests:**
 
-- [TT-CONFIDENCE](TT.md#tt-confidence)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-CONFIDENCE](TT.md#tt-confidence)  | Confidence in the nlohmann/json library is achieved by measuring and analysing behaviour and evidence over time within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [AOU-10_COMBINED](AOU.md#aou-10_combined)
-- [JLS-13](JLS.md#jls-13)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-13](JLS.md#jls-13)  | The S-Core methodologies are followed in eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-METHODOLOGIES-CHECKLIST.md`
-
-
-#### Checklist for TA-METHODOLOGIES from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-This project follows purely the Methodologies of Eclipse S-CORE.
-
-* Are the identified gaps documented clearly to justify using a manual process?
-
-    **Answer**:  
-
-* Are the goals for each process clearly defined?
-
-    **Answer**:  
-
-* Is the sequence of procedures documented in an unambiguous manner?
-
-    **Answer**:  
-
-* Can improvements to the processes be suggested and implemented?
-
-    **Answer**:  
-
-* How frequently are processes changed?
-
-    **Answer**:  
-
-* How are changes to manual processes communicated?
-
-    **Answer**:  
-
-* Are there any exceptions to the processes?
-
-    **Answer**:  
-
-* How is evidence of process adherence recorded?
-
-    **Answer**:  
-
-* How is the effectiveness of the process evaluated?
-
-    **Answer**:  
-
-* Is ongoing training required to follow these processes?
-
-    **Answer**:  
-
+_None_
 
 
 
@@ -812,87 +1221,114 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-METHODOLOGIES.svg)
+
+|date-time|TA-METHODOLOGIES|JLS-13|
+|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |
+
 
 
 ---
 
-### TA-MISBEHAVIOURS 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
-Prohibited misbehaviours for nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis.
+**Guidance**
+
+To satisfy this assertion, all manual processes used in the verification of nlohmann/json must be documented, including the methodologies applied, the results for specific aspects and iterations, and evidence that these processes were reviewed against documented criteria.
+
+Most analysis (e.g., data analysis for TA-ANALYSIS) should be automated to enable continuous feedback.
+However, the quality of any remaining manual processes (whether from first parties or external third parties) must be considered and how they are documented and reviewed.
+Considerations should be made about how manual processes may impact identifying and addressing Misbehaviours (TA-MISBEHAVIOURS).
+
+Assignment of responsibilities for any manual work must follow a documented process that verifies competence and grants appropriate access, with automation applied where possible.
+Resulting assigned responsibilities must ensure organisational robustness (e.g., avoidance of conflicts of interest) together with appropriate independent verification and validation.
+Manual reviews involving source inspections must follow documented guidelines, with exceptions recorded and illustrated through examples.
+These guidelines should evolve over time and cover:
+
+- coding patterns (e.g., good patterns, anti-patterns, defensive coding)
+- structured design practices (e.g., control flow constraints)
+- complexity management (e.g., limiting feature creep)
+- documentation (e.g., clear, formal figures and diagrams)
+- feature subset restrictions (e.g., programming language subsets)
+- code of conduct guidelines (e.g., review etiquette, handling disagreements)
+
+Nevertheless, specific coding rules (e.g., memory allocation, typing, concurrency) should be integrated into automatic linting and static analysis tools where appropriate.
+
+All processes and checks must themselves be reviewed to drive continuous improvement following specified guidelines.
+Any resulting changes from reviews must follow change control, regardless of who initiates them or under what circumstances.
+
+**Evidence**
+
+- Manual process documentation
+  - **Answer**: 
+- References to methodologies applied as part of these processes
+  - **Answer**: 
+- Results of applying the processes
+  - **Answer**: 
+- Criteria used to confirm that the processes were applied correctly
+  - **Answer**: 
+- Review records for results
+  - **Answer**: 
+
+**Confidence scoring**
+
+Confidence scoring for TA-METHODOLOGIES is based on identifying areas of need for
+manual processes, assessing the clarity of proposed processes, analysing the
+results of their implementation, and evaluating the evidence of effectiveness
+in comparison to the analysed results
+
+**Checklist**
+
+- Are the identified gaps documented clearly to justify using a manual process?
+  - **Answer**: 
+- Are the goals for each process clearly defined?
+  - **Answer**: 
+- Is the sequence of procedures documented in an unambiguous manner?
+  - **Answer**: 
+- Can improvements to the processes be suggested and implemented?
+  - **Answer**: 
+- How frequently are processes changed?
+  - **Answer**: 
+- How are changes to manual processes communicated?
+  - **Answer**: 
+- Are there any exceptions to the processes?
+  - **Answer**: 
+- How is evidence of process adherence recorded?
+  - **Answer**: 
+- How is the effectiveness of the process evaluated?
+  - **Answer**: 
+- Is ongoing training required to follow these processes?
+  - **Answer**:
+
+
+---
+
+### TA-MISBEHAVIOURS | Reviewed: ⨯ | Score: 0.0 
+Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis.
 
 
 **Supported Requests:**
 
-- [TT-EXPECTATIONS](TT.md#tt-expectations)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-EXPECTATIONS](TT.md#tt-expectations)  | Documentation is provided within eclipse-score/inc_nlohmann_json, specifying what the nlohmann/json library is expected to do, and what it must not do, and how this is verified. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [JLS-02](JLS.md#jls-02)
-- [JLS-24](JLS.md#jls-24)
-- [JLS-25](JLS.md#jls-25)
-- [AOU-17](AOU.md#aou-17)
-- [AOU-24](AOU.md#aou-24)
-- [AOU-23](AOU.md#aou-23)
-- [AOU-26](AOU.md#aou-26)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-02](JLS.md#jls-02)  | Fuzz testing is used in the original nlohmann/json repository (https://github.com/nlohmann/json) to uncover edge cases and failure modes throughout development. (https://github.com/nlohmann/json/blob/develop/tests/fuzzing.md) | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-24](JLS.md#jls-24)  | The nlohmann/json library recognizes malformed JSON and returns an exception. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-25](JLS.md#jls-25)  | Malicious code changes in nlohmann/json are mitigated by code reviews, adhering to the contribution guidelines and security policy specified by nlohmann/json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-31](JLS.md#jls-31)  | The nlohmann/json repository uses a static code analysis tool. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-MISBEHAVIOURS-CHECKLIST.md`
-
-
-#### Checklist for TA-MISBEHAVIOURS from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-* How has the list of misbehaviours varied over time?
-
-    **Answer**:  The list of misbehaviours is collected using github and its development is thereby understandable.
-
-* How confident can we be that this list is comprehensive?
-
-    **Answer**:  Due to the collaborative nature of the open source community, we deem it quite unlikely that there are any known misbehaviours which are not reported to the repository nlohmann/json.
-
-* How well do the misbehaviours map to the expectations?
-
-    **Answer**:  There are no identified misbehaviours that tangent the expectations.
-
-* Could some participants have incentives to manipulate information?
-
-    **Answer**:  We could not think of an incentive that any collaborateur could have to manipulate the information.
-
-* Could there be whole categories of misbehaviours still undiscovered?
-
-    **Answer**:  Due to the wide use and long-standing development of the library it is quite unlikely that any major misbehaviors, in particular regarding the parsing and validating of JSON data in the sense of RFC-8259, is undiscovered. 
-
-* Can we identify misbehaviours that have been understood but not specified?
-
-    **Answer**:  No.
-
-* Can we identify some new misbehaviours, right now?
-
-    **Answer**:  No.
-
-* Is every misbehaviour represented by at least one fault induction test?
-
-    **Answer**:  Since there are no misbehaviours that concern the use within S-CORE, no.
-
-* Are fault inductions used to demonstrate that tests which usually pass can and do fail appropriately?
-
-    **Answer**:  ?????? No.
-
-* Are all the fault induction results actually collected?
-
-    **Answer**:  ?????? No.
-
-* Are the results evaluated?
-
-    **Answer**:  ?????? No.
-
-* Do input analysis findings on verifiable tool or component claims and features identify additional misbehaviours or support existing mitigations?
-
-    **Answer**:  Currently, there is no analysis which identifies additional misbehaviours. The only such analysis is indirectly via the analysis of the fuzz testing, which currently does not identifies additional misbehaviours.
-
+_None_
 
 
 
@@ -902,59 +1338,178 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-MISBEHAVIOURS.svg)
+
+|date-time|TA-MISBEHAVIOURS|JLS-02|JLS-24|JLS-25|JLS-31|
+|-|-|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### TA-RELEASES 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
-Construction of nlohmann/json library releases is fully repeatable and the results are fully reproducible, with any exceptions documented and justified.
+The goal of TA-MISBEHAVIOURS is to force engineers to think critically about their work.
+This means understanding and mitigating as many of the situations that cause the
+software to deviate from Expected Behaviours as possible. This is not limited to
+the contents of the final binary.
+
+**Guidance**
+
+This assertion is satisfied to the extent that we can:
+
+- Show we have identified all of the ways in which nlohmann/json could deviate from its
+  Expected Behaviours.
+- Demonstrate that mitigations have been specified, verified and validated for
+  all Misbehaviours.
+
+Once Expected Behaviours have been identified in TA-BEHAVIOURS, there are at
+least four classes of Misbehaviour that can be identified:
+
+- Reachable vulnerable system states that cause deviations from Expected
+  Behaviour. These can be identified by stress testing, failures in functional
+  and soak testing in TA-BEHAVIOURS and reporting in TA-FIXES. Long run trends
+  in both test and production data should also be used to identify these states.
+- Potentially unreachable vulnerable system states that could lead to deviations
+  from Expected Behaviour. These can be identified using risk/hazard analysis
+  techniques including HAZOP, FMEDA and STPA.
+- Vulnerabilities in the development process that could lead to deviations from
+  Expected Behaviour. This includes those that occur as a result of misuse,
+  negligence or malicious intent. These can be identified by incident
+  investigation, random sampling of process artifacts and STPA of processes.
+- Configurations in integrating projects (including the computer or embedded
+  system that is the final product) that could lead to deviations from Expected
+  Behaviour.
+
+Identified Misbehaviours must be mitigated. Mitigations include patching,
+re-designing components, re-designing architectures, removing components,
+testing, static analysis etc. They explicitly _do not_ include the use of AWIs
+to return to a known-good state. These are treated specifically and in detail in
+TA-INDICATORS.
+
+Mitigations could be verified by:
+
+- Specifying and repeatedly executing false negative tests to confirm that
+  functional tests detect known classes of misbehaviour.
+- Specifying fault induction tests or stress tests to demonstrate that the
+  system continues providing the Expected Behaviour after entering a vulnerable
+  system state.
+- Performing statistical analysis of test data, including using statistical path
+  coverage to demonstrate that the vulnerable system state is never reached.
+- Conducting fault injections in development processes to demonstrate that
+  vulnerabilities cannot be exploited (knowingly or otherwise) to affect either
+  output binaries or our analysis of it, whether this is by manipulating the
+  source code, build environment, test cases or any other means.
+- Stress testing of assumptions of use. That is, confirming assumptions of use
+  are actually consistent with the system and its Expected Behaviours by
+  intentionally misinterpreting or liberally interpreting them in a test
+  environment. For example, we could consider testing nlohmann/json on different pieces of
+  hardware that satisfy its assumptions of use.
+
+Remember that a Misbehaviour is _anything_ that could lead to a deviation from
+Expected Behaviour. The specific technologies in and applications of nlohmann/json should
+always be considered in addition to the guidance above.
+
+At the core, a faulty design is inherently difficult to mitigate. The first
+priority, therefore, is to ensure a fault-tolerant and fault-avoidant design
+that minimises fault impact and maximises fault control across all modes and
+states. All design considerations should be traceable to analyses at the correct
+abstraction level, with appropriate partitioning and scoping, which address
+prevalent aspects in complex systems, such as:
+
+- Spatial constraints (e.g., memory corruption)
+- Temporal constraints (e.g., timing violations)
+- Concurrency constraints (e.g., interference)
+- Computational constraints (e.g., precision limits)
+- Performance constraints (e.g., latency spikes under load)
+- Environmental constraints (e.g., hardware non-determinism)
+- Usability constraints (e.g., human interaction errors)
+
+Finally, each new Expectation, whether a required behaviour or a misbehaviour
+mitigation, introduces the potential for unexpected emergent properties,
+highlighting the importance of simple, understandable designs that build on
+established and reusable solutions.
+
+**Suggested evidence**
+
+- List of identified Misbehaviours
+  - **Answer**: 
+- List of Expectations for mitigations addressing identified Misbehaviours
+  - **Answer**: 
+- Risk analysis
+  - **Answer**: 
+- Test analysis, including:
+  - False negative tests
+    - **Answer**: 
+  - Exception handling tests
+    - **Answer**: 
+  - Stress tests
+    - **Answer**: 
+  - Soak tests
+    - **Answer**: 
+
+**Confidence scoring**
+
+Confidence scoring for TA-MISBEHAVIOURS is based on confidence that
+identification and coverage of misbehaviours by tests is complete when
+considered against the list of Expectations.
+
+**Checklist**
+
+- How has the list of misbehaviours varied over time?
+  - **Answer**: 
+- How confident can we be that this list is comprehensive?
+  - **Answer**: 
+- How well do the misbehaviours map to the expectations?
+  - **Answer**: 
+- Could some participants have incentives to manipulate information?
+  - **Answer**: 
+- Could there be whole categories of misbehaviours still undiscovered?
+  - **Answer**: 
+- Can we identify misbehaviours that have been understood but not specified?
+  - **Answer**: 
+- Can we identify some new misbehaviours, right now?
+  - **Answer**: 
+- Is every misbehaviour represented by at least one fault induction test?
+  - **Answer**: 
+- Are fault inductions used to demonstrate that tests which usually pass can
+  and do fail appropriately?
+  - **Answer**: 
+- Are all the fault induction results actually collected?
+  - **Answer**: 
+- Are the results evaluated?
+  - **Answer**: 
+- Do input analysis findings on verifiable tool or component claims and features
+identify additional misbehaviours or support existing mitigations?
+  - **Answer**:
+
+
+---
+
+### TA-RELEASES | Reviewed: ⨯ | Score: 0.0 
+Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified.
 
 
 **Supported Requests:**
 
-- [TT-CONSTRUCTION](TT.md#tt-construction)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-CONSTRUCTION](TT.md#tt-construction)  | Tools are provided to build the nlohmann/json library from trusted sources (also provided) with full reproducibility. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [JLS-14](JLS.md#jls-14)
-- [JLS-21](JLS.md#jls-21)
-- [AOU-08](AOU.md#aou-08)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-14](JLS.md#jls-14)  | The SHA value of the nlohmann/json library in use within eclipse-score/inc_nlohmann_json coincides with the SHA value provided by Niels Lohmann for that version. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-21](JLS.md#jls-21)  | A score is calculated based on the number of mirrored and unmirrored things. (TODO) | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-RELEASES-CHECKLIST.md`
-
-
-#### Checklist for TA-RELEASES from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-* How confident are we that all components are taken from within our controlled environment?
-
-    **Answer**:  This library does not take anything from outside of this repository.
-
-* How confident are we that all of the tools we are using are also under our control?
-
-    **Answer**:  The version of nlohmann/json that is documented with this documentation is under the full control of the Eclipse S-CORE organisation.
-
-* Are our builds repeatable on a different server, or in a different context?
-
-    **Answer**:  Since there is no "build" of the header-only library, yes.
-
-* How sure are we that our builds don't access the internet?
-
-    **Answer**:  There is no implemented access to the internet in the library itself. The testsuite is downloaded from a within Eclipse S-CORE.
-
-* How many of our components are non-reproducible?
-
-    **Answer**:  The single component is reproducible.
-
-* How confident are we that our reproducibility check is correct?
-
-    **Answer**:  Quite.
-
+_None_
 
 
 
@@ -964,59 +1519,118 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-RELEASES.svg)
+
+|date-time|TA-RELEASES|JLS-14|JLS-21|
+|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### TA-SUPPLY_CHAIN 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
-All sources for nlohmann/json library and tools are mirrored in our controlled environment.
+**Guidance**
+
+This assertion is satisfied if each iteration of nlohmann/json is *repeatable*, with all
+required inputs controlled, and *reproducible* (covering both nlohmann/json and the
+construction toolchain/environment, as described in TA-TESTS).
+
+This assertion can be most effectively satisfied in a Continuous Integration
+environment with mirrored projects (see TA-SUPPLY_CHAIN) and build servers
+without internet access. The aim is to show that all build tools, nlohmann/json
+components, and dependencies are built from controlled inputs, that rebuilding
+produces the same binary fileset, and that builds can be repeated on any
+suitably configured server, with server differences shown not to affect
+reproducibility.
+
+For releases in particular, builds from source must be shown to produce
+identical outputs both with and without cache access. 
+
+Again this will not be achievable for components/tools provided in binary form,
+or accessed via an external service - we must consider our confidence in
+attestations made by/for the supply chain.
+
+All non-reproducible elements, such as timestamps or embedded random values from
+build metadata, are clearly identified and considered when evaluating
+reproducibility.
+
+As a result, we gain increased confidence that the toolchain behaves correctly
+during version upgrades: unintended changes to the project are avoided, intended
+fixes produce the expected effects, and the constructed output of nlohmann/json shows the
+correct behavioural changes, verified and validated with test results according
+to TT-RESULTS analysis.
+
+**Evidence**
+
+- list of reproducible SHAs
+  - **Answer**: 
+- list of non-reproducible elements with:
+  - explanation and justification
+    - **Answer**: 
+  - details of what is not reproducible
+    - **Answer**: 
+- evidence of configuration management for build instructions and infrastructure
+  - **Answer**: 
+- evidence of repeatable builds
+  - **Answer**: 
+
+**Confidence scoring**
+
+Calculate:
+
+R = number of reproducible components (including sources which have no build stage)
+N = number of non-reproducible
+B = number of binaries
+M = number of mirrored
+X = number of things not mirrored
+
+Confidence scoring for TA-RELEASES could possibly be calculated as
+R / (R + N + B + M / (M + X))
+
+**Checklist**
+
+- How confident are we that all components are taken from within our
+  controlled environment?
+  - **Answer**: 
+- How confident are we that all of the tools we are using are also under our
+  control?
+  - **Answer**: 
+- Are our builds repeatable on a different server, or in a different context?
+  - **Answer**: 
+- How sure are we that our builds don't access the internet?
+  - **Answer**: 
+- How many of our components are non-reproducible?
+  - **Answer**: 
+- How confident are we that our reproducibility check is correct?
+  - **Answer**:
+
+
+---
+
+### TA-SUPPLY_CHAIN | Reviewed: ⨯ | Score: 0.0 
+All sources and tools for the nlohmann/json library are mirrored in our controlled environment.
 
 
 **Supported Requests:**
 
-- [TT-PROVENANCE](TT.md#tt-provenance)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-PROVENANCE](TT.md#tt-provenance)  | All inputs (and attestations for claims) for the nlohmann/json library are provided with known provenance. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [AOU-02](AOU.md#aou-02)
-- [AOU-03](AOU.md#aou-03)
-- [JLS-23](JLS.md#jls-23)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-23](JLS.md#jls-23)  | The Eclipse S-CORE organization mirrors the nlohmann/json project in a github fork. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-SUPPLY_CHAIN-CHECKLIST.md`
-
-
-#### Checklist for TA-SUPPLY_CHAIN from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-*    Could there be other components, missed from the list?
-
-    **Answer**:  Since the library does not contain any external components, no.
-
-*    Does the list include all toolchain components?
-
-    **Answer**:  Since the library does not contain any external components, yes.
-
-*    Does the toolchain include a bootstrap?
-
-    **Answer**:  ???? No.
-
-*    Could the content of a mirrored project be compromised by an upstream change?
-
-    **Answer**:  Since the library does not contain any external components, no.
-
-*    Are mirrored projects up to date with the upstream project?
-
-    **Answer**:  Yes, the library is up to date with the most recent release of the original nlohmann/json
-
-*    Are mirrored projects based on the correct upstream?
-
-    **Answer**:  Yes.
-
+_None_
 
 
 
@@ -1026,58 +1640,106 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-SUPPLY_CHAIN.svg)
+
+|date-time|TA-SUPPLY_CHAIN|JLS-23|
+|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |
+
 
 
 ---
 
-### TA-TESTS 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
-All tests for nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented.
+**Guidance**
+
+This assertion is satisfied to the extent that we have traced and captured
+source code for nlohmann/json and all of its dependencies (including transitive
+dependencies, all the way down), and for all of the tools used to construct
+nlohmann/json from source, and have mirrored versions of these inputs under our control.
+Any associated data and documentation dependencies must also be considered.
+
+'Mirrored' in this context means that we have a version of the upstream project
+that we keep up-to-date with additions and changes to the upstream project,
+but which is protected from changes that would delete the project, or remove
+parts of its history.
+
+Clearly this is not possible for components or tools (or data) that are provided only in
+binary form, or accessed via online services - in these circumstances we can
+only assess confidence based on attestations made by the suppliers, and on our
+experience with the suppliers' people and processes.
+
+Keep in mind that even if repositories with source code for a particular
+component or tool are available, not all of it may be stored in Git as
+plaintext. A deeper analysis is required in TA-INPUTS to assess the impact of any
+binaries present within the repositories of the components and tools used.
+
+**Evidence**
+
+- list of all nlohmann/json components including
+  - URL of mirrored projects in controlled environment
+    - **Answer**: 
+  - URL of upstream projects
+    - **Answer**: 
+- successful build of nlohmann/json from source
+  - without access to external source projects
+    - **Answer**: 
+  - without access to cached data
+    - **Answer**: 
+- update logs for mirrored projects
+  - **Answer**: 
+- mirrors reject history rewrites
+  - **Answer**: 
+- mirroring is configured via infrastructure under direct control
+  - **Answer**: 
+
+**Confidence scoring**
+
+Confidence scoring for TA-SUPPLY_CHAIN is based on confidence that all inputs and
+dependencies are identified and mirrored, and that mirrored projects cannot be
+compromised.
+
+**Checklist**
+
+- Could there be other components, missed from the list?
+  - **Answer**: 
+- Does the list include all toolchain components?
+  - **Answer**: 
+- Does the toolchain include a bootstrap?
+  - **Answer**: 
+- Could the content of a mirrored project be compromised by an upstream change?
+  - **Answer**: 
+- Are mirrored projects up to date with the upstream project?
+  - **Answer**: 
+- Are mirrored projects based on the correct upstream?
+  - **Answer**:
+
+
+---
+
+### TA-TESTS | Reviewed: ⨯ | Score: 0.0 
+All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented.
 
 
 **Supported Requests:**
 
-- [TT-CONSTRUCTION](TT.md#tt-construction)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-CONSTRUCTION](TT.md#tt-construction)  | Tools are provided to build the nlohmann/json library from trusted sources (also provided) with full reproducibility. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [JLS-16](JLS.md#jls-16)
-- [AOU-15](AOU.md#aou-15)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-16](JLS.md#jls-16)  | A list of tests, which is extracted from the test execution, is provided, along with a list of test environments. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-TESTS-CHECKLIST.md`
-
-
-#### Checklist for TA-TESTS from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-* How confident are we that our test tooling and environment setups used for tests, fault inductions, and analyses are reproducible?
-
-    **Answer**:  The test can be reproduced any time on any machine running the versions of the operating systems and compilers as provided (TODO, cf. AOU-14)
-
-* Are any exceptions identified, documented and justified?
-
-    **Answer**:  To the best of our understanding, there are no exceptions identified.
-
-* How confident are we that all test components are taken from within our controlled environment?
-
-    **Answer**:  All tests are either self-contained or download test data from [within Eclipse S-CORE](https://github.com/eclipse-score/inc_nlohmann_json/tree/json_test_data_version_3_1_0_mirror).
-
-* How confident are we that all of the test environments we are using are also under our control? 
-
-    **Answer**: ????  The environments are standard docker images of ubuntu and standard versions of compilers.
-
-* Do we record all test environment components, including hardware and infrastructure used for exercising tests and processing input/output data? 
-
-    **Answer**:  No, since the tests are independent from hard-ware, these data are not collected.
-
-* How confident are we that all tests scenarios are repeatable? 
-
-    **Answer**:  All test scenarios are repeated daily in the CI pipeline.
-
+_None_
 
 
 
@@ -1087,60 +1749,96 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-TESTS.svg)
+
+|date-time|TA-TESTS|JLS-16|
+|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |
+
 
 
 ---
 
-### TA-UPDATES 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
+**Guidance**
+
+This assertion is satisfied if all build and test environments and tools used to support Expectations are shown to be
+*reproducible*, all build and test steps are *repeatable*, and all required inputs are controlled.
+TA-TESTS does not include reproducibility of nlohmann/json itself, this is instead included in TA-RELEASES.
+
+All tools and test environments should be constructed from change-managed sources (see TA-UPDATES) and mirrored
+sources (see TA-SUPPLY_CHAIN).
+Additional evidence needs to demonstrate that construction of tools and environments produces the same binary fileset
+used for testing and that builds can be repeated on any suitably configured server
+(similar to how the nlohmann/json is evaluated for TA-RELEASES).
+
+Test environment repeatability should be ensured to enable effective Misbehaviour investigations, and enable additional
+data generations (including those by third parties).
+To achieve repeatability, all infrastructure, hardware, and configurations must be identified and documented for all
+test environments. Storage of this information is evaluated in TA-DATA, and its availability is considered in
+TA-ITERATIONS.
+
+**Evidence**
+
+- Test build environment reproducibility
+  - **Answer**: 
+- Test build configuration
+  - **Answer**: 
+- Test build reproducibility
+  - **Answer**: 
+- Test environment configuration
+  - **Answer**: 
+
+**Confidence scoring**
+
+Confidence scoring for TA-TESTS is based on confidence that the construction and deployment of test environments,
+tooling and their build environments are repeatable and reproducible.
+
+**CHECKLIST**
+
+- How confident are we that our test tooling and environment setups used for tests, fault inductions, and analyses are reproducible?
+  - Are any exceptions identified, documented and justified?
+    - **Answer**: 
+- How confident are we that all test components are taken from within our controlled environment?
+  - **Answer**: 
+- How confident are we that all of the test environments we are using are also under our control?
+  - **Answer**: 
+- Do we record all test environment components, including hardware and infrastructure used for exercising tests and processing input/output data?
+  - **Answer**: 
+- How confident are we that all tests scenarios are repeatable?
+  - **Answer**:
+
+
+---
+
+### TA-UPDATES | Reviewed: ⨯ | Score: 0.0 
 nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls.
 
 
 **Supported Requests:**
 
-- [TT-CHANGES](TT.md#tt-changes)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-CHANGES](TT.md#tt-changes)  | The nlohmann/json library is actively maintained, with regular updates to dependencies, and changes are verified to prevent regressions. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [JLS-06](JLS.md#jls-06)
-- [JLS-07](JLS.md#jls-07)
-- [JLS-12](JLS.md#jls-12)
-- [AOU-27](AOU.md#aou-27)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-06](JLS.md#jls-06)  | Pull requests in the nlohmann/json repository are merged only after code review. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-07](JLS.md#jls-07)  | The develop branch of nlohmann/json is protected, i.e. no direct commits are possible. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-12](JLS.md#jls-12)  | The nlohmann/json repository has well-defined community standards, including a contribution guideline and a security policy. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-32](JLS.md#jls-32)  | All pull requests to the develop branch in the nlohmann/json repository trigger a request for review from Niels Lohmann (@nlohmann). | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-35](JLS.md#jls-35)  | Pull requests in the nlohmann/json repository are merged only after running CI-tests and successfully passing the pipeline. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-34](JLS.md#jls-34)  | The nlohmann/json library has no external components or dependencies besides the C++ standard components. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-UPDATES-CHECKLIST.md`
-
-
-#### Checklist for TA-UPDATES from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-* Where are the change and configuration management controls specified?
-
-    **Answer**:  WIP
-
-* Are these controls enforced for all of components, tools, data, documentation and configurations?
-
-    **Answer**:  The S-CORE Methodology is followed, compliance with which enforces the change process to be followed.
-
-* Are there any ways in which these controls can be subverted, and have we mitigated them?
-
-    **Answer**:  Yes, the change process can just not be followed. We have no real method to enforce it other than to trust that the committers follow the S-CORE processes.
-
-* Does change control capture all potential regressions? 
-
-    **Answer**:  Due to the test coverage of 99.186%, it is unlikely that a potential regression is not captured.
-
-* Is change control timely enough? 
-
-    **Answer**:  Not applicable, as far as can be understood right now, there is no immanent need to keep the library up to date. 
-
-* Are all guidance and checks understandable and consistently followed? 
-
-    **Answer**:  WIP
-
+_None_
 
 
 
@@ -1150,88 +1848,105 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-UPDATES.svg)
+
+|date-time|TA-UPDATES|JLS-06|JLS-07|JLS-12|JLS-32|JLS-35|JLS-34|
+|-|-|-|-|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### TA-VALIDATION 
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
 
-All specified tests are executed repeatedly, under defined conditions in controlled environments, according to specified objectives.
+**Guidance**
+
+This assertion requires control over all changes to nlohmann/json, including configurations, components, tools, data, documentation, and dependency versions used to build, verify, and validate it.
+
+As part of change control, all automated checks must run and pass (e.g., tests, static analysis, lint checks) before accepting proposed changes.
+These checks must be configured against appropriate claims and coding guidelines.
+Where a change affects tracked claims, the impact must be identified, reasoned, and verified, with linked analysis performed (e.g., input analysis for new dependencies as per TA-INPUTS).
+Even changes with no direct impact on project claims must be justified.
+
+Multiple roles (assigned to appropriate parties under suitable guidelines) should be involved in assessing changes.
+Reviews must focus on the integrity and consistency of claims, the software, and its tests.
+What each reviewer did or did not examine must be recorded, and this information (together with all checks) made available for every change throughout the project lifecycle (see TA-DATA).
+Details of manual quality management aspects are addressed in TA-METHODOLOGIES.
+
+As a result, all changes must be regression-free (blocking problematic changes until resolved) and aim to exhibit the following properties:
+
+- simple
+- atomic
+- modular
+- understandable
+- testable
+- maintainable
+- sustainable
+
+Practices that enforce these properties help identify and resolve inconsistent changes early in development.
+
+Change control itself must not be subverted, whether accidentally or maliciously.
+Process documentation, guidance, and automated checks must also be under change control, approved by appropriate parties, and protected with suitable security controls.
+
+To prevent regressions and reduce the rate of bugs and vulnerabilities, consistent dependency updates must be applied and new issues promptly addressed (TA-FIXES).
+Evidence for each iteration must demonstrate that change control requirements are applied consistently and evolve as improvements are identified, ensuring the process remains repeatable and reproducible.
+Timeliness must be monitored across detection, resolution, and deployment, with automation and process improvements introduced where delays are found.
+
+Ultimately, the trustable controlled process is the only path to production for the constructed target software.
+
+**Evidence**
+
+- change management process and configuration artifacts
+  - **Answer**: Provided in JLS-06, JLS-07, JLS-12, JLS-32, JLS-34, JLS-35 and AOU-27. 
+
+**Confidence scoring**
+
+Confidence scoring for TA-UPDATES is based on confidence that we have
+control over the changes that we make to nlohmann/json, including its configuration and
+dependencies.
+
+**Checklist**
+
+- Where are the change and configuration management controls specified?
+  - **Answer**: In the [contribution guidelines](https://github.com/nlohmann/json?tab=contributing-ov-file#readme) and [security policy](https://github.com/nlohmann/json?tab=security-ov-file#readme). 
+- Are these controls enforced for all of components, tools, data, documentation and configurations?
+  - **Answer**: Yes. Any proposed change is subject to the same change controls.
+- Are there any ways in which these controls can be subverted, and have we mitigated them?
+  - **Answer**: No. The controls are enforced using branch protection rules and are mostly automated.
+- Does change control capture all potential regressions?
+  - **Answer**: Yes. All changes are tested in the branch '[develop](https://github.com/nlohmann/json/actions?query=branch%3Adevelop)' before being deployed to the master branch.
+- Is change control timely enough?
+  - **Answer**: The change control is indeed timely enough. Any [issues](https://github.com/nlohmann/json/issues) or [discussions](https://github.com/nlohmann/json/discussions) opened are addressed within a reasonable time frame.
+- Are all guidance and checks understandable and consistently followed?
+  - **Answer**: Yes. The [contribution guideline](https://github.com/nlohmann/json?tab=contributing-ov-file#readme) is clear and well-documented, and checks are enforced through automatic [CI workflows](https://github.com/nlohmann/json/tree/develop/.github/workflows).
+
+
+---
+
+### TA-VALIDATION | Reviewed: ⨯ | Score: 0.0 
+All specified tests are executed repeatedly, under defined conditions in controlled environments, according to specified objectives. (To revisit)
 
 
 **Supported Requests:**
 
-- [TT-RESULTS](TT.md#tt-results)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TT-RESULTS](TT.md#tt-results)  | Evidence is provided within eclipse-score/inc_nlohmann_json to demonstrate that the nlohmann/json library does what it is supposed to do, and does not do what it must not do. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [JLS-01](JLS.md#jls-01)
-- [JLS-22](JLS.md#jls-22)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-01](JLS.md#jls-01)  | The CI pipeline in nlohmann/json executes the unit and integration test suites on each pull request (opened, reopened, synchronized). | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-22](JLS.md#jls-22)  | A github workflow of eclipse-score/inc_nlohmann_json executes the unit tests daily and saves the results as time-series data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
 **References:**
 
-- `TSF/trustable/assertions/TA-VALIDATION-CHECKLIST.md`
-
-
-#### Checklist for TA-VALIDATION from [Codethink](https://codethinklabs.gitlab.io/trustable/trustable/print_page.html)
-
-I DO NOT FEEL CONFIDENT TO **Answer** THIS!
-
-* Is the selection of tests correct?
-
-    **Answer**:  ???? Who could tell this?
-
-* Are the tests executed enough times? 
-
-    **Answer**:  ???? Define "enough times"
-
-* How confident are we that all test results are being captured?
-
-    **Answer**: ???? How fine-grained is a test-result supposed to be?
-    
-* Can we look at any individual test result, and establish what it relates to?
-
-    **Answer**:  ????
-
-* Can we trace from any test result to the expectation it relates to? 
-
-    **Answer**:  No, there are more tests than expectations, and in particular tests that relate to the inner workings of the library which are not used by S-CORE. 
-
-* Can we identify precisely which environment (software and hardware) were used?
-
-    **Answer**:  ???? How precisely shall that be? Moreover, the tests are supposed to run independent of underlying hardware, since this is a software. 
-
-* How many pass/fail results would be expected, based on the scheduled tests?
-
-    **Answer**:  Zero fails.
-
-* Do we have all of the expected results?
-
-    **Answer**:  Yes.
-
-* Do we have time-series data for all of those results? 
-
-    **Answer**:  Yes, there are time-series data.
-
-* If there are any gaps, do we understand why?
-
-    **Answer**:  ????  Define gaps
-
-* Are the test validation strategies credible and appropriate? 
-
-    **Answer**:  ???? Define test validation strategies
-
-* What proportion of the implemented tests are validated? 
-
-    **Answer**:  ???? None.
-
-* Have the tests been verified using known good and bad data? 
-
-    **Answer**:  ???? 
-
+_None_
 
 
 
@@ -1241,4 +1956,80 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TA-VALIDATION.svg)
+
+|date-time|TA-VALIDATION|JLS-01|JLS-22|
+|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |
+
+
+
+---
+
+(Note: The guidance, evidence, confidence scoring and checklist sections below are copied from [CodeThink's documentation of TSF](https://codethinklabs.gitlab.io/trustable/trustable/trustable/TA.html). However, the answers to each point in the evidence list and checklist are specific to this project.)
+
+**Guidance**
+
+This assertion is satisfied when tests demonstrate that the features specified to meet project Expectations (TT-EXPECTATIONS) are present and function as intended.
+These tests run repeatedly in a controlled environment (TA-TESTs) on a defined schedule (e.g., daily, per change, or per candidate release of nlohmann/json).
+
+Confidence grows when tests not only verify Expectations but also validate (continuously) that they meet stakeholder and user needs.
+Robust validation depends on three aspects:
+
+- TA-VALIDATION – a strategy that produces representative and stressing data.
+- TA-DATA – appropriate handling of collected data.
+- TA-ANALYSIS – analysis methods that remain dependable as the project evolves.
+
+This structure enables iterative convergence toward required behaviours, even when early validation results are unsatisfactory.
+
+A strategy to generate appropriate data addresses quantity, quality, and selection:
+
+- Selection: Testing remains exploratory, combining monitoring with verified and new indicators (supporting TA-INDICATORS). 
+  Coverage spans input, design, and output analysis with traceable specifications and results (considering TA-BEHAVIOURS).
+  Tests also support calibration of capacity, scalability, response time, latency, and throughput, executed in targetted conditions and under stress (e.g., equivalence class and boundary-value testing).
+- Quantity: Automation scheduling provides sufficient repetition and covers diverse environments (e.g., multiple hardware platforms).
+  Failures block merge requests, with pre- and post-merge tests giving fast feedback.
+  Adequacy of data is assessed through TA-ANALYSIS.
+- Quality: Test suites include fault induction (considering TA-MISBEHAVIOURS) and checks that good data yields good results while bad data yields bad results.
+
+**Evidence**
+
+- Test results from per-change tests
+  - **Answer**: 
+- Test results from scheduled tests as time series
+  - **Answer**: 
+
+**Confidence scoring**
+
+Confidence scoring for TA-VALIDATION is based on verification that we have
+results for all expected tests (both pass / fail and performance).
+
+**Checklist**
+
+- Is the selection of tests correct?
+  - **Answer**: 
+- Are the tests executed enough times?
+  - **Answer**: 
+- How confident are we that all test results are being captured?
+  - **Answer**: 
+- Can we look at any individual test result, and establish what it relates to?
+  - **Answer**: 
+- Can we trace from any test result to the expectation it relates to?
+  - **Answer**: 
+- Can we identify precisely which environment (software and hardware) were used?
+  - **Answer**: 
+- How many pass/fail results would be expected, based on the scheduled tests?
+  - **Answer**: 
+- Do we have all of the expected results?
+  - **Answer**: 
+- Do we have time-series data for all of those results?
+  - **Answer**: 
+- If there are any gaps, do we understand why?
+  - **Answer**: 
+- Are the test validation strategies credible and appropriate?
+  - **Answer**: 
+- What proportion of the implemented tests are validated?
+  - **Answer**: 
+- Have the tests been verified using known good and bad data?
+  - **Answer**:

@@ -115,12 +115,6 @@ Trustable graph centered at TA-MISBEHAVIOURS
 
 Trustable graph centered at TA-CONSTRAINTS
 
-.. image:: custom_TA-INDICATORS_graph.svg
-	:alt: Root of the trustable graph
-	:width: 6000px
-
-Trustable graph centered at TA-INDICATORS
-
 .. image:: custom_TA-SUPPLY_CHAIN_graph.svg
 	:alt: Root of the trustable graph
 	:width: 6000px

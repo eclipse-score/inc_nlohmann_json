@@ -1,16 +1,19 @@
 
-### PJD-01 
-
-The service provides implementations that parses JSON texts, which ignores the presence of a byte order mark rather than treating it as an error.
+### PJD-01 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library provides implementations that parses JSON texts, which ignores the presence of a byte order mark rather than treating it as an error.
 
 
 **Supported Requests:**
 
-- [JLEX-02](JLEX.md#jlex-02)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLEX-02](JLEX.md#jlex-02)  | The requirement regarding [JSON Deserialization](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__deserialization) is fulfilled. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [NPF-01](NPF.md#npf-01)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [NPF-01](NPF.md#npf-01)  | The service provided by the nlohmann/json library ignores the presence of a byte order mark. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -26,19 +29,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/PJD-01.svg)
+
+|date-time|PJD-01|NPF-01|
+|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |
+
 
 
 ---
 
-### PJD-02 
-
-The service transforms a JSON text into a C++ representation using C++ containers (for arrays and objects) and primitive datatypes (for strings, numbers, boolean, null).
+### PJD-02 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library transforms a JSON text into a C++ representation using C++ containers (for arrays and objects) and primitive datatypes (for strings, numbers, boolean, null).
 
 
 **Supported Requests:**
 
-- [PJD-03](PJD.md#pjd-03)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [PJD-03](PJD.md#pjd-03)  | The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -58,31 +68,38 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/PJD-02.svg)
+
+|date-time|PJD-02|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### PJD-03 
-
-The service parses all texts that conform to the JSON grammar.
+### PJD-03 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar.
 
 
 **Supported Requests:**
 
-- [JLEX-02](JLEX.md#jlex-02)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLEX-02](JLEX.md#jlex-02)  | The requirement regarding [JSON Deserialization](https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__deserialization) is fulfilled. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [AOU-21](AOU.md#aou-21)
-- [AOU-05](AOU.md#aou-05)
-- [NPF-02](NPF.md#npf-02)
-- [NPF-04](NPF.md#npf-04)
-- [NPF-05](NPF.md#npf-05)
-- [NPF-06](NPF.md#npf-06)
-- [NPF-07](NPF.md#npf-07)
-- [NPF-03](NPF.md#npf-03)
-- [PJD-02](PJD.md#pjd-02)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [NPF-02](NPF.md#npf-02)  | The service provided by the nlohmann/json library parses numbers according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-04](NPF.md#npf-04)  | The service provided by the nlohmann/json library parses literal names "true", "false" and "null" according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-05](NPF.md#npf-05)  | The service provided by the nlohmann/json library parses arrays according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-06](NPF.md#npf-06)  | The service provided by the nlohmann/json library parses objects according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-07](NPF.md#npf-07)  | The service provided by the nlohmann/json library parses well-formed UTF-8 encoded data only. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-03](NPF.md#npf-03)  | The service provided by the nlohmann/json library parses strings according to RFC8259. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [PJD-02](PJD.md#pjd-02)  | The service provided by the nlohmann/json library transforms a JSON text into a C++ representation using C++ containers (for arrays and objects) and primitive datatypes (for strings, numbers, boolean, null). | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -98,4 +115,10 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/PJD-03.svg)
+
+|date-time|PJD-03|NPF-02|NPF-04|NPF-05|NPF-06|NPF-07|NPF-03|PJD-02|
+|-|-|-|-|-|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+

@@ -8,7 +8,7 @@ The distribution of scores for evidence nodes across the graph.
 
 |bin|count|
 |-|-|
-|0.0-0.1  |163|
+|0.0-0.1  |175|
 |0.1-0.2  |0|
 |0.2-0.3  |0|
 |0.3-0.4  |0|
@@ -46,7 +46,7 @@ The distribution of scores for all nodes across the graph.
 
 |bin|count|
 |-|-|
-|0.0-0.1  |221|
+|0.0-0.1  |232|
 |0.1-0.2  |0|
 |0.2-0.3  |0|
 |0.3-0.4  |0|
@@ -72,7 +72,7 @@ The distribution of scores for all nodes across the graph.
 |0.6-0.7  |1|
 |0.7-0.8  |2|
 |0.8-0.9  |0|
-|0.9-1.0  |119|
+|0.9-1.0  |120|
 ## Erikhu1 SME Score Distribution
 
 ![No Image](figs/Erikhu1_hist.svg)
@@ -80,36 +80,19 @@ The distribution of scores for all nodes across the graph.
 
 |bin|count|
 |-|-|
-|0.0-0.1  |0|
+|0.0-0.1  |1|
 |0.1-0.2  |0|
 |0.2-0.3  |0|
-|0.3-0.4  |0|
+|0.3-0.4  |1|
 |0.4-0.5  |0|
-|0.5-0.6  |0|
+|0.5-0.6  |1|
 |0.6-0.7  |0|
-|0.7-0.8  |0|
-|0.8-0.9  |1|
-|0.9-1.0  |118|
+|0.7-0.8  |1|
+|0.8-0.9  |2|
+|0.9-1.0  |125|
 ## Mishu-Dev SME Score Distribution
 
 ![No Image](figs/mishu-dev_hist.svg)
-
-
-|bin|count|
-|-|-|
-|0.0-0.1  |0|
-|0.1-0.2  |0|
-|0.2-0.3  |0|
-|0.3-0.4  |0|
-|0.4-0.5  |0|
-|0.5-0.6  |0|
-|0.6-0.7  |0|
-|0.7-0.8  |0|
-|0.8-0.9  |0|
-|0.9-1.0  |1|
-## Jonsa-Kirchhoff SME Score Distribution
-
-![No Image](figs/Jonsa-Kirchhoff_hist.svg)
 
 
 |bin|count|
@@ -129,10 +112,10 @@ The distribution of scores for all nodes across the graph.
 
 | Category | Count |
 |----------|-------|
-|statements|225|
+|statements|252|
 |reviewed statements|0|
-|unreviewed statements|225|
+|unreviewed statements|252|
 |orphaned statements|0|
-|statements with evidence|45|
-|evidence|163|
+|statements with evidence|44|
+|evidence|175|
 |expectations|1|

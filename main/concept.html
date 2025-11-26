@@ -439,18 +439,20 @@
 <p>For the concept of the Trustable Software Framework (TSF), please refer to the <a class="reference external" href="https://eclipse-score.github.io/process_description/main/trustable/index.html">Eclipse Process Description</a>.</p>
 <section id="scoring">
 <h2>Scoring<a class="headerlink" href="#scoring" title="Link to this heading">#</a></h2>
-<p>The trustability scores in the TSF are calculated recursively using the underlying graph structure.
-In particular, scores are provided, either manually by subject-matter-experts (SME) or automatically by automatic evidence, for the leafs of the graph only.
-Then, the scores are calculated recursively using the following scheme:</p>
+<p>The Trustable scores in the TSF are calculated recursively using the underlying graph structure.</p>
+<p>Depending on whether the node is a leaf node (i.e., has no supporting statements) or a parent node (i.e., has supporting statements), the calculation of the trustability score differs.</p>
+<p><strong>Leaf nodes</strong>:
+For the calculation of the scores of leaf nodes, several attributes come into play.
+In particular, the existence or absence of a validator plays a crucial role in how the trustability scores of leaf nodes are determined.
+The following table displays the possible scenarios for calculating the scores of leaf nodes, depending on the existence or values of its attributes:</p>
 <div class="pst-scrollable-table-container"><table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p>normative</p></th>
-<th class="head"><p>review-status</p></th>
-<th class="head"><p>SME</p></th>
-<th class="head"><p>evidence</p></th>
-<th class="head"><p>reference</p></th>
-<th class="head"><p>unsuspect children</p></th>
-<th class="head"><p>score</p></th>
+<tr class="row-odd"><th class="head"><p><a class="reference external" href="https://codethinklabs.gitlab.io/trustable/trustable/reference/trudag/dotstop/core/item.html#trudag.dotstop.core.item.BaseItem.normative">normative</a></p></th>
+<th class="head"><p><a class="reference external" href="https://codethinklabs.gitlab.io/trustable/trustable/reference/trudag/dotstop/core/graph/trustable_graph.html#trudag.dotstop.core.graph.trustable_graph.TrustableGraph.set_link_status">review-status</a></p></th>
+<th class="head"><p><a class="reference external" href="https://codethinklabs.gitlab.io/trustable/trustable/reference/trudag/dotstop/core/item.html#trudag.dotstop.core.item.BaseItem.sme_scores">SME-score</a></p></th>
+<th class="head"><p><a class="reference external" href="https://codethinklabs.gitlab.io/trustable/trustable/trudag/usage.html#providing-evidence">validator</a></p></th>
+<th class="head"><p><a class="reference external" href="https://codethinklabs.gitlab.io/trustable/trustable/reference/trudag/dotstop/core/item.html#trudag.dotstop.core.item.BaseItem.references">reference</a></p></th>
+<th class="head"><p><a class="reference external" href="https://codethinklabs.gitlab.io/trustable/trustable/trudag/scoring-roadmap.html">Trustable-score</a></p></th>
 </tr>
 </thead>
 <tbody>
@@ -459,53 +461,96 @@ Then, the scores are calculated recursively using the following scheme:</p>
 <td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
 <td><p>no score</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">unreviewed</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">yes</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">no</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">no</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">reviewed</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">provided</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">excluded</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">excluded</span></code></p></td>
 <td><p>0.0</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">yes</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">no</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">yes</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">no</span></code></p></td>
-<td><p>SME</p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">reviewed</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">provided</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">excluded</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">included</span></code></p></td>
+<td><p>SME-score x 1</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">yes</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">yes</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">reviewed</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">provided</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">included</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">no</span></code></p></td>
-<td><p>SME × evidence</p></td>
-</tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
-<td><p><code class="docutils literal notranslate"><span class="pre">yes</span></code></p></td>
-<td><p>mean of unsuspect
-children-scores</p></td>
+<td><p>SME-score × validator-score</p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<p><strong>Parent nodes</strong>:
+The score for any parent node is then recursively calculated as the normalized weighted sum of the scores of its supporting statements.
+Note that currently, TSF only supports equal weighting.
+In other words, the score of a parent node is the mean of the scores of its child nodes.
+This behaviour is however likely to change in the future, to support different weighting schemes.
+Any supporting statements with a suspect link are excluded from the calculation of the scores of parent nodes.
+The following table displays the possible scenarios for calculating the scores of parent nodes:</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><a class="reference external" href="https://codethinklabs.gitlab.io/trustable/trustable/reference/trudag/dotstop/core/item.html#trudag.dotstop.core.item.BaseItem.normative">normative</a></p></th>
+<th class="head"><p><a class="reference external" href="https://codethinklabs.gitlab.io/trustable/trustable/reference/trudag/dotstop/core/graph/trustable_graph.html#trudag.dotstop.core.graph.trustable_graph.TrustableGraph.set_link_status">review-status</a></p></th>
+<th class="head"><p><a class="reference external" href="https://codethinklabs.gitlab.io/trustable/trustable/reference/trudag/dotstop/core/graph/trustable_graph.html#trudag.dotstop.core.graph.trustable_graph.LinkStatus">link-status</a></p></th>
+<th class="head"><p><a class="reference external" href="https://codethinklabs.gitlab.io/trustable/trustable/trudag/scoring-roadmap.html">Trustable-score</a></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">false</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p>no score</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">unreviewed</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">*</span></code></p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">reviewed</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">suspect</span></code></p></td>
+<td><p>mean of supporting statements with no suspect links</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">true</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">reviewed</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">linked</span></code></p></td>
+<td><p>mean of all supporting statements</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="terminology">
+<h3>Terminology<a class="headerlink" href="#terminology" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>normative</strong>: Indicates whether the statement is normative (<cite>true</cite>) or not (<cite>false</cite>). If a statement is not normative, it does not contribute to the score calculation, and shall not be reviewed. This attribute is not to be set or changed by the SME reviewer.</p></li>
+<li><p><strong>review-status</strong>: Indicates the current review status of the statement. A <cite>false</cite> means the statement needs to be reviewed or re-reviewed, and that the score is set to <cite>0.0</cite>. A <cite>true</cite> means the statement has been reviewed by a subject matter expert (SME).</p></li>
+<li><p><strong>SME-score</strong>: A score reflecting the SME reviewer’s confidence in the truth of the statement as a probability.</p></li>
+<li><p><strong>validator</strong>: Automatic scripts that validate the correctness of a statement. Note that in the markdown files, validators are referred to as “evidence”.</p></li>
+<li><p><strong>reference</strong>: Supporting material for the SME reviewer to evaluate the statement.</p></li>
+<li><p><strong>link-status</strong>: Indicates whether the statement has any suspect links. If suspect links exist, the score of a parent item is calculated based on child items without suspect links only.</p></li>
+<li><p><strong>Trustable-score</strong>: Shows how the TSF score is calculated.</p></li>
+</ul>
+</section>
+<section id="example-scoring">
+<h3>Example scoring<a class="headerlink" href="#example-scoring" title="Link to this heading">#</a></h3>
+<p>This diagram illustrates an example of the scoring process in the TSF and how the score propagates upwards in the graph.
+Please note that the numbers shown in this graph are <strong>example values only</strong> and do not represent real assessments.</p>
+<img alt="Graph illustrating the scoring process in the Trustable Software Framework" class="align-center" src="_images/score_calculation_example.svg" />
+</section>
 </section>
 </section>
 
@@ -556,7 +601,11 @@ children-scores</p></td>
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scoring">Scoring</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#scoring">Scoring</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminology">Terminology</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#example-scoring">Example scoring</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

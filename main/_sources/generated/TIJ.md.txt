@@ -1,17 +1,20 @@
 
-### TIJ-01 
-
-The parsing service throws an exception on ill-formed literal names.
+### TIJ-01 | Reviewed: ⨯ | Score: 0.0 
+The parsing service provided by the nlohmann/json library throws an exception on ill-formed literal names.
 
 
 **Supported Requests:**
 
-- [JLS-24](JLS.md#jls-24)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-24](JLS.md#jls-24)  | The nlohmann/json library recognizes malformed JSON and returns an exception. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [TIJ-01.1](TIJ.md#tij-01.1)
-- [TIJ-01.2](TIJ.md#tij-01.2)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-01.1](TIJ.md#tij-01.1)  | The service provided by the nlohmann/json library throws an exception on capitalised literal names. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-01.2](TIJ.md#tij-01.2)  | The service provided by the nlohmann/json library throws an exception on any other than the three literal names true, false, null. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -27,19 +30,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-01.svg)
+
+|date-time|TIJ-01|TIJ-01.1|TIJ-01.2|
+|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### TIJ-01.1 
-
-The service throws an exception on capitalised literal names.
+### TIJ-01.1 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on capitalised literal names.
 
 
 **Supported Requests:**
 
-- [TIJ-01](TIJ.md#tij-01)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-01](TIJ.md#tij-01)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed literal names. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -140,19 +150,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-01.1.svg)
+
+|date-time|TIJ-01.1|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-01.2 
-
-The service throws an exception on any other than the three literal names true, false, null.
+### TIJ-01.2 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on any other than the three literal names true, false, null.
 
 
 **Supported Requests:**
 
-- [TIJ-01](TIJ.md#tij-01)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-01](TIJ.md#tij-01)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed literal names. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -1011,27 +1028,36 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-01.2.svg)
+
+|date-time|TIJ-01.2|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-02 
-
-The parsing service throws an exception on ill-formed numbers.
+### TIJ-02 | Reviewed: ⨯ | Score: 0.0 
+The parsing service provided by the nlohmann/json library throws an exception on ill-formed numbers.
 
 
 **Supported Requests:**
 
-- [JLS-24](JLS.md#jls-24)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-24](JLS.md#jls-24)  | The nlohmann/json library recognizes malformed JSON and returns an exception. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [TIJ-02.1](TIJ.md#tij-02.1)
-- [TIJ-02.2](TIJ.md#tij-02.2)
-- [TIJ-02.3](TIJ.md#tij-02.3)
-- [TIJ-02.4](TIJ.md#tij-02.4)
-- [TIJ-02.5](TIJ.md#tij-02.5)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-02.1](TIJ.md#tij-02.1)  | The service provided by the nlohmann/json library throws an exception on leading plus. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-02.2](TIJ.md#tij-02.2)  | The service provided by the nlohmann/json library throws an exception on leading zeroes. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-02.3](TIJ.md#tij-02.3)  | The service provided by the nlohmann/json library throws an exception on NaN and infinity. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-02.4](TIJ.md#tij-02.4)  | The service provided by the nlohmann/json library throws an exception on U+0415 and U+0436 instead of U+0045 or U+0065. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-02.5](TIJ.md#tij-02.5)  | The service provided by the nlohmann/json library throws an exception on invalid number syntax. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -1047,19 +1073,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-02.svg)
+
+|date-time|TIJ-02|TIJ-02.1|TIJ-02.2|TIJ-02.3|TIJ-02.4|TIJ-02.5|
+|-|-|-|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### TIJ-02.1 
-
-The service throws an exception on leading plus.
+### TIJ-02.1 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on leading plus.
 
 
 **Supported Requests:**
 
-- [TIJ-02](TIJ.md#tij-02)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-02](TIJ.md#tij-02)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed numbers. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -1128,19 +1161,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-02.1.svg)
+
+|date-time|TIJ-02.1|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-02.2 
-
-The service throws an exception on leading zeroes.
+### TIJ-02.2 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on leading zeroes.
 
 
 **Supported Requests:**
 
-- [TIJ-02](TIJ.md#tij-02)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-02](TIJ.md#tij-02)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed numbers. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -1283,19 +1323,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-02.2.svg)
+
+|date-time|TIJ-02.2|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-02.3 
-
-The service throws an exception on NaN, infinity.
+### TIJ-02.3 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on NaN and infinity.
 
 
 **Supported Requests:**
 
-- [TIJ-02](TIJ.md#tij-02)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-02](TIJ.md#tij-02)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed numbers. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -1691,19 +1738,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-02.3.svg)
+
+|date-time|TIJ-02.3|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-02.4 
-
-The service throws an exception on U+0415 and U+0436 instead of U+0045 or U+0065.
+### TIJ-02.4 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on U+0415 and U+0436 instead of U+0045 or U+0065.
 
 
 **Supported Requests:**
 
-- [TIJ-02](TIJ.md#tij-02)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-02](TIJ.md#tij-02)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed numbers. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -1756,19 +1810,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-02.4.svg)
+
+|date-time|TIJ-02.4|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-02.5 
-
-The service throws an exception on invalid number syntax.
+### TIJ-02.5 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on invalid number syntax.
 
 
 **Supported Requests:**
 
-- [TIJ-02](TIJ.md#tij-02)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-02](TIJ.md#tij-02)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed numbers. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -2518,27 +2579,36 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-02.5.svg)
+
+|date-time|TIJ-02.5|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-03 
-
-The parsing service throws an exception on ill-formed strings.
+### TIJ-03 | Reviewed: ⨯ | Score: 0.0 
+The parsing service provided by the nlohmann/json library throws an exception on ill-formed strings.
 
 
 **Supported Requests:**
 
-- [JLS-24](JLS.md#jls-24)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-24](JLS.md#jls-24)  | The nlohmann/json library recognizes malformed JSON and returns an exception. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [TIJ-03.1](TIJ.md#tij-03.1)
-- [TIJ-03.2](TIJ.md#tij-03.2)
-- [TIJ-03.3](TIJ.md#tij-03.3)
-- [TIJ-03.4](TIJ.md#tij-03.4)
-- [TIJ-03.5](TIJ.md#tij-03.5)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-03.1](TIJ.md#tij-03.1)  | The service provided by the nlohmann/json library throws an exception on unescaped control characters. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-03.2](TIJ.md#tij-03.2)  | The service provided by the nlohmann/json library throws an exception on unpaired utf-16 surrogates. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-03.3](TIJ.md#tij-03.3)  | The service provided by the nlohmann/json library throws an exception on improperly bounded strings. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-03.4](TIJ.md#tij-03.4)  | The service provided by the nlohmann/json library throws an exception on escaped invalid characters. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-03.5](TIJ.md#tij-03.5)  | The service provided by the nlohmann/json library throws an exception on incorrect surrogate pairs. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -2554,19 +2624,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-03.svg)
+
+|date-time|TIJ-03|TIJ-03.1|TIJ-03.2|TIJ-03.3|TIJ-03.4|TIJ-03.5|
+|-|-|-|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### TIJ-03.1 
-
-The service throws an exception on unescaped control characters.
+### TIJ-03.1 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on unescaped control characters.
 
 
 **Supported Requests:**
 
-- [TIJ-03](TIJ.md#tij-03)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-03](TIJ.md#tij-03)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed strings. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -2652,19 +2729,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-03.1.svg)
+
+|date-time|TIJ-03.1|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-03.2 
-
-The service throws an exception on unpaired utf-16 surrogates.
+### TIJ-03.2 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on unpaired utf-16 surrogates.
 
 
 **Supported Requests:**
 
-- [TIJ-03](TIJ.md#tij-03)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-03](TIJ.md#tij-03)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed strings. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -2720,19 +2804,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-03.2.svg)
+
+|date-time|TIJ-03.2|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-03.3 
-
-The service throws an exception on improperly bounded strings.
+### TIJ-03.3 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on improperly bounded strings.
 
 
 **Supported Requests:**
 
-- [TIJ-03](TIJ.md#tij-03)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-03](TIJ.md#tij-03)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed strings. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3112,19 +3203,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-03.3.svg)
+
+|date-time|TIJ-03.3|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-03.4 
-
-The service throws an exception on escaped invalid characters.
+### TIJ-03.4 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on escaped invalid characters.
 
 
 **Supported Requests:**
 
-- [TIJ-03](TIJ.md#tij-03)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-03](TIJ.md#tij-03)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed strings. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3371,19 +3469,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-03.4.svg)
+
+|date-time|TIJ-03.4|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-03.5 
-
-The service throws an exception on incorrect surrogate pairs.
+### TIJ-03.5 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on incorrect surrogate pairs.
 
 
 **Supported Requests:**
 
-- [TIJ-03](TIJ.md#tij-03)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-03](TIJ.md#tij-03)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed strings. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3451,25 +3556,34 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-03.5.svg)
+
+|date-time|TIJ-03.5|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-04 
-
-The parsing service throws an exception on ill-formed arrays.
+### TIJ-04 | Reviewed: ⨯ | Score: 0.0 
+The parsing service provided by the nlohmann/json library throws an exception on ill-formed arrays.
 
 
 **Supported Requests:**
 
-- [JLS-24](JLS.md#jls-24)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-24](JLS.md#jls-24)  | The nlohmann/json library recognizes malformed JSON and returns an exception. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [TIJ-04.1](TIJ.md#tij-04.1)
-- [TIJ-04.2](TIJ.md#tij-04.2)
-- [TIJ-04.3](TIJ.md#tij-04.3)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-04.1](TIJ.md#tij-04.1)  | The service provided by the nlohmann/json library throws an exception on improperly bounded arrays. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-04.2](TIJ.md#tij-04.2)  | The service provided by the nlohmann/json library throws an exception on improper values within a properly bounded array. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-04.3](TIJ.md#tij-04.3)  | The service provided by the nlohmann/json library throws an exception on improper value separators. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -3485,19 +3599,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-04.svg)
+
+|date-time|TIJ-04|TIJ-04.1|TIJ-04.2|TIJ-04.3|
+|-|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### TIJ-04.1 
-
-The service throws an exception on improperly bounded arrays.
+### TIJ-04.1 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on improperly bounded arrays.
 
 
 **Supported Requests:**
 
-- [TIJ-04](TIJ.md#tij-04)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-04](TIJ.md#tij-04)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed arrays. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3737,19 +3858,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-04.1.svg)
+
+|date-time|TIJ-04.1|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-04.2 
-
-The service throws an exception on improper values within a properly bounded array.
+### TIJ-04.2 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on improper values within a properly bounded array.
 
 
 **Supported Requests:**
 
-- [TIJ-04](TIJ.md#tij-04)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-04](TIJ.md#tij-04)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed arrays. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3886,19 +4014,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-04.2.svg)
+
+|date-time|TIJ-04.2|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-04.3 
-
-The service throws an exception on improper value separators.
+### TIJ-04.3 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on improper value separators.
 
 
 **Supported Requests:**
 
-- [TIJ-04](TIJ.md#tij-04)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-04](TIJ.md#tij-04)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed arrays. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -3958,27 +4093,36 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-04.3.svg)
+
+|date-time|TIJ-04.3|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-05 
-
-The parsing service throws an exception on ill-formed objects.
+### TIJ-05 | Reviewed: ⨯ | Score: 0.0 
+The parsing service provided by the nlohmann/json library throws an exception on ill-formed objects.
 
 
 **Supported Requests:**
 
-- [JLS-24](JLS.md#jls-24)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-24](JLS.md#jls-24)  | The nlohmann/json library recognizes malformed JSON and returns an exception. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [TIJ-05.1](TIJ.md#tij-05.1)
-- [TIJ-05.2](TIJ.md#tij-05.2)
-- [TIJ-05.3](TIJ.md#tij-05.3)
-- [TIJ-05.4](TIJ.md#tij-05.4)
-- [TIJ-05.5](TIJ.md#tij-05.5)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-05.1](TIJ.md#tij-05.1)  | The service provided by the nlohmann/json library throws an exception on improperly bounded objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-05.2](TIJ.md#tij-05.2)  | The service provided by the nlohmann/json library throws an exception if a non-string is used as name of any member. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-05.3](TIJ.md#tij-05.3)  | The service provided by the nlohmann/json library throws an exception if an improper string is used as name of any member. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-05.4](TIJ.md#tij-05.4)  | The service provided by the nlohmann/json library throws an exception if any member has an improper value. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-05.5](TIJ.md#tij-05.5)  | The service provided by the nlohmann/json library throws an exception on improper member separators. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -3994,19 +4138,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-05.svg)
+
+|date-time|TIJ-05|TIJ-05.1|TIJ-05.2|TIJ-05.3|TIJ-05.4|TIJ-05.5|
+|-|-|-|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### TIJ-05.1 
-
-The service throws an exception on improperly bounded objects.
+### TIJ-05.1 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on improperly bounded objects.
 
 
 **Supported Requests:**
 
-- [TIJ-05](TIJ.md#tij-05)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-05](TIJ.md#tij-05)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -4110,19 +4261,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-05.1.svg)
+
+|date-time|TIJ-05.1|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-05.2 
-
-The service throws an exception if a non-string is used as name of any member.
+### TIJ-05.2 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception if a non-string is used as name of any member.
 
 
 **Supported Requests:**
 
-- [TIJ-05](TIJ.md#tij-05)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-05](TIJ.md#tij-05)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -4255,19 +4413,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-05.2.svg)
+
+|date-time|TIJ-05.2|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-05.3 
-
-The service throws an exception if an improper string is used as name of any member.
+### TIJ-05.3 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception if an improper string is used as name of any member.
 
 
 **Supported Requests:**
 
-- [TIJ-05](TIJ.md#tij-05)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-05](TIJ.md#tij-05)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -4434,19 +4599,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-05.3.svg)
+
+|date-time|TIJ-05.3|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-05.4 
-
-The service throws an exception if any member has an improper value.
+### TIJ-05.4 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception if any member has an improper value.
 
 
 **Supported Requests:**
 
-- [TIJ-05](TIJ.md#tij-05)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-05](TIJ.md#tij-05)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -4506,19 +4678,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-05.4.svg)
+
+|date-time|TIJ-05.4|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-05.5 
-
-The service throws an exception on improper member separators.
+### TIJ-05.5 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library throws an exception on improper member separators.
 
 
 **Supported Requests:**
 
-- [TIJ-05](TIJ.md#tij-05)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TIJ-05](TIJ.md#tij-05)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -4692,26 +4871,35 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-05.5.svg)
+
+|date-time|TIJ-05.5|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### TIJ-06 
-
-The service recognises ill-formed byte-order marks and throws an exception.
+### TIJ-06 | Reviewed: ⨯ | Score: 0.0 
+The service provided by the nlohmann/json library recognises ill-formed byte-order marks and throws an exception.
 
 
 **Supported Requests:**
 
-- [JLS-24](JLS.md#jls-24)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [JLS-24](JLS.md#jls-24)  | The nlohmann/json library recognizes malformed JSON and returns an exception. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [NPF-01.2](NPF.md#npf-01.2)
-- [NPF-01.3](NPF.md#npf-01.3)
-- [NPF-01.4](NPF.md#npf-01.4)
-- [NPF-01.5](NPF.md#npf-01.5)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [NPF-01.2](NPF.md#npf-01.2)  | The service provided by the nlohmann/json library does not parse multiple UTF-8 byte order marks at the beginning of the input and throws an exception. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-01.3](NPF.md#npf-01.3)  | The service provided by the nlohmann/json library does not parse UTF-8 byte order marks outside of a string and the first three characters of the input, and throws an exception. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-01.4](NPF.md#npf-01.4)  | The service provided by the nlohmann/json library does not parse UTF-16 and UTF-32 byte order mark instead of an UTF-8 byte order mark, and throws an exception. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [NPF-01.5](NPF.md#npf-01.5)  | The service provided by the nlohmann/json library does not parse partial and perturbed UTF-8 byte order marks within the first three characters of the input and throws an exception. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -4727,4 +4915,10 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/TIJ-06.svg)
+
+|date-time|TIJ-06|NPF-01.2|NPF-01.3|NPF-01.4|NPF-01.5|
+|-|-|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |
+

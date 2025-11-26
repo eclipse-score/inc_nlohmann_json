@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>JLS-01 &#8212; S-CORE NLOHMANN JSON LIBRARY FORK  documentation</title>
+    <title>JLS-01 | Reviewed: ⨯ | Score: 0.0 &#8212; S-CORE NLOHMANN JSON LIBRARY FORK  documentation</title>
   
   
   
@@ -408,7 +408,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">JLS-01</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">JLS-01 | Reviewed: ⨯ | Score: 0.0</span></li>
   </ul>
 </nav>
 </div>
@@ -425,189 +425,78 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="jls-01">
-<h1>JLS-01<a class="headerlink" href="#jls-01" title="Link to this heading">#</a></h1>
-<p>The CI pipeline of the main branch executes on each pull request (opened, reopened, synchronized) the integration test suite, and failures in these runs are investigated by contributors.</p>
+  <section id="jls-01-reviewed-score-0-0">
+<h1>JLS-01 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-01-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The CI pipeline in nlohmann/json executes the unit and integration test suites on each pull request (opened, reopened, synchronized).</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-validation"><span class="std std-ref">TA-VALIDATION</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-validation"><span class="std std-ref">TA-VALIDATION</span></a></p></td>
+<td><p>All specified tests are executed repeatedly, under defined conditions in controlled environments, according to specified objectives. (To revisit)</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">.github/workflows/parent-workflow.yml</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/nlohmann/json/blob/develop/.github/workflows/ubuntu.yml#L9</span></code></p></li>
 </ul>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Parent Workflow</span>
-
-<span class="nt">on</span><span class="p">:</span><span class="w"> </span>
-<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">push</span><span class="p">:</span><span class="w"> </span>
-<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
-<span class="w">  </span><span class="nt">schedule</span><span class="p">:</span>
-<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">cron</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;0</span><span class="nv"> </span><span class="s">0</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*</span><span class="nv"> </span><span class="s">*&#39;</span><span class="w"> </span><span class="c1"># Runs daily at midnight UTC</span>
-
-<span class="nt">permissions</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
-
-<span class="nt">jobs</span><span class="p">:</span>
-<span class="w">  </span><span class="nt">labeler</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">permissions</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
-<span class="w">      </span><span class="nt">pages</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<span class="w">      </span><span class="nt">pull-requests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Labeler Workflow</span>
-<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/workflows/labeler.yml</span>
-<span class="w">    </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">artifact_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;labeler-${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
-
-<span class="w">  </span><span class="nt">check_amalgamation</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Amalgamation Workflow</span>
-<span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.event_name == &#39;pull_request&#39; }}</span><span class="w"> </span><span class="c1"># only run check_amalgamation for PRs</span>
-<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/workflows/check_amalgamation.yml</span>
-<span class="w">    </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">artifact_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;check_amalgamation-${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<span class="w">      </span>
-<span class="w">  </span><span class="nt">test_trudag_extensions</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Test Trudag Extensions Workflow</span>
-<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/workflows/test_trudag_extensions.yml</span>
-<span class="w">    </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">artifact_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;test_trudag_extensions-${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
-
-<span class="w">  </span><span class="nt">codeql</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">permissions</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
-<span class="w">      </span><span class="nt">security-events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Codeql analysis Workflow</span>
-<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/workflows/codeql-analysis.yml</span>
-<span class="w">    </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">artifact_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;codeql-${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
-
-<span class="w">  </span><span class="nt">ubuntu</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Ubuntu Workflow</span>
-<span class="w">    </span><span class="nt">permissions</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">codeql</span><span class="p p-Indicator">]</span><span class="w"> </span><span class="c1"># Error if CodeQL and Ubuntu triggered at the same time due to conflicting priorities</span>
-<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/workflows/ubuntu.yml</span>
-<span class="w">    </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">artifact_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ubuntu-${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
-
-<span class="w">  </span><span class="nt">dependency_review</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run dependency_review Workflow</span>
-<span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.event_name == &#39;pull_request&#39; }}</span><span class="w">  </span><span class="c1"># only run dependency_review for PRs</span>
-<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/workflows/dependency-review.yml</span>
-<span class="w">    </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">artifact_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;dependency_review-${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
-
-<span class="w">  </span><span class="nt">collect_artifacts_pr</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Collect</span><span class="nv"> </span><span class="s">Results</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">Deploy</span><span class="nv"> </span><span class="s">(PR)&quot;</span>
-<span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.event_name == &#39;pull_request&#39;</span>
-<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">check_amalgamation</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dependency_review</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<span class="w">    </span><span class="nt">strategy</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">matrix</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">check_amalgamation</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dependency_review</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span>
-
-<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout code</span>
-<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683</span><span class="w"> </span><span class="c1"># v4.2.2</span>
-
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check child workflow results</span><span class="w"> </span>
-<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">          </span><span class="no">echo &quot;=== Checking Child Workflow Results ===&quot;</span>
-<span class="w">          </span><span class="no">result=&quot;${{ needs[matrix.target].result }}&quot;</span>
-<span class="w">          </span><span class="no">echo &quot;${{ matrix.target }} workflow result: $result&quot;</span>
-
-<span class="w">          </span><span class="no">if [[ &quot;$result&quot; != &quot;success&quot; ]]; then</span>
-<span class="w">            </span><span class="no">echo &quot;❌ ${{ matrix.target }} workflow failed! Exiting...&quot;</span>
-<span class="w">            </span><span class="no">exit 1</span>
-<span class="w">          </span><span class="no">fi</span>
-<span class="w">          </span><span class="no">echo &quot;✅ Child workflows completed successfully!&quot; </span>
-<span class="w">        </span><span class="nt">env</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">current_workflow</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ matrix.target }}</span>
-
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Download artifacts</span>
-<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16</span><span class="w"> </span><span class="c1"># v4.1.8</span>
-<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${{</span><span class="nv"> </span><span class="s">matrix.target</span><span class="nv"> </span><span class="s">}}-${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">artifacts/</span>
-
-<span class="w">  </span><span class="nt">collect_artifacts_non_pr</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Collect</span><span class="nv"> </span><span class="s">Results</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">Deploy</span><span class="nv"> </span><span class="s">(Non-PR)&quot;</span>
-<span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.event_name != &#39;pull_request&#39;</span>
-<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># no check_amalgamation or dependency_review if non PR</span>
-<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
-<span class="w">    </span><span class="nt">strategy</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">matrix</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span>
-
-<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout code</span>
-<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683</span><span class="w"> </span><span class="c1"># v4.2.2</span>
-
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Check child workflow results</span><span class="w"> </span>
-<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
-<span class="w">          </span><span class="no">echo &quot;=== Checking Child Workflow Results ===&quot;</span>
-<span class="w">          </span><span class="no">result=&quot;${{ needs[matrix.target].result }}&quot;</span>
-<span class="w">          </span><span class="no">echo &quot;${{ matrix.target }} workflow result: $result&quot;</span>
-
-<span class="w">          </span><span class="no">if [[ &quot;$result&quot; != &quot;success&quot; ]]; then</span>
-<span class="w">            </span><span class="no">echo &quot;❌ ${{ matrix.target }} workflow failed! Exiting...&quot;</span>
-<span class="w">            </span><span class="no">exit 1</span>
-<span class="w">          </span><span class="no">fi</span>
-<span class="w">          </span><span class="no">echo &quot;✅ Child workflows completed successfully!&quot; </span>
-<span class="w">        </span><span class="nt">env</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">current_workflow</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ matrix.target }}</span>
-
-<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Download artifacts</span>
-<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16</span><span class="w"> </span><span class="c1"># v4.1.8</span>
-<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">          </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;${{</span><span class="nv"> </span><span class="s">matrix.target</span><span class="nv"> </span><span class="s">}}-${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
-<span class="w">          </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">artifacts/</span>
-
-<span class="w">  </span><span class="nt">test_publish_documentation</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">permissions</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<span class="w">      </span><span class="nt">pages</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<span class="w">      </span><span class="nt">pull-requests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<span class="w">      </span><span class="nt">id-token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<span class="w">      </span><span class="nt">security-events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Test publish_documentation Workflow</span>
-<span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.event_name == &#39;pull_request&#39;</span><span class="w">            </span><span class="c1"># Whenever on Pull-request, test publication</span>
-<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">collect_artifacts_pr</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/workflows/test_publication.yml</span>
-<span class="w">    </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">artifact_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ubuntu-${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
-
-<span class="w">  </span><span class="nt">publish_documentation</span><span class="p">:</span>
-<span class="w">    </span><span class="nt">permissions</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<span class="w">      </span><span class="nt">pages</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<span class="w">      </span><span class="nt">pull-requests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<span class="w">      </span><span class="nt">id-token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">write</span>
-<span class="w">      </span><span class="nt">security-events</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
-<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run publish_documentation Workflow</span>
-<span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.event_name == &#39;push&#39;</span><span class="w">            </span><span class="c1"># Publish documentation should only run on push to main</span>
-<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">collect_artifacts_non_pr</span><span class="p p-Indicator">]</span>
-<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/workflows/publish_documentation.yml</span>
-<span class="w">    </span><span class="nt">with</span><span class="p">:</span>
-<span class="w">      </span><span class="nt">artifact_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;ubuntu-${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
-</pre></div>
-</div>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/nlohmann/json/blob/develop/.github/workflows/ubuntu.yml#L9</span></code>
+- The trigger condition for the CI workflow that executes the test suites.</p>
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-01.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-01</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-02">
-<h1>JLS-02<a class="headerlink" href="#jls-02" title="Link to this heading">#</a></h1>
+<section id="jls-02-reviewed-score-0-0">
+<h1>JLS-02 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-02-reviewed-score-0-0" title="Link to this heading">#</a></h1>
 <p>Fuzz testing is used in the original nlohmann/json repository (https://github.com/nlohmann/json) to uncover edge cases and failure modes throughout development. (https://github.com/nlohmann/json/blob/develop/tests/fuzzing.md)</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-misbehaviours"><span class="std std-ref">TA-MISBEHAVIOURS</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-misbehaviours"><span class="std std-ref">TA-MISBEHAVIOURS</span></a></p></td>
+<td><p>Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -626,19 +515,54 @@
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/.github/workflows/cifuzz.yml</span></code>
 - Configuration file for Fuzz-Testing pipeline in the original nlohmann/json repository</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson</span></code>
+- OpenSSF Scorecard Report for nlohmann/json, where score for ‘Fuzzing’ supports this statement.</p>
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-02.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-02</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-03">
-<h1>JLS-03<a class="headerlink" href="#jls-03" title="Link to this heading">#</a></h1>
-<p>Automated tests are reviewed by a Subject Matter Expert to verify they test the properties they claim to.</p>
+<section id="jls-03-reviewed-score-0-0">
+<h1>JLS-03 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-03-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>Automated tests within the TSF documentation are reviewed by a Subject Matter Expert to verify they test the properties they claim to.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-behaviours"><span class="std std-ref">TA-BEHAVIOURS</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-behaviours"><span class="std std-ref">TA-BEHAVIOURS</span></a></p></td>
+<td><p>Expected or required behaviours for the nlohmann/json library are identified, specified, verified and validated based on analysis.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -646,17 +570,51 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-03.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-03</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-04">
-<h1>JLS-04<a class="headerlink" href="#jls-04" title="Link to this heading">#</a></h1>
-<p>External dependencies are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved.</p>
+<section id="jls-04-reviewed-score-0-0">
+<h1>JLS-04 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-04-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-fixes"><span class="std std-ref">TA-FIXES</span></a></p></li>
-<li><p><a class="reference internal" href="TA.html#ta-inputs"><span class="std std-ref">TA-INPUTS</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-fixes"><span class="std std-ref">TA-FIXES</span></a></p></td>
+<td><p>In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="TA.html#ta-inputs"><span class="std std-ref">TA-INPUTS</span></a></p></td>
+<td><p>All inputs to the nlohmann/json library are assessed, to identify potential risks and issues.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -718,16 +676,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-04.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-04</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-05">
-<h1>JLS-05<a class="headerlink" href="#jls-05" title="Link to this heading">#</a></h1>
-<p>The OSS nlohmann/json is widely used, actively maintained and uses github issues to track bugs and misbehaviours.</p>
+<section id="jls-05-reviewed-score-0-0">
+<h1>JLS-05 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-05-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The nlohmann/json library is widely used and actively maintained; bugs and misbehaviours are tracked publicly and transparently.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-fixes"><span class="std std-ref">TA-FIXES</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-fixes"><span class="std std-ref">TA-FIXES</span></a></p></td>
+<td><p>In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -765,40 +753,157 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://json.nlohmann.me/home/customers/</span></code></p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">https://json.nlohmann.me/home/customers/</span></code>
-- list of large projects using nlohmann/json</p>
+- presents a list of a subset of all customers who are using the nlohmann/json library</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/nlohmann/json/releases/tag/v3.12.0</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/nlohmann/json/releases/tag/v3.12.0</span></code>
+- release notes for v3.12.0, listing bugs, CVEs and warnings which were either fixed or mitigated since last release</p>
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-05.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-05</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-06">
-<h1>JLS-06<a class="headerlink" href="#jls-06" title="Link to this heading">#</a></h1>
-<p>Changes to the code (main branch) are applied only after code review and passing of all pipelines.</p>
+<section id="jls-06-reviewed-score-0-0">
+<h1>JLS-06 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-06-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>Pull requests in the nlohmann/json repository are merged only after code review.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-updates"><span class="std std-ref">TA-UPDATES</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-updates"><span class="std std-ref">TA-UPDATES</span></a></p></td>
+<td><p>nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">failures</span> <span class="pre">on</span> <span class="pre">branch</span> <span class="pre">master</span> <span class="pre">of</span> <span class="pre">nlohmann/json</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson</span></code></p></li>
 </ul>
-<p>0 workflows failed on branch master of nlohmann/json</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson</span></code>
+- OpenSSF Scorecard Report for nlohmann/json, where score for ‘Code-Review’ reflects this statement.</p>
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-06.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-06</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-07">
-<h1>JLS-07<a class="headerlink" href="#jls-07" title="Link to this heading">#</a></h1>
-<p>Main branch is protected, i.e. no direct commits are possible.</p>
+<section id="jls-07-reviewed-score-0-0">
+<h1>JLS-07 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-07-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The develop branch of nlohmann/json is protected, i.e. no direct commits are possible.</p>
 <p><strong>Supported Requests:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-updates"><span class="std std-ref">TA-UPDATES</span></a></p></td>
+<td><p>nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Supporting Items:</strong></p>
+<p><em>None</em></p>
+<p><strong>References:</strong></p>
 <ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-updates"><span class="std std-ref">TA-UPDATES</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/nlohmann/json/actions?query=event%3Apush+branch%3Adevelop</span></code></p></li>
 </ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/nlohmann/json/actions?query=event%3Apush+branch%3Adevelop</span></code>
+- List of all pushes to the develop branch in nlohmann/json, showing that all commits are done by nlohmann and indicating that direct commits are not possible.</p>
+<p><strong>Fallacies:</strong></p>
+<p><em>None</em></p>
+<p><strong>Graph:</strong></p>
+<p><img alt="No Image" src="../_images/JLS-07.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-07</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="jls-08-reviewed-score-0-0">
+<h1>JLS-08 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-08-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>Each statement within the TSF documentation is scored based on SME reviews or automatic validation functions. (TODO)</p>
+<p><strong>Supported Requests:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-confidence"><span class="std std-ref">TA-CONFIDENCE</span></a></p></td>
+<td><p>Confidence in the nlohmann/json library is measured based on results of analysis.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -806,16 +911,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-08.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-08</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-08">
-<h1>JLS-08<a class="headerlink" href="#jls-08" title="Link to this heading">#</a></h1>
-<p>Each statement is scored based on SME reviews or automatic validation functions. (TODO)</p>
+<section id="jls-09-reviewed-score-0-0">
+<h1>JLS-09 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-09-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>Scores within the TSF documentation are reasonably, systematically and repeatably accumulated. (TODO)</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-confidence"><span class="std std-ref">TA-CONFIDENCE</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-confidence"><span class="std std-ref">TA-CONFIDENCE</span></a></p></td>
+<td><p>Confidence in the nlohmann/json library is measured based on results of analysis.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -823,16 +958,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-09.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-09</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-09">
-<h1>JLS-09<a class="headerlink" href="#jls-09" title="Link to this heading">#</a></h1>
-<p>Scores are reasonably, systematically and repeatably accumulated. (TODO)</p>
+<section id="jls-10-reviewed-score-0-0">
+<h1>JLS-10 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-10-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>Every release of nlohmann/json includes source code, build instructions, tests and attestations. (TODO: Test result summary)</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-confidence"><span class="std std-ref">TA-CONFIDENCE</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-iterations"><span class="std std-ref">TA-ITERATIONS</span></a></p></td>
+<td><p>All constructed iterations of the nlohmann/json library include source code, build instructions, tests, results and attestations.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -840,71 +1005,148 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-10.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-10</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-10">
-<h1>JLS-10<a class="headerlink" href="#jls-10" title="Link to this heading">#</a></h1>
-<p>Every release includes source code, build instructions, tests and attestations. (TODO: Test result summary)</p>
+<section id="jls-11-reviewed-score-0-0">
+<h1>JLS-11 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-11-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>Outstanding bugs or misbehaviours are analyzed within eclipse-score/inc_nlohmann_json to determine whether they are relevant for S-CORE’s use cases of the nlohmann/json library.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-iterations"><span class="std std-ref">TA-ITERATIONS</span></a></p></li>
-</ul>
-<p><strong>Supporting Items:</strong></p>
-<p><em>None</em></p>
-<p><strong>References:</strong></p>
-<p><em>None</em></p>
-<p><strong>Fallacies:</strong></p>
-<p><em>None</em></p>
-<p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
-</section>
-<hr class="docutils" />
-<section id="jls-11">
-<h1>JLS-11<a class="headerlink" href="#jls-11" title="Link to this heading">#</a></h1>
-<p>A score based on outstanding, fixed and mitigated faults is calculated based on github issues in nlohmann/json.</p>
-<p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-fixes"><span class="std std-ref">TA-FIXES</span></a></p></li>
-</ul>
-<p><strong>Supporting Items:</strong></p>
-<p><em>None</em></p>
-<p><strong>References:</strong></p>
-<p><em>None</em></p>
-<p><strong>Fallacies:</strong></p>
-<p><em>None</em></p>
-<p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
-</section>
-<hr class="docutils" />
-<section id="jls-12">
-<h1>JLS-12<a class="headerlink" href="#jls-12" title="Link to this heading">#</a></h1>
-<p>The S-Core change process management is followed.</p>
-<p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-updates"><span class="std std-ref">TA-UPDATES</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-fixes"><span class="std std-ref">TA-FIXES</span></a></p></td>
+<td><p>In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://eclipse-score.github.io/process_description/main/process_areas/change_management/index.html</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/misbehaviours.md</span></code></p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">https://eclipse-score.github.io/process_description/main/process_areas/change_management/index.html</span></code>
-- Documentation of S-CORE change process management</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/misbehaviours.md</span></code>
+- List of outstanding bugs as well as fixes for developed code that are outstanding, not yet applied.</p>
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-11.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-11</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-13">
-<h1>JLS-13<a class="headerlink" href="#jls-13" title="Link to this heading">#</a></h1>
-<p>The S-Core methodologies are followed.</p>
+<section id="jls-12-reviewed-score-0-0">
+<h1>JLS-12 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-12-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The nlohmann/json repository has well-defined community standards, including a contribution guideline and a security policy.</p>
 <p><strong>Supported Requests:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-updates"><span class="std std-ref">TA-UPDATES</span></a></p></td>
+<td><p>nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Supporting Items:</strong></p>
+<p><em>None</em></p>
+<p><strong>References:</strong></p>
 <ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-methodologies"><span class="std std-ref">TA-METHODOLOGIES</span></a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/nlohmann/json/community</span></code></p></li>
 </ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/nlohmann/json/community</span></code>
+- List of defined community standards in nlohmann/json</p>
+<p><strong>Fallacies:</strong></p>
+<p><em>None</em></p>
+<p><strong>Graph:</strong></p>
+<p><img alt="No Image" src="../_images/JLS-12.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-12</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="jls-13-reviewed-score-0-0">
+<h1>JLS-13 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-13-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The S-Core methodologies are followed in eclipse-score/inc_nlohmann_json.</p>
+<p><strong>Supported Requests:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-methodologies"><span class="std std-ref">TA-METHODOLOGIES</span></a></p></td>
+<td><p>Manual methodologies applied for the nlohmann/json library by contributors, and their results, are managed according to specified objectives.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -916,16 +1158,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-13.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-13</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-14">
-<h1>JLS-14<a class="headerlink" href="#jls-14" title="Link to this heading">#</a></h1>
-<p>The SHA value of the library in use coincides with the SHA value provided by Niels Lohmann for that version.</p>
+<section id="jls-14-reviewed-score-0-0">
+<h1>JLS-14 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-14-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The SHA value of the nlohmann/json library in use within eclipse-score/inc_nlohmann_json coincides with the SHA value provided by Niels Lohmann for that version.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-releases"><span class="std std-ref">TA-RELEASES</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-releases"><span class="std std-ref">TA-RELEASES</span></a></p></td>
+<td><p>Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -937,16 +1209,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-14.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-14</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-16">
-<h1>JLS-16<a class="headerlink" href="#jls-16" title="Link to this heading">#</a></h1>
+<section id="jls-16-reviewed-score-0-0">
+<h1>JLS-16 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-16-reviewed-score-0-0" title="Link to this heading">#</a></h1>
 <p>A list of tests, which is extracted from the test execution, is provided, along with a list of test environments.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-tests"><span class="std std-ref">TA-TESTS</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-tests"><span class="std std-ref">TA-TESTS</span></a></p></td>
+<td><p>All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -8487,16 +8789,46 @@ All tests in this file were run in the following configurations:
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-16.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-16</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-17">
-<h1>JLS-17<a class="headerlink" href="#jls-17" title="Link to this heading">#</a></h1>
-<p>A github workflow calculates the fraction of expectations covered by tests (TODO).</p>
+<section id="jls-17-reviewed-score-0-0">
+<h1>JLS-17 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-17-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>A github workflow calculates the fraction of expectations covered by tests in eclipse-score/inc_nlohmann_json (TODO).</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-analysis"><span class="std std-ref">TA-ANALYSIS</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-analysis"><span class="std std-ref">TA-ANALYSIS</span></a></p></td>
+<td><p>Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -8504,16 +8836,46 @@ All tests in this file were run in the following configurations:
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-17.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-17</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-18">
-<h1>JLS-18<a class="headerlink" href="#jls-18" title="Link to this heading">#</a></h1>
+<section id="jls-18-reviewed-score-0-0">
+<h1>JLS-18 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-18-reviewed-score-0-0" title="Link to this heading">#</a></h1>
 <p>Results from tests are accurately captured.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-data"><span class="std std-ref">TA-DATA</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-data"><span class="std std-ref">TA-DATA</span></a></p></td>
+<td><p>Data in eclipse-score/inc_nlohmann_json is collected from tests, and from monitoring of deployed software, according to specified objectives.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -9450,33 +9812,112 @@ All tests in this file were run in the following configurations:
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-18.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-18</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-19">
-<h1>JLS-19<a class="headerlink" href="#jls-19" title="Link to this heading">#</a></h1>
-<p>All components, dependencies and tools are listed in a manifest.</p>
+<section id="jls-19-reviewed-score-0-0">
+<h1>JLS-19 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-19-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>All library components, build dependencies, and build tools in the nlohmann/json repository are declared in build system manifests.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-iterations"><span class="std std-ref">TA-ITERATIONS</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-iterations"><span class="std std-ref">TA-ITERATIONS</span></a></p></td>
+<td><p>All constructed iterations of the nlohmann/json library include source code, build instructions, tests, results and attestations.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
-<p><em>None</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/CMakeLists.txt</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/CMakeLists.txt</span></code>
+- CMake build manifest file</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/BUILD.bazel</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/BUILD.bazel</span></code>
+- Bazel build manifest file</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/meson.build</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/meson.build</span></code>
+- Meson build manifest file</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/Package.swift</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/Package.swift</span></code>
+- Swift Package Manager manifest file</p>
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-19.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-19</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-20">
-<h1>JLS-20<a class="headerlink" href="#jls-20" title="Link to this heading">#</a></h1>
-<p>A github workflow saves the history of scores in the trustable graph to derive trends.</p>
+<section id="jls-20-reviewed-score-0-0">
+<h1>JLS-20 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-20-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>A github workflow of eclipse-score/inc_nlohmann_json saves the history of scores in the trustable graph to derive trends.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-confidence"><span class="std std-ref">TA-CONFIDENCE</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-confidence"><span class="std std-ref">TA-CONFIDENCE</span></a></p></td>
+<td><p>Confidence in the nlohmann/json library is measured based on results of analysis.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -9506,6 +9947,16 @@ All tests in this file were run in the following configurations:
 <span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/workflows/labeler.yml</span>
 <span class="w">    </span><span class="nt">with</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">artifact_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;labeler-${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
+
+<span class="w">  </span><span class="nt">SME_review_checker</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">permissions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
+<span class="w">      </span><span class="nt">pull-requests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run SME_review_checker Workflow</span>
+<span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.event_name == &#39;pull_request&#39; }}</span><span class="w"> </span><span class="c1"># only run SME_review_checker for PRs</span>
+<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/workflows/SME_review_checker.yml</span>
+<span class="w">    </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">artifact_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;SME_review_checker-${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
 
 <span class="w">  </span><span class="nt">check_amalgamation</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Amalgamation Workflow</span>
@@ -9548,11 +9999,11 @@ All tests in this file were run in the following configurations:
 <span class="w">  </span><span class="nt">collect_artifacts_pr</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Collect</span><span class="nv"> </span><span class="s">Results</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">Deploy</span><span class="nv"> </span><span class="s">(PR)&quot;</span>
 <span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.event_name == &#39;pull_request&#39;</span>
-<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">check_amalgamation</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dependency_review</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">SME_review_checker</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">check_amalgamation</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dependency_review</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span>
 <span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
 <span class="w">    </span><span class="nt">strategy</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">matrix</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">check_amalgamation</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dependency_review</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">SME_review_checker</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">check_amalgamation</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dependency_review</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span>
 
 <span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout code</span>
@@ -9581,7 +10032,7 @@ All tests in this file were run in the following configurations:
 <span class="w">  </span><span class="nt">collect_artifacts_non_pr</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Collect</span><span class="nv"> </span><span class="s">Results</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">Deploy</span><span class="nv"> </span><span class="s">(Non-PR)&quot;</span>
 <span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.event_name != &#39;pull_request&#39;</span>
-<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># no check_amalgamation or dependency_review if non PR</span>
+<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># no check_amalgamation, dependency_review or SME_review_checker if non PR</span>
 <span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
 <span class="w">    </span><span class="nt">strategy</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">matrix</span><span class="p">:</span>
@@ -9694,12 +10145,14 @@ All tests in this file were run in the following configurations:
 <span class="w">        </span><span class="nt">with</span><span class="p">:</span>
 <span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.11.2&#39;</span>
 
-<span class="w">      </span><span class="c1"># trudag version 2025.8.5</span>
+<span class="w">      </span><span class="c1"># trudag version v2025.10.22</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install trudag and dependencies</span>
 <span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
 <span class="w">          </span><span class="no">sudo apt-get update</span>
 <span class="w">          </span><span class="no">sudo apt-get install -y graphviz</span>
-<span class="w">          </span><span class="no">pip install git+https://gitlab.com/CodethinkLabs/trustable/trustable@9957f12171cb898d83df5ae708fdba0a38fece2e</span>
+<span class="w">          </span><span class="no">pip install --upgrade pip</span>
+<span class="w">          </span><span class="no">pip install PyYAML requests</span>
+<span class="w">          </span><span class="no">pip install git+https://gitlab.com/CodethinkLabs/trustable/trustable@v2025.10.22</span>
 
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install tools</span>
 <span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
@@ -9828,23 +10281,53 @@ All tests in this file were run in the following configurations:
 </div>
 <ul class="simple">
 <li><p>Description: github workflow executing calculation and storage of trustable scores</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/score-json/json/blob/save_historical_data/TSF/TrustableScoring.db</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/TrustableScoring.db</span></code></p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">https://github.com/score-json/json/blob/save_historical_data/TSF/TrustableScoring.db</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/TrustableScoring.db</span></code>
 - the database containing the trustable scores</p>
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-20.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-20</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-21">
-<h1>JLS-21<a class="headerlink" href="#jls-21" title="Link to this heading">#</a></h1>
+<section id="jls-21-reviewed-score-0-0">
+<h1>JLS-21 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-21-reviewed-score-0-0" title="Link to this heading">#</a></h1>
 <p>A score is calculated based on the number of mirrored and unmirrored things. (TODO)</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-releases"><span class="std std-ref">TA-RELEASES</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-releases"><span class="std std-ref">TA-RELEASES</span></a></p></td>
+<td><p>Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -9852,16 +10335,46 @@ All tests in this file were run in the following configurations:
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-21.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-21</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-22">
-<h1>JLS-22<a class="headerlink" href="#jls-22" title="Link to this heading">#</a></h1>
-<p>The github workflow executes the unit tests daily and saves the results as time-series data.</p>
+<section id="jls-22-reviewed-score-0-0">
+<h1>JLS-22 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-22-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>A github workflow of eclipse-score/inc_nlohmann_json executes the unit tests daily and saves the results as time-series data.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-validation"><span class="std std-ref">TA-VALIDATION</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-validation"><span class="std std-ref">TA-VALIDATION</span></a></p></td>
+<td><p>All specified tests are executed repeatedly, under defined conditions in controlled environments, according to specified objectives. (To revisit)</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -9891,6 +10404,16 @@ All tests in this file were run in the following configurations:
 <span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/workflows/labeler.yml</span>
 <span class="w">    </span><span class="nt">with</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">artifact_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;labeler-${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
+
+<span class="w">  </span><span class="nt">SME_review_checker</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">permissions</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">contents</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
+<span class="w">      </span><span class="nt">pull-requests</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">read</span>
+<span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run SME_review_checker Workflow</span>
+<span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${{ github.event_name == &#39;pull_request&#39; }}</span><span class="w"> </span><span class="c1"># only run SME_review_checker for PRs</span>
+<span class="w">    </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./.github/workflows/SME_review_checker.yml</span>
+<span class="w">    </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">artifact_id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;SME_review_checker-${{</span><span class="nv"> </span><span class="s">github.sha</span><span class="nv"> </span><span class="s">}}&quot;</span>
 
 <span class="w">  </span><span class="nt">check_amalgamation</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Run Amalgamation Workflow</span>
@@ -9933,11 +10456,11 @@ All tests in this file were run in the following configurations:
 <span class="w">  </span><span class="nt">collect_artifacts_pr</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Collect</span><span class="nv"> </span><span class="s">Results</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">Deploy</span><span class="nv"> </span><span class="s">(PR)&quot;</span>
 <span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.event_name == &#39;pull_request&#39;</span>
-<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">check_amalgamation</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dependency_review</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">SME_review_checker</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">check_amalgamation</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dependency_review</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span>
 <span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
 <span class="w">    </span><span class="nt">strategy</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">matrix</span><span class="p">:</span>
-<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">check_amalgamation</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dependency_review</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span>
+<span class="w">        </span><span class="nt">target</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">SME_review_checker</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">check_amalgamation</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">dependency_review</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span>
 
 <span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
 <span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout code</span>
@@ -9966,7 +10489,7 @@ All tests in this file were run in the following configurations:
 <span class="w">  </span><span class="nt">collect_artifacts_non_pr</span><span class="p">:</span>
 <span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Collect</span><span class="nv"> </span><span class="s">Results</span><span class="nv"> </span><span class="s">&amp;</span><span class="nv"> </span><span class="s">Deploy</span><span class="nv"> </span><span class="s">(Non-PR)&quot;</span>
 <span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.event_name != &#39;pull_request&#39;</span>
-<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># no check_amalgamation or dependency_review if non PR</span>
+<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">labeler</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">test_trudag_extensions</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">codeql</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="nv">ubuntu</span><span class="p p-Indicator">]</span><span class="w">  </span><span class="c1"># no check_amalgamation, dependency_review or SME_review_checker if non PR</span>
 <span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
 <span class="w">    </span><span class="nt">strategy</span><span class="p">:</span>
 <span class="w">      </span><span class="nt">matrix</span><span class="p">:</span>
@@ -10941,23 +11464,53 @@ All tests in this file were run in the following configurations:
 </div>
 <ul class="simple">
 <li><p>Description: script, which collects the data produced by ctest in a database</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/score-json/json/blob/save_historical_data/TSF/MemoryEfficientTestResultData.db</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/MemoryEfficientTestResultData.db</span></code></p></li>
 </ul>
-<p><code class="docutils literal notranslate"><span class="pre">https://github.com/score-json/json/blob/save_historical_data/TSF/MemoryEfficientTestResultData.db</span></code>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/MemoryEfficientTestResultData.db</span></code>
 - the database containing the test results</p>
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-22.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-22</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-23">
-<h1>JLS-23<a class="headerlink" href="#jls-23" title="Link to this heading">#</a></h1>
+<section id="jls-23-reviewed-score-0-0">
+<h1>JLS-23 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-23-reviewed-score-0-0" title="Link to this heading">#</a></h1>
 <p>The Eclipse S-CORE organization mirrors the nlohmann/json project in a github fork.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-supply_chain"><span class="std std-ref">TA-SUPPLY_CHAIN</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-supply_chain"><span class="std std-ref">TA-SUPPLY_CHAIN</span></a></p></td>
+<td><p>All sources and tools for the nlohmann/json library are mirrored in our controlled environment.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -10974,58 +11527,216 @@ All tests in this file were run in the following configurations:
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-23.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-23</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-24">
-<h1>JLS-24<a class="headerlink" href="#jls-24" title="Link to this heading">#</a></h1>
+<section id="jls-24-reviewed-score-0-0">
+<h1>JLS-24 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-24-reviewed-score-0-0" title="Link to this heading">#</a></h1>
 <p>The nlohmann/json library recognizes malformed JSON and returns an exception.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-misbehaviours"><span class="std std-ref">TA-MISBEHAVIOURS</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-misbehaviours"><span class="std std-ref">TA-MISBEHAVIOURS</span></a></p></td>
+<td><p>Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="NPF.html#npf-07.2"><span class="std std-ref">NPF-07.2</span></a></p></li>
-<li><p><a class="reference internal" href="TIJ.html#tij-01"><span class="std std-ref">TIJ-01</span></a></p></li>
-<li><p><a class="reference internal" href="TIJ.html#tij-02"><span class="std std-ref">TIJ-02</span></a></p></li>
-<li><p><a class="reference internal" href="TIJ.html#tij-03"><span class="std std-ref">TIJ-03</span></a></p></li>
-<li><p><a class="reference internal" href="TIJ.html#tij-04"><span class="std std-ref">TIJ-04</span></a></p></li>
-<li><p><a class="reference internal" href="TIJ.html#tij-05"><span class="std std-ref">TIJ-05</span></a></p></li>
-<li><p><a class="reference internal" href="TIJ.html#tij-06"><span class="std std-ref">TIJ-06</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-07.2"><span class="std std-ref">NPF-07.2</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on ill-formed UTF-8 data.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-01"><span class="std std-ref">TIJ-01</span></a></p></td>
+<td><p>The parsing service provided by the nlohmann/json library throws an exception on ill-formed literal names.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-02"><span class="std std-ref">TIJ-02</span></a></p></td>
+<td><p>The parsing service provided by the nlohmann/json library throws an exception on ill-formed numbers.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-03"><span class="std std-ref">TIJ-03</span></a></p></td>
+<td><p>The parsing service provided by the nlohmann/json library throws an exception on ill-formed strings.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-04"><span class="std std-ref">TIJ-04</span></a></p></td>
+<td><p>The parsing service provided by the nlohmann/json library throws an exception on ill-formed arrays.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-05"><span class="std std-ref">TIJ-05</span></a></p></td>
+<td><p>The parsing service provided by the nlohmann/json library throws an exception on ill-formed objects.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-06"><span class="std std-ref">TIJ-06</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library recognises ill-formed byte-order marks and throws an exception.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>References:</strong></p>
 <p><em>None</em></p>
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-24.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-24</p></th>
+<th class="head"><p>NPF-07.2</p></th>
+<th class="head"><p>TIJ-01</p></th>
+<th class="head"><p>TIJ-02</p></th>
+<th class="head"><p>TIJ-03</p></th>
+<th class="head"><p>TIJ-04</p></th>
+<th class="head"><p>TIJ-05</p></th>
+<th class="head"><p>TIJ-06</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-25">
-<h1>JLS-25<a class="headerlink" href="#jls-25" title="Link to this heading">#</a></h1>
-<p>Malicious code changes are mitigated by code reviews, adhering to Eclipse S-core contribution procedures and vigilance from the open-source community.</p>
+<section id="jls-25-reviewed-score-0-0">
+<h1>JLS-25 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-25-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>Malicious code changes in nlohmann/json are mitigated by code reviews, adhering to the contribution guidelines and security policy specified by nlohmann/json.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-misbehaviours"><span class="std std-ref">TA-MISBEHAVIOURS</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-misbehaviours"><span class="std std-ref">TA-MISBEHAVIOURS</span></a></p></td>
+<td><p>Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
-<p><em>None</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson</span></code>
+- OpenSSF Scorecard Report for nlohmann/json, where scores for ‘Security-Policy’ and ‘Code-Review’ reflect this statement.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/nlohmann/json?tab=contributing-ov-file#readme</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/nlohmann/json?tab=contributing-ov-file#readme</span></code>
+- Contribution Guidelines for nlohmann/json, where it is indirectly indicated that all changes are reviewed.</p>
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-25.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-25</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-26">
-<h1>JLS-26<a class="headerlink" href="#jls-26" title="Link to this heading">#</a></h1>
-<p>Pipeline execution results are analyzed in nlohmann/json.</p>
+<section id="jls-26-reviewed-score-0-0">
+<h1>JLS-26 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-26-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>Any failed CI pipeline executions in the master branch of the nlohmann/json repository are analyzed and fixed.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-analysis"><span class="std std-ref">TA-ANALYSIS</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-analysis"><span class="std std-ref">TA-ANALYSIS</span></a></p></td>
+<td><p>Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -11036,16 +11747,46 @@ All tests in this file were run in the following configurations:
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-26.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-26</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="jls-27">
-<h1>JLS-27<a class="headerlink" href="#jls-27" title="Link to this heading">#</a></h1>
+<section id="jls-27-reviewed-score-0-0">
+<h1>JLS-27 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-27-reviewed-score-0-0" title="Link to this heading">#</a></h1>
 <p>The test coverage for this version of nlohmann/json is monitored using Coveralls and is not decreasing over time, unless reasonably justified.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="TA.html#ta-behaviours"><span class="std std-ref">TA-BEHAVIOURS</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-behaviours"><span class="std std-ref">TA-BEHAVIOURS</span></a></p></td>
+<td><p>Expected or required behaviours for the nlohmann/json library are identified, specified, verified and validated based on analysis.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -11053,7 +11794,647 @@ All tests in this file were run in the following configurations:
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/JLS-27.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-27</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="jls-28-reviewed-score-0-0">
+<h1>JLS-28 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-28-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>Outstanding bugs and misbehaviours are triaged in the nlohmann/json repository.</p>
+<p><strong>Supported Requests:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-fixes"><span class="std std-ref">TA-FIXES</span></a></p></td>
+<td><p>In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Supporting Items:</strong></p>
+<p><em>None</em></p>
+<p><strong>References:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/nlohmann/json/discussions/4967</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/nlohmann/json/discussions/4967</span></code>
+- Discussion in nlohmann/json showing that no triage processes for bugs are currently in place</p>
+<p><strong>Fallacies:</strong></p>
+<p><em>None</em></p>
+<p><strong>Graph:</strong></p>
+<p><img alt="No Image" src="../_images/JLS-28.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-28</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="jls-29-reviewed-score-0-0">
+<h1>JLS-29 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-29-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>Known bugs, misbehaviours and CVEs are analyzed and either fixed or mitigated in the nlohmann/json repository.</p>
+<p><strong>Supported Requests:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-fixes"><span class="std std-ref">TA-FIXES</span></a></p></td>
+<td><p>In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Supporting Items:</strong></p>
+<p><em>None</em></p>
+<p><strong>References:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/nlohmann/json/releases/tag/v3.12.0</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/nlohmann/json/releases/tag/v3.12.0</span></code>
+- release notes for v3.12.0, listing bugs, CVEs and warnings which were either fixed or mitigated since last release</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson</span></code>
+- OpenSSF Scorecard Report for nlohmann/json, where scores for ‘Vulnerabilities’, ‘Pinned-Dependencies’ and ‘Dangerous-Workflow’ support this statement.</p>
+<p><strong>Fallacies:</strong></p>
+<p><em>None</em></p>
+<p><strong>Graph:</strong></p>
+<p><img alt="No Image" src="../_images/JLS-29.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-29</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="jls-30-reviewed-score-0-0">
+<h1>JLS-30 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-30-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>Outstanding CVEs are analyzed within eclipse-score/inc_nlohmann_json to determine whether they can be dismissed, and/or are relevant for S-CORE’s use cases of the nlohmann/json library.</p>
+<p><strong>Supported Requests:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-fixes"><span class="std std-ref">TA-FIXES</span></a></p></td>
+<td><p>In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Supporting Items:</strong></p>
+<p><em>None</em></p>
+<p><strong>References:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson</span></code>
+- OpenSSF Scorecard Report for nlohmann/json, where score for ‘Vulnerabilities’ shows that there are no outstanding CVEs.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/nlohmann/json/discussions/4975</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/nlohmann/json/discussions/4975</span></code>
+- Screenshot of dismissed code scanning alerts, which can also be dismissed in S-CORE.</p>
+<p><strong>Fallacies:</strong></p>
+<p><em>None</em></p>
+<p><strong>Graph:</strong></p>
+<p><img alt="No Image" src="../_images/JLS-30.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-30</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="jls-31-reviewed-score-0-0">
+<h1>JLS-31 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-31-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The nlohmann/json repository uses a static code analysis tool.</p>
+<p><strong>Supported Requests:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-misbehaviours"><span class="std std-ref">TA-MISBEHAVIOURS</span></a></p></td>
+<td><p>Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Supporting Items:</strong></p>
+<p><em>None</em></p>
+<p><strong>References:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson</span></code>
+- OpenSSF Scorecard Report for nlohmann/json, where score for ‘SAST’ supports this statement.</p>
+<p><strong>Fallacies:</strong></p>
+<p><em>None</em></p>
+<p><strong>Graph:</strong></p>
+<p><img alt="No Image" src="../_images/JLS-31.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-31</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="jls-32-reviewed-score-0-0">
+<h1>JLS-32 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-32-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>All pull requests to the develop branch in the nlohmann/json repository trigger a request for review from Niels Lohmann (&#64;nlohmann).</p>
+<p><strong>Supported Requests:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-updates"><span class="std std-ref">TA-UPDATES</span></a></p></td>
+<td><p>nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Supporting Items:</strong></p>
+<p><em>None</em></p>
+<p><strong>References:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/nlohmann/json/blob/develop/.github/CODEOWNERS</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/nlohmann/json/blob/develop/.github/CODEOWNERS</span></code>
+- CODEOWNERS file specifying that changes to any file requests &#64;nlohmann for code review in case of a pull request</p>
+<p><strong>Fallacies:</strong></p>
+<p><em>None</em></p>
+<p><strong>Graph:</strong></p>
+<p><img alt="No Image" src="../_images/JLS-32.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-32</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="jls-33-reviewed-score-0-0">
+<h1>JLS-33 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-33-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>Outstanding CVEs are triaged in the nlohmann/json repository.</p>
+<p><strong>Supported Requests:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-fixes"><span class="std std-ref">TA-FIXES</span></a></p></td>
+<td><p>In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Supporting Items:</strong></p>
+<p><em>None</em></p>
+<p><strong>References:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/nlohmann/json/security/advisories/new</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/nlohmann/json/security/advisories/new</span></code>
+- the vulnerability reporting template used in nlohmann/json, which includes a severity section and CVSS scoring</p>
+<p><strong>Fallacies:</strong></p>
+<p><em>None</em></p>
+<p><strong>Graph:</strong></p>
+<p><img alt="No Image" src="../_images/JLS-33.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-33</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="jls-34-reviewed-score-0-0">
+<h1>JLS-34 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-34-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The nlohmann/json library has no external components or dependencies besides the C++ standard components.</p>
+<p><strong>Supported Requests:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-updates"><span class="std std-ref">TA-UPDATES</span></a></p></td>
+<td><p>nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Supporting Items:</strong></p>
+<p><em>None</em></p>
+<p><strong>References:</strong></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">List</span> <span class="pre">of</span> <span class="pre">included</span> <span class="pre">libraries</span> <span class="pre">for:</span> <span class="pre">single_include/nlohmann/json.hpp</span></code></p>
+<ul class="simple">
+<li><p>Description: file containing all include occurrences of the score-project.</p></li>
+</ul>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp">#include &amp;lt;algorithm&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;functional&amp;gt;</span>
+<span class="cp">#include &amp;lt;initializer_list&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;iosfwd&amp;gt;</span>
+<span class="cp">#include &amp;lt;iterator&amp;gt;</span>
+<span class="cp">#include &amp;lt;memory&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;vector&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;algorithm&amp;gt;</span>
+<span class="cp">#include &amp;lt;array&amp;gt;</span>
+<span class="cp">#include &amp;lt;forward_list&amp;gt;</span>
+<span class="cp">#include &amp;lt;iterator&amp;gt;</span>
+<span class="cp">#include &amp;lt;map&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;optional&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;tuple&amp;gt;</span>
+<span class="cp">#include &amp;lt;type_traits&amp;gt;</span>
+<span class="cp">#include &amp;lt;unordered_map&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;valarray&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;exception&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;numeric&amp;gt;</span>
+<span class="cp">#include &amp;lt;stdexcept&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;vector&amp;gt;</span>
+<span class="cp">#include &amp;lt;array&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstdint&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;type_traits&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;stdint.h&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;stdint.h&amp;gt;</span>
+<span class="w">        </span><span class="cp">#include &amp;lt;version&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;cstdlib&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;cassert&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;compare&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;array&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;type_traits&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;limits&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;tuple&amp;gt;</span>
+<span class="cp">#include &amp;lt;type_traits&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;iterator&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;cstdint&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;map&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;memory&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;vector&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstring&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;experimental/filesystem&amp;gt;</span>
+<span class="cp">#include &amp;lt;filesystem&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;optional&amp;gt;</span>
+<span class="cp">#include &amp;lt;algorithm&amp;gt;</span>
+<span class="cp">#include &amp;lt;iterator&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;tuple&amp;gt;</span>
+<span class="cp">#include &amp;lt;type_traits&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;valarray&amp;gt;</span>
+<span class="cp">#include &amp;lt;vector&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;iterator&amp;gt;</span>
+<span class="cp">#include &amp;lt;tuple&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;ranges&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstdint&amp;gt;</span>
+<span class="cp">#include &amp;lt;tuple&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstdint&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;functional&amp;gt;</span>
+<span class="cp">#include &amp;lt;algorithm&amp;gt;</span>
+<span class="cp">#include &amp;lt;array&amp;gt;</span>
+<span class="cp">#include &amp;lt;cmath&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstdint&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstdio&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstring&amp;gt;</span>
+<span class="cp">#include &amp;lt;iterator&amp;gt;</span>
+<span class="cp">#include &amp;lt;limits&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;vector&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;bit&amp;gt;</span>
+<span class="cp">#include &amp;lt;array&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstring&amp;gt;</span>
+<span class="cp">#include &amp;lt;iterator&amp;gt;</span>
+<span class="cp">#include &amp;lt;memory&amp;gt;</span>
+<span class="cp">#include &amp;lt;numeric&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;type_traits&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;cstdio&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;istream&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;type_traits&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;vector&amp;gt;</span>
+<span class="cp">#include &amp;lt;array&amp;gt;</span>
+<span class="cp">#include &amp;lt;clocale&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstdio&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstdlib&amp;gt;</span>
+<span class="cp">#include &amp;lt;initializer_list&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;vector&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstdint&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;cmath&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstdint&amp;gt;</span>
+<span class="cp">#include &amp;lt;functional&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;vector&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;limits&amp;gt;</span>
+<span class="cp">#include &amp;lt;iterator&amp;gt;</span>
+<span class="cp">#include &amp;lt;type_traits&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;iterator&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;type_traits&amp;gt;</span>
+<span class="cp">#include &amp;lt;algorithm&amp;gt;</span>
+<span class="cp">#include &amp;lt;cctype&amp;gt;</span>
+<span class="cp">#include &amp;lt;cerrno&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstdlib&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;iosfwd&amp;gt;</span>
+<span class="cp">#include &amp;lt;limits&amp;gt;</span>
+<span class="cp">#include &amp;lt;numeric&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;vector&amp;gt;</span>
+<span class="cp">#include &amp;lt;initializer_list&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;algorithm&amp;gt;</span>
+<span class="cp">#include &amp;lt;array&amp;gt;</span>
+<span class="cp">#include &amp;lt;map&amp;gt;</span>
+<span class="cp">#include &amp;lt;cmath&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstdint&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstring&amp;gt;</span>
+<span class="cp">#include &amp;lt;limits&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;vector&amp;gt;</span>
+<span class="cp">#include &amp;lt;algorithm&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;iterator&amp;gt;</span>
+<span class="cp">#include &amp;lt;memory&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;vector&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;ios&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;ostream&amp;gt;</span>
+<span class="cp">#include &amp;lt;algorithm&amp;gt;</span>
+<span class="cp">#include &amp;lt;array&amp;gt;</span>
+<span class="cp">#include &amp;lt;clocale&amp;gt;</span>
+<span class="cp">#include &amp;lt;cmath&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstddef&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstdint&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstdio&amp;gt;</span>
+<span class="cp">#include &amp;lt;limits&amp;gt;</span>
+<span class="cp">#include &amp;lt;string&amp;gt;</span>
+<span class="cp">#include &amp;lt;iomanip&amp;gt;</span>
+<span class="cp">#include &amp;lt;type_traits&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;array&amp;gt;</span>
+<span class="cp">#include &amp;lt;cmath&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstdint&amp;gt;</span>
+<span class="cp">#include &amp;lt;cstring&amp;gt;</span>
+<span class="cp">#include &amp;lt;limits&amp;gt;</span>
+<span class="cp">#include &amp;lt;type_traits&amp;gt;</span>
+<span class="cp">#include &amp;lt;functional&amp;gt;</span>
+<span class="cp">#include &amp;lt;initializer_list&amp;gt;</span>
+<span class="cp">#include &amp;lt;iterator&amp;gt;</span>
+<span class="cp">#include &amp;lt;memory&amp;gt;</span>
+<span class="cp">#include &amp;lt;stdexcept&amp;gt;</span>
+<span class="cp">#include &amp;lt;type_traits&amp;gt;</span>
+<span class="cp">#include &amp;lt;utility&amp;gt;</span>
+<span class="cp">#include &amp;lt;vector&amp;gt;</span>
+<span class="w">        </span><span class="cp">#include &amp;lt;any&amp;gt;</span>
+<span class="w">    </span><span class="cp">#include &amp;lt;string_view&amp;gt;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+<p><strong>Fallacies:</strong></p>
+<p><em>None</em></p>
+<p><strong>Graph:</strong></p>
+<p><img alt="No Image" src="../_images/JLS-34.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-34</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<hr class="docutils" />
+<section id="jls-35-reviewed-score-0-0">
+<h1>JLS-35 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#jls-35-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>Pull requests in the nlohmann/json repository are merged only after running CI-tests and successfully passing the pipeline.</p>
+<p><strong>Supported Requests:</strong></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-updates"><span class="std std-ref">TA-UPDATES</span></a></p></td>
+<td><p>nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong>Supporting Items:</strong></p>
+<p><em>None</em></p>
+<p><strong>References:</strong></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson</span></code>
+- OpenSSF Scorecard Report for nlohmann/json, where score for ‘CI-Tests’ supports this statement</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">website:</span> <span class="pre">https://github.com/nlohmann/json/pulls?q=is%3Apr+is%3Aclosed+review%3Aapproved</span></code></p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/nlohmann/json/pulls?q=is%3Apr+is%3Aclosed+review%3Aapproved</span></code>
+- All approved pull requests in the nlohmann/json repository, with the results of the CI pipeline executions.</p>
+<p><strong>Fallacies:</strong></p>
+<p><em>None</em></p>
+<p><strong>Graph:</strong></p>
+<p><img alt="No Image" src="../_images/JLS-35.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>JLS-35</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 
 
@@ -11085,32 +12466,40 @@ All tests in this file were run in the following configurations:
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">JLS-01</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-02">JLS-02</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-03">JLS-03</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-04">JLS-04</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-05">JLS-05</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-06">JLS-06</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-07">JLS-07</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-08">JLS-08</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-09">JLS-09</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-10">JLS-10</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-11">JLS-11</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-12">JLS-12</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-13">JLS-13</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-14">JLS-14</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-16">JLS-16</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-17">JLS-17</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-18">JLS-18</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-19">JLS-19</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-20">JLS-20</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-21">JLS-21</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-22">JLS-22</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-23">JLS-23</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-24">JLS-24</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-25">JLS-25</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-26">JLS-26</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-27">JLS-27</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">JLS-01 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-02-reviewed-score-0-0">JLS-02 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-03-reviewed-score-0-0">JLS-03 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-04-reviewed-score-0-0">JLS-04 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-05-reviewed-score-0-0">JLS-05 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-06-reviewed-score-0-0">JLS-06 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-07-reviewed-score-0-0">JLS-07 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-08-reviewed-score-0-0">JLS-08 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-09-reviewed-score-0-0">JLS-09 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-10-reviewed-score-0-0">JLS-10 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-11-reviewed-score-0-0">JLS-11 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-12-reviewed-score-0-0">JLS-12 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-13-reviewed-score-0-0">JLS-13 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-14-reviewed-score-0-0">JLS-14 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-16-reviewed-score-0-0">JLS-16 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-17-reviewed-score-0-0">JLS-17 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-18-reviewed-score-0-0">JLS-18 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-19-reviewed-score-0-0">JLS-19 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-20-reviewed-score-0-0">JLS-20 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-21-reviewed-score-0-0">JLS-21 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-22-reviewed-score-0-0">JLS-22 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-23-reviewed-score-0-0">JLS-23 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-24-reviewed-score-0-0">JLS-24 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-25-reviewed-score-0-0">JLS-25 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-26-reviewed-score-0-0">JLS-26 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-27-reviewed-score-0-0">JLS-27 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-28-reviewed-score-0-0">JLS-28 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-29-reviewed-score-0-0">JLS-29 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-30-reviewed-score-0-0">JLS-30 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-31-reviewed-score-0-0">JLS-31 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-32-reviewed-score-0-0">JLS-32 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-33-reviewed-score-0-0">JLS-33 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-34-reviewed-score-0-0">JLS-34 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#jls-35-reviewed-score-0-0">JLS-35 | Reviewed: ⨯ | Score: 0.0</a></li>
 </ul>
 
   </nav></div>

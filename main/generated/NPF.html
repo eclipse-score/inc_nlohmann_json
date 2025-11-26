@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>NPF-01 &#8212; S-CORE NLOHMANN JSON LIBRARY FORK  documentation</title>
+    <title>NPF-01 | Reviewed: ⨯ | Score: 0.0 &#8212; S-CORE NLOHMANN JSON LIBRARY FORK  documentation</title>
   
   
   
@@ -408,7 +408,7 @@
         <i class="fa-solid fa-home"></i>
       </a>
     </li>
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">NPF-01</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">NPF-01 | Reviewed: ⨯ | Score: 0.0</span></li>
   </ul>
 </nav>
 </div>
@@ -425,36 +425,125 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="npf-01">
-<h1>NPF-01<a class="headerlink" href="#npf-01" title="Link to this heading">#</a></h1>
-<p>The service ignores the presence of a byte order mark.</p>
+  <section id="npf-01-reviewed-score-0-0">
+<h1>NPF-01 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-01-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library ignores the presence of a byte order mark.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="PJD.html#pjd-01"><span class="std std-ref">PJD-01</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="PJD.html#pjd-01"><span class="std std-ref">PJD-01</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library provides implementations that parses JSON texts, which ignores the presence of a byte order mark rather than treating it as an error.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-01.1"><span class="std std-ref">NPF-01.1</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-01.2"><span class="std std-ref">NPF-01.2</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-01.3"><span class="std std-ref">NPF-01.3</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-01.4"><span class="std std-ref">NPF-01.4</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-01.5"><span class="std std-ref">NPF-01.5</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-01.1"><span class="std std-ref">NPF-01.1</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores the presence of a single UTF-8 byte order mark at the very beginning of the input.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-01.2"><span class="std std-ref">NPF-01.2</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library does not parse multiple UTF-8 byte order marks at the beginning of the input and throws an exception.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-01.3"><span class="std std-ref">NPF-01.3</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library does not parse UTF-8 byte order marks outside of a string and the first three characters of the input, and throws an exception.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-01.4"><span class="std std-ref">NPF-01.4</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library does not parse UTF-16 and UTF-32 byte order mark instead of an UTF-8 byte order mark, and throws an exception.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-01.5"><span class="std std-ref">NPF-01.5</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library does not parse partial and perturbed UTF-8 byte order marks within the first three characters of the input and throws an exception.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>References:</strong></p>
 <p><em>None</em></p>
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-01.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-01</p></th>
+<th class="head"><p>NPF-01.1</p></th>
+<th class="head"><p>NPF-01.2</p></th>
+<th class="head"><p>NPF-01.3</p></th>
+<th class="head"><p>NPF-01.4</p></th>
+<th class="head"><p>NPF-01.5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-01-1">
-<h1>NPF-01.1<a class="headerlink" href="#npf-01-1" title="Link to this heading">#</a></h1>
-<p>The service ignores the presence of a single UTF-8 byte order mark at the very beginning of the input.</p>
+<section id="npf-01-1-reviewed-score-0-0">
+<h1>NPF-01.1 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-01-1-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library ignores the presence of a single UTF-8 byte order mark at the very beginning of the input.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-01"><span class="std std-ref">NPF-01</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-01"><span class="std std-ref">NPF-01</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores the presence of a byte order mark.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -513,17 +602,51 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-01.1.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-01.1</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-01-2">
-<h1>NPF-01.2<a class="headerlink" href="#npf-01-2" title="Link to this heading">#</a></h1>
-<p>The service does not parse multiple UTF-8 byte order marks at the beginning of the input and throws an exception.</p>
+<section id="npf-01-2-reviewed-score-0-0">
+<h1>NPF-01.2 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-01-2-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library does not parse multiple UTF-8 byte order marks at the beginning of the input and throws an exception.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-01"><span class="std std-ref">NPF-01</span></a></p></li>
-<li><p><a class="reference internal" href="TIJ.html#tij-06"><span class="std std-ref">TIJ-06</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-01"><span class="std std-ref">NPF-01</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores the presence of a byte order mark.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-06"><span class="std std-ref">TIJ-06</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library recognises ill-formed byte-order marks and throws an exception.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -550,17 +673,51 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-01.2.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-01.2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-01-3">
-<h1>NPF-01.3<a class="headerlink" href="#npf-01-3" title="Link to this heading">#</a></h1>
-<p>The service does not parse UTF-8 byte order marks outside of a string and the first three characters of the input, and throws an exception.</p>
+<section id="npf-01-3-reviewed-score-0-0">
+<h1>NPF-01.3 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-01-3-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library does not parse UTF-8 byte order marks outside of a string and the first three characters of the input, and throws an exception.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-01"><span class="std std-ref">NPF-01</span></a></p></li>
-<li><p><a class="reference internal" href="TIJ.html#tij-06"><span class="std std-ref">TIJ-06</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-01"><span class="std std-ref">NPF-01</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores the presence of a byte order mark.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-06"><span class="std std-ref">TIJ-06</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library recognises ill-formed byte-order marks and throws an exception.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -590,17 +747,51 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-01.3.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-01.3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-01-4">
-<h1>NPF-01.4<a class="headerlink" href="#npf-01-4" title="Link to this heading">#</a></h1>
-<p>The service does not parse UTF-16 and UTF-32 byte order mark instead of an UTF-8 byte order mark, and throws an exception.</p>
+<section id="npf-01-4-reviewed-score-0-0">
+<h1>NPF-01.4 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-01-4-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library does not parse UTF-16 and UTF-32 byte order mark instead of an UTF-8 byte order mark, and throws an exception.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-01"><span class="std std-ref">NPF-01</span></a></p></li>
-<li><p><a class="reference internal" href="TIJ.html#tij-06"><span class="std std-ref">TIJ-06</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-01"><span class="std std-ref">NPF-01</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores the presence of a byte order mark.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-06"><span class="std std-ref">TIJ-06</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library recognises ill-formed byte-order marks and throws an exception.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -632,17 +823,51 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-01.4.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-01.4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-01-5">
-<h1>NPF-01.5<a class="headerlink" href="#npf-01-5" title="Link to this heading">#</a></h1>
-<p>The service does not parse partial and perturbed UTF-8 byte order marks within the first three characters of the input and throws an exception.</p>
+<section id="npf-01-5-reviewed-score-0-0">
+<h1>NPF-01.5 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-01-5-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library does not parse partial and perturbed UTF-8 byte order marks within the first three characters of the input and throws an exception.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-01"><span class="std std-ref">NPF-01</span></a></p></li>
-<li><p><a class="reference internal" href="TIJ.html#tij-06"><span class="std std-ref">TIJ-06</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-01"><span class="std std-ref">NPF-01</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores the presence of a byte order mark.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-06"><span class="std std-ref">TIJ-06</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library recognises ill-formed byte-order marks and throws an exception.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -795,32 +1020,119 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-01.5.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-01.5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-02">
-<h1>NPF-02<a class="headerlink" href="#npf-02" title="Link to this heading">#</a></h1>
-<p>The service parses numbers according to RFC8259.</p>
+<section id="npf-02-reviewed-score-0-0">
+<h1>NPF-02 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-02-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses numbers according to RFC8259.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="PJD.html#pjd-03"><span class="std std-ref">PJD-03</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="PJD.html#pjd-03"><span class="std std-ref">PJD-03</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-02.1"><span class="std std-ref">NPF-02.1</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-02.2"><span class="std std-ref">NPF-02.2</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-02.3"><span class="std std-ref">NPF-02.3</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-02.4"><span class="std std-ref">NPF-02.4</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-02.5"><span class="std std-ref">NPF-02.5</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-02.6"><span class="std std-ref">NPF-02.6</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-02.7"><span class="std std-ref">NPF-02.7</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-02.8"><span class="std std-ref">NPF-02.8</span></a></p></li>
-<li><p><a class="reference internal" href="AOU.html#aou-22"><span class="std std-ref">AOU-22</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-02.9"><span class="std std-ref">NPF-02.9</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-02.10"><span class="std std-ref">NPF-02.10</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-02.11"><span class="std std-ref">NPF-02.11</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-02.12"><span class="std std-ref">NPF-02.12</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02.1"><span class="std std-ref">NPF-02.1</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses integers without exponent within the precision of int64_t.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-02.2"><span class="std std-ref">NPF-02.2</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses integers with exponent within the precision of 64-bit double.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02.3"><span class="std std-ref">NPF-02.3</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses floating point values without exponent within the precision of 64-bit double.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-02.4"><span class="std std-ref">NPF-02.4</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses floating point values with exponent within the precision of 64-bit double.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02.5"><span class="std std-ref">NPF-02.5</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores leading zeroes in the exponent.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-02.6"><span class="std std-ref">NPF-02.6</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses integers within IEEE 754-2008 binary64.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02.7"><span class="std std-ref">NPF-02.7</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores leading and trailing whitespace.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-02.8"><span class="std std-ref">NPF-02.8</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores one singular leading plus of the exponent.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02.9"><span class="std std-ref">NPF-02.9</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses floating point numbers within IEEE 754-2008 binary64 standard.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-02.10"><span class="std std-ref">NPF-02.10</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores trailing zeroes after the decimal point.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02.11"><span class="std std-ref">NPF-02.11</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers within the 64-bit double range but outside of the double precision without throwing an exception and without guarantee of precision.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-02.12"><span class="std std-ref">NPF-02.12</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores capitalisation of the exponent.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>References:</strong></p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">function:</span> <span class="pre">[lexer::scan_number]</span> <span class="pre">(include/nlohmann/detail/input/lexer.hpp)</span></code></p>
@@ -1160,16 +1472,82 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-02.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-02</p></th>
+<th class="head"><p>NPF-02.1</p></th>
+<th class="head"><p>NPF-02.2</p></th>
+<th class="head"><p>NPF-02.3</p></th>
+<th class="head"><p>NPF-02.4</p></th>
+<th class="head"><p>NPF-02.5</p></th>
+<th class="head"><p>NPF-02.6</p></th>
+<th class="head"><p>NPF-02.7</p></th>
+<th class="head"><p>NPF-02.8</p></th>
+<th class="head"><p>NPF-02.9</p></th>
+<th class="head"><p>NPF-02.10</p></th>
+<th class="head"><p>NPF-02.11</p></th>
+<th class="head"><p>NPF-02.12</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-02-1">
-<h1>NPF-02.1<a class="headerlink" href="#npf-02-1" title="Link to this heading">#</a></h1>
-<p>The service parses integers without exponent within the precision of int64_t.</p>
+<section id="npf-02-1-reviewed-score-0-0">
+<h1>NPF-02.1 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-02-1-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses integers without exponent within the precision of int64_t.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -1270,16 +1648,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-02.1.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-02.1</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-02-10">
-<h1>NPF-02.10<a class="headerlink" href="#npf-02-10" title="Link to this heading">#</a></h1>
-<p>The service ignores trailing zeroes after the decimal point.</p>
+<section id="npf-02-10-reviewed-score-0-0">
+<h1>NPF-02.10 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-02-10-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library ignores trailing zeroes after the decimal point.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -1322,16 +1730,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-02.10.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-02.10</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-02-11">
-<h1>NPF-02.11<a class="headerlink" href="#npf-02-11" title="Link to this heading">#</a></h1>
-<p>The service parses numbers within the 64-bit double range but outside of the double precision without throwing an exception and without guarantee of precision.</p>
+<section id="npf-02-11-reviewed-score-0-0">
+<h1>NPF-02.11 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-02-11-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses numbers within the 64-bit double range but outside of the double precision without throwing an exception and without guarantee of precision.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -1394,16 +1832,48 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-02.11.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-02.11</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<hr class="docutils" />
+<p>Although numbers are parsed without throwing an exception, they are not parsed accurately.</p>
 </section>
 <hr class="docutils" />
-<section id="npf-02-12">
-<h1>NPF-02.12<a class="headerlink" href="#npf-02-12" title="Link to this heading">#</a></h1>
-<p>The service ignores capitalisation of the exponent.</p>
+<section id="npf-02-12-reviewed-score-0-0">
+<h1>NPF-02.12 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-02-12-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library ignores capitalisation of the exponent.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -1425,16 +1895,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-02.12.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-02.12</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-02-2">
-<h1>NPF-02.2<a class="headerlink" href="#npf-02-2" title="Link to this heading">#</a></h1>
-<p>The service parses integers with exponent within the precision of 64-bit double.</p>
+<section id="npf-02-2-reviewed-score-0-0">
+<h1>NPF-02.2 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-02-2-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses integers with exponent within the precision of 64-bit double.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -1610,16 +2110,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-02.2.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-02.2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-02-3">
-<h1>NPF-02.3<a class="headerlink" href="#npf-02-3" title="Link to this heading">#</a></h1>
-<p>The service parses floating point values without exponent within the precision of 64-bit double.</p>
+<section id="npf-02-3-reviewed-score-0-0">
+<h1>NPF-02.3 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-02-3-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses floating point values without exponent within the precision of 64-bit double.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -1739,16 +2269,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-02.3.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-02.3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-02-4">
-<h1>NPF-02.4<a class="headerlink" href="#npf-02-4" title="Link to this heading">#</a></h1>
-<p>The service parses floating point values with exponent within the precision of 64-bit double.</p>
+<section id="npf-02-4-reviewed-score-0-0">
+<h1>NPF-02.4 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-02-4-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses floating point values with exponent within the precision of 64-bit double.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -1846,16 +2406,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-02.4.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-02.4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-02-5">
-<h1>NPF-02.5<a class="headerlink" href="#npf-02-5" title="Link to this heading">#</a></h1>
-<p>The service ignores leading zeroes in the exponent.</p>
+<section id="npf-02-5-reviewed-score-0-0">
+<h1>NPF-02.5 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-02-5-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library ignores leading zeroes in the exponent.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -1886,16 +2476,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-02.5.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-02.5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-02-6">
-<h1>NPF-02.6<a class="headerlink" href="#npf-02-6" title="Link to this heading">#</a></h1>
-<p>The service parses integers within IEEE 754-2008 binary64.</p>
+<section id="npf-02-6-reviewed-score-0-0">
+<h1>NPF-02.6 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-02-6-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses integers within IEEE 754-2008 binary64.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -1947,16 +2567,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-02.6.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-02.6</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-02-7">
-<h1>NPF-02.7<a class="headerlink" href="#npf-02-7" title="Link to this heading">#</a></h1>
-<p>The service ignores leading and trailing whitespace.</p>
+<section id="npf-02-7-reviewed-score-0-0">
+<h1>NPF-02.7 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-02-7-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library ignores leading and trailing whitespace.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -2012,16 +2662,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-02.7.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-02.7</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-02-8">
-<h1>NPF-02.8<a class="headerlink" href="#npf-02-8" title="Link to this heading">#</a></h1>
-<p>The service ignores one singular leading plus of the exponent.</p>
+<section id="npf-02-8-reviewed-score-0-0">
+<h1>NPF-02.8 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-02-8-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library ignores one singular leading plus of the exponent.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -2046,16 +2726,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-02.8.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-02.8</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-02-9">
-<h1>NPF-02.9<a class="headerlink" href="#npf-02-9" title="Link to this heading">#</a></h1>
-<p>The service parses floating point numbers within IEEE 754-2008 binary64 standard.</p>
+<section id="npf-02-9-reviewed-score-0-0">
+<h1>NPF-02.9 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-02-9-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses floating point numbers within IEEE 754-2008 binary64 standard.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-02"><span class="std std-ref">NPF-02</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -2266,26 +2976,94 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-02.9.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-02.9</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-03">
-<h1>NPF-03<a class="headerlink" href="#npf-03" title="Link to this heading">#</a></h1>
-<p>The service parses strings according to RFC8259.</p>
+<section id="npf-03-reviewed-score-0-0">
+<h1>NPF-03 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-03-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses strings according to RFC8259.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="PJD.html#pjd-03"><span class="std std-ref">PJD-03</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="PJD.html#pjd-03"><span class="std std-ref">PJD-03</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-03.1"><span class="std std-ref">NPF-03.1</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-03.2"><span class="std std-ref">NPF-03.2</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-03.3"><span class="std std-ref">NPF-03.3</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-03.4"><span class="std std-ref">NPF-03.4</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-03.5"><span class="std std-ref">NPF-03.5</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-03.6"><span class="std std-ref">NPF-03.6</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-03.7"><span class="std std-ref">NPF-03.7</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-03.1"><span class="std std-ref">NPF-03.1</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores leading and trailing whitespace.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-03.2"><span class="std std-ref">NPF-03.2</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses escaped characters in the basic multilingual plane.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-03.3"><span class="std std-ref">NPF-03.3</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores capitalisation in escaped hexadecimal unicode.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-03.4"><span class="std std-ref">NPF-03.4</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses all unescaped utf-8 characters except quotation marks, reverse solidus and the control characters.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-03.5"><span class="std std-ref">NPF-03.5</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses \, \/, \b,\f, \n, \r, \t and escaped quotation marks.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-03.6"><span class="std std-ref">NPF-03.6</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses the empty string.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-03.7"><span class="std std-ref">NPF-03.7</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses non-empty strings.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>References:</strong></p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">function:</span> <span class="pre">[lexer::scan_string]</span> <span class="pre">(include/nlohmann/detail/input/lexer.hpp)</span></code></p>
@@ -2884,16 +3662,67 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-03.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-03</p></th>
+<th class="head"><p>NPF-03.1</p></th>
+<th class="head"><p>NPF-03.2</p></th>
+<th class="head"><p>NPF-03.3</p></th>
+<th class="head"><p>NPF-03.4</p></th>
+<th class="head"><p>NPF-03.5</p></th>
+<th class="head"><p>NPF-03.6</p></th>
+<th class="head"><p>NPF-03.7</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-03-1">
-<h1>NPF-03.1<a class="headerlink" href="#npf-03-1" title="Link to this heading">#</a></h1>
-<p>The service ignores leading and trailing whitespace.</p>
+<section id="npf-03-1-reviewed-score-0-0">
+<h1>NPF-03.1 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-03-1-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library ignores leading and trailing whitespace.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-03"><span class="std std-ref">NPF-03</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-03"><span class="std std-ref">NPF-03</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses strings according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -2948,16 +3777,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-03.1.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-03.1</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-03-2">
-<h1>NPF-03.2<a class="headerlink" href="#npf-03-2" title="Link to this heading">#</a></h1>
-<p>The service parses escaped characters in the basic multilingual plane.</p>
+<section id="npf-03-2-reviewed-score-0-0">
+<h1>NPF-03.2 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-03-2-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses escaped characters in the basic multilingual plane.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-03"><span class="std std-ref">NPF-03</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-03"><span class="std std-ref">NPF-03</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses strings according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -3087,16 +3946,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-03.2.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-03.2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-03-3">
-<h1>NPF-03.3<a class="headerlink" href="#npf-03-3" title="Link to this heading">#</a></h1>
-<p>The service ignores capitalisation in escaped hexadecimal unicode.</p>
+<section id="npf-03-3-reviewed-score-0-0">
+<h1>NPF-03.3 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-03-3-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library ignores capitalisation in escaped hexadecimal unicode.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-03"><span class="std std-ref">NPF-03</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-03"><span class="std std-ref">NPF-03</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses strings according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -3140,16 +4029,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-03.3.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-03.3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-03-4">
-<h1>NPF-03.4<a class="headerlink" href="#npf-03-4" title="Link to this heading">#</a></h1>
-<p>The service parses all unescaped utf-8 characters except quotation mark, reverse solidus and the control characters.</p>
+<section id="npf-03-4-reviewed-score-0-0">
+<h1>NPF-03.4 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-03-4-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses all unescaped utf-8 characters except quotation marks, reverse solidus and the control characters.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-03"><span class="std std-ref">NPF-03</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-03"><span class="std std-ref">NPF-03</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses strings according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -3261,16 +4180,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-03.4.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-03.4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-03-5">
-<h1>NPF-03.5<a class="headerlink" href="#npf-03-5" title="Link to this heading">#</a></h1>
-<p>The service parses \, \/, \b,\f, \n, \r, \t and escaped quotation marks.</p>
+<section id="npf-03-5-reviewed-score-0-0">
+<h1>NPF-03.5 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-03-5-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses \, \/, \b,\f, \n, \r, \t and escaped quotation marks.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-03"><span class="std std-ref">NPF-03</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-03"><span class="std std-ref">NPF-03</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses strings according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -3350,16 +4299,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-03.5.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-03.5</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-03-6">
-<h1>NPF-03.6<a class="headerlink" href="#npf-03-6" title="Link to this heading">#</a></h1>
-<p>The service parses the empty string.</p>
+<section id="npf-03-6-reviewed-score-0-0">
+<h1>NPF-03.6 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-03-6-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses the empty string.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-03"><span class="std std-ref">NPF-03</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-03"><span class="std std-ref">NPF-03</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses strings according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -3480,16 +4459,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-03.6.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-03.6</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-03-7">
-<h1>NPF-03.7<a class="headerlink" href="#npf-03-7" title="Link to this heading">#</a></h1>
-<p>The service parses non-empty strings.</p>
+<section id="npf-03-7-reviewed-score-0-0">
+<h1>NPF-03.7 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-03-7-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses non-empty strings.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-03"><span class="std std-ref">NPF-03</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-03"><span class="std std-ref">NPF-03</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses strings according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -3910,23 +4919,79 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-03.7.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-03.7</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-04">
-<h1>NPF-04<a class="headerlink" href="#npf-04" title="Link to this heading">#</a></h1>
-<p>The service parses literal names “true”, “false” and “null” according to RFC8259.</p>
+<section id="npf-04-reviewed-score-0-0">
+<h1>NPF-04 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-04-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses literal names “true”, “false” and “null” according to RFC8259.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="PJD.html#pjd-03"><span class="std std-ref">PJD-03</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="PJD.html#pjd-03"><span class="std std-ref">PJD-03</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-04.1"><span class="std std-ref">NPF-04.1</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-04.2"><span class="std std-ref">NPF-04.2</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-04.3"><span class="std std-ref">NPF-04.3</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-04.4"><span class="std std-ref">NPF-04.4</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-04.1"><span class="std std-ref">NPF-04.1</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores leading and trailing whitespace.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-04.2"><span class="std std-ref">NPF-04.2</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses the literal name true.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-04.3"><span class="std std-ref">NPF-04.3</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses the literal name false.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-04.4"><span class="std std-ref">NPF-04.4</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses the literal name null.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>References:</strong></p>
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">function:</span> <span class="pre">[lexer::scan_literal]</span> <span class="pre">(include/nlohmann/detail/input/lexer.hpp)</span></code></p>
@@ -3954,16 +5019,58 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-04.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-04</p></th>
+<th class="head"><p>NPF-04.1</p></th>
+<th class="head"><p>NPF-04.2</p></th>
+<th class="head"><p>NPF-04.3</p></th>
+<th class="head"><p>NPF-04.4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-04-1">
-<h1>NPF-04.1<a class="headerlink" href="#npf-04-1" title="Link to this heading">#</a></h1>
-<p>The service ignores leading and trailing whitespace.</p>
+<section id="npf-04-1-reviewed-score-0-0">
+<h1>NPF-04.1 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-04-1-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library ignores leading and trailing whitespace.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-04"><span class="std std-ref">NPF-04</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-04"><span class="std std-ref">NPF-04</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses literal names “true”, “false” and “null” according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -4049,16 +5156,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-04.1.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-04.1</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-04-2">
-<h1>NPF-04.2<a class="headerlink" href="#npf-04-2" title="Link to this heading">#</a></h1>
-<p>The service parses the literal name true.</p>
+<section id="npf-04-2-reviewed-score-0-0">
+<h1>NPF-04.2 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-04-2-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses the literal name true.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-04"><span class="std std-ref">NPF-04</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-04"><span class="std std-ref">NPF-04</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses literal names “true”, “false” and “null” according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -4080,16 +5217,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-04.2.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-04.2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-04-3">
-<h1>NPF-04.3<a class="headerlink" href="#npf-04-3" title="Link to this heading">#</a></h1>
-<p>The service parses the literal name false.</p>
+<section id="npf-04-3-reviewed-score-0-0">
+<h1>NPF-04.3 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-04-3-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses the literal name false.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-04"><span class="std std-ref">NPF-04</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-04"><span class="std std-ref">NPF-04</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses literal names “true”, “false” and “null” according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -4111,16 +5278,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-04.3.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-04.3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-04-4">
-<h1>NPF-04.4<a class="headerlink" href="#npf-04-4" title="Link to this heading">#</a></h1>
-<p>The service parses the literal name null.</p>
+<section id="npf-04-4-reviewed-score-0-0">
+<h1>NPF-04.4 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-04-4-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses the literal name null.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-04"><span class="std std-ref">NPF-04</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-04"><span class="std std-ref">NPF-04</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses literal names “true”, “false” and “null” according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -4142,37 +5339,128 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-04.4.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-04.4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-05">
-<h1>NPF-05<a class="headerlink" href="#npf-05" title="Link to this heading">#</a></h1>
-<p>The service parses arrays according to RFC8259.</p>
+<section id="npf-05-reviewed-score-0-0">
+<h1>NPF-05 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-05-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses arrays according to RFC8259.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="PJD.html#pjd-03"><span class="std std-ref">PJD-03</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="PJD.html#pjd-03"><span class="std std-ref">PJD-03</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-05.1"><span class="std std-ref">NPF-05.1</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-05.2"><span class="std std-ref">NPF-05.2</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-05.3"><span class="std std-ref">NPF-05.3</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-05.1"><span class="std std-ref">NPF-05.1</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores leading and trailing whitespace for each value.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-05.2"><span class="std std-ref">NPF-05.2</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses empty arrays.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-05.3"><span class="std std-ref">NPF-05.3</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses non-empty arrays.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>References:</strong></p>
 <p><em>None</em></p>
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-05.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-05</p></th>
+<th class="head"><p>NPF-05.1</p></th>
+<th class="head"><p>NPF-05.2</p></th>
+<th class="head"><p>NPF-05.3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-05-1">
-<h1>NPF-05.1<a class="headerlink" href="#npf-05-1" title="Link to this heading">#</a></h1>
-<p>The service ignores leading and trailing whitespace for each value.</p>
+<section id="npf-05-1-reviewed-score-0-0">
+<h1>NPF-05.1 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-05-1-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library ignores leading and trailing whitespace for each value.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-05"><span class="std std-ref">NPF-05</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-05"><span class="std std-ref">NPF-05</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses arrays according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -4236,16 +5524,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-05.1.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-05.1</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-05-2">
-<h1>NPF-05.2<a class="headerlink" href="#npf-05-2" title="Link to this heading">#</a></h1>
-<p>The service parses empty arrays.</p>
+<section id="npf-05-2-reviewed-score-0-0">
+<h1>NPF-05.2 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-05-2-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses empty arrays.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-05"><span class="std std-ref">NPF-05</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-05"><span class="std std-ref">NPF-05</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses arrays according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -4301,16 +5619,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-05.2.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-05.2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-05-3">
-<h1>NPF-05.3<a class="headerlink" href="#npf-05-3" title="Link to this heading">#</a></h1>
-<p>The service parses non-empty arrays.</p>
+<section id="npf-05-3-reviewed-score-0-0">
+<h1>NPF-05.3 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-05-3-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses non-empty arrays.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-05"><span class="std std-ref">NPF-05</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-05"><span class="std std-ref">NPF-05</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses arrays according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -4431,38 +5779,136 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-05.3.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-05.3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-06">
-<h1>NPF-06<a class="headerlink" href="#npf-06" title="Link to this heading">#</a></h1>
-<p>The service parses objects according to RFC8259.</p>
+<section id="npf-06-reviewed-score-0-0">
+<h1>NPF-06 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-06-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses objects according to RFC8259.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="PJD.html#pjd-03"><span class="std std-ref">PJD-03</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="PJD.html#pjd-03"><span class="std std-ref">PJD-03</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-06.1"><span class="std std-ref">NPF-06.1</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-06.2"><span class="std std-ref">NPF-06.2</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-06.3"><span class="std std-ref">NPF-06.3</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-06.4"><span class="std std-ref">NPF-06.4</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-06.1"><span class="std std-ref">NPF-06.1</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library ignores leading and trailing whitespace for name and value of each member.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-06.2"><span class="std std-ref">NPF-06.2</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses duplicate names without error and reports the last member with that name only.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-06.3"><span class="std std-ref">NPF-06.3</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses empty objects.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-06.4"><span class="std std-ref">NPF-06.4</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses non-empty objects.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>References:</strong></p>
 <p><em>None</em></p>
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-06.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-06</p></th>
+<th class="head"><p>NPF-06.1</p></th>
+<th class="head"><p>NPF-06.2</p></th>
+<th class="head"><p>NPF-06.3</p></th>
+<th class="head"><p>NPF-06.4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-06-1">
-<h1>NPF-06.1<a class="headerlink" href="#npf-06-1" title="Link to this heading">#</a></h1>
-<p>The service ignores leading and trailing whitespace for name and value of each member.</p>
+<section id="npf-06-1-reviewed-score-0-0">
+<h1>NPF-06.1 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-06-1-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library ignores leading and trailing whitespace for name and value of each member.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-06"><span class="std std-ref">NPF-06</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-06"><span class="std std-ref">NPF-06</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses objects according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -4518,16 +5964,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-06.1.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-06.1</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-06-2">
-<h1>NPF-06.2<a class="headerlink" href="#npf-06-2" title="Link to this heading">#</a></h1>
-<p>The service parses duplicate names without error and reports the last member with that name only.</p>
+<section id="npf-06-2-reviewed-score-0-0">
+<h1>NPF-06.2 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-06-2-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses duplicate names without error and reports the last member with that name only.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-06"><span class="std std-ref">NPF-06</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-06"><span class="std std-ref">NPF-06</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses objects according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -4581,16 +6057,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-06.2.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-06.2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-06-3">
-<h1>NPF-06.3<a class="headerlink" href="#npf-06-3" title="Link to this heading">#</a></h1>
-<p>The service parses empty objects.</p>
+<section id="npf-06-3-reviewed-score-0-0">
+<h1>NPF-06.3 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-06-3-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses empty objects.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-06"><span class="std std-ref">NPF-06</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-06"><span class="std std-ref">NPF-06</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses objects according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -4612,16 +6118,46 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-06.3.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-06.3</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-06-4">
-<h1>NPF-06.4<a class="headerlink" href="#npf-06-4" title="Link to this heading">#</a></h1>
-<p>The service parses non-empty objects.</p>
+<section id="npf-06-4-reviewed-score-0-0">
+<h1>NPF-06.4 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-06-4-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses non-empty objects.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-06"><span class="std std-ref">NPF-06</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-06"><span class="std std-ref">NPF-06</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses objects according to RFC8259.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -4642,36 +6178,120 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-06.4.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-06.4</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-07">
-<h1>NPF-07<a class="headerlink" href="#npf-07" title="Link to this heading">#</a></h1>
-<p>The service parses well-formed UTF-8 encoded data only.</p>
+<section id="npf-07-reviewed-score-0-0">
+<h1>NPF-07 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-07-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses well-formed UTF-8 encoded data only.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="PJD.html#pjd-03"><span class="std std-ref">PJD-03</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="PJD.html#pjd-03"><span class="std std-ref">PJD-03</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-07.1"><span class="std std-ref">NPF-07.1</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-07.2"><span class="std std-ref">NPF-07.2</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-07.1"><span class="std std-ref">NPF-07.1</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses UTF-8 encoded data.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-07.2"><span class="std std-ref">NPF-07.2</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on ill-formed UTF-8 data.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>References:</strong></p>
 <p><em>None</em></p>
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-07.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-07</p></th>
+<th class="head"><p>NPF-07.1</p></th>
+<th class="head"><p>NPF-07.2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-07-1">
-<h1>NPF-07.1<a class="headerlink" href="#npf-07-1" title="Link to this heading">#</a></h1>
-<p>The service parses UTF-8 encoded data.</p>
+<section id="npf-07-1-reviewed-score-0-0">
+<h1>NPF-07.1 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-07-1-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library parses UTF-8 encoded data.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="#npf-07"><span class="std std-ref">NPF-07</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#npf-07"><span class="std std-ref">NPF-07</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses well-formed UTF-8 encoded data only.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -4876,17 +6496,51 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-07.1.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-07.1</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 <hr class="docutils" />
-<section id="npf-07-2">
-<h1>NPF-07.2<a class="headerlink" href="#npf-07-2" title="Link to this heading">#</a></h1>
-<p>The service throws an exception on ill-formed UTF-8 data.</p>
+<section id="npf-07-2-reviewed-score-0-0">
+<h1>NPF-07.2 | Reviewed: ⨯ | Score: 0.0<a class="headerlink" href="#npf-07-2-reviewed-score-0-0" title="Link to this heading">#</a></h1>
+<p>The service provided by the nlohmann/json library throws an exception on ill-formed UTF-8 data.</p>
 <p><strong>Supported Requests:</strong></p>
-<ul class="simple">
-<li><p><a class="reference internal" href="JLS.html#jls-24"><span class="std std-ref">JLS-24</span></a></p></li>
-<li><p><a class="reference internal" href="#npf-07"><span class="std std-ref">NPF-07</span></a></p></li>
-</ul>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Item</p></th>
+<th class="head"><p>Summary</p></th>
+<th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-24"><span class="std std-ref">JLS-24</span></a></p></td>
+<td><p>The nlohmann/json library recognizes malformed JSON and returns an exception.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#npf-07"><span class="std std-ref">NPF-07</span></a></p></td>
+<td><p>The service provided by the nlohmann/json library parses well-formed UTF-8 encoded data only.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ Link Reviewed</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p><strong>Supporting Items:</strong></p>
 <p><em>None</em></p>
 <p><strong>References:</strong></p>
@@ -5664,7 +7318,23 @@
 <p><strong>Fallacies:</strong></p>
 <p><em>None</em></p>
 <p><strong>Graph:</strong></p>
-<p><em>No Historic Data Found</em></p>
+<p><img alt="No Image" src="../_images/NPF-07.2.svg" /></p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>date-time</p></th>
+<th class="head"><p>NPF-07.2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>2025-11-26 12:04:09</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>2025-11-26 12:52:19.093864</p></td>
+<td><p>0.00</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 </section>
 
 
@@ -5696,50 +7366,50 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">NPF-01</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-01-1">NPF-01.1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-01-2">NPF-01.2</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-01-3">NPF-01.3</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-01-4">NPF-01.4</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-01-5">NPF-01.5</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02">NPF-02</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-1">NPF-02.1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-10">NPF-02.10</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-11">NPF-02.11</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-12">NPF-02.12</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-2">NPF-02.2</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-3">NPF-02.3</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-4">NPF-02.4</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-5">NPF-02.5</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-6">NPF-02.6</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-7">NPF-02.7</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-8">NPF-02.8</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-9">NPF-02.9</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03">NPF-03</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-1">NPF-03.1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-2">NPF-03.2</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-3">NPF-03.3</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-4">NPF-03.4</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-5">NPF-03.5</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-6">NPF-03.6</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-7">NPF-03.7</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-04">NPF-04</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-04-1">NPF-04.1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-04-2">NPF-04.2</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-04-3">NPF-04.3</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-04-4">NPF-04.4</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-05">NPF-05</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-05-1">NPF-05.1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-05-2">NPF-05.2</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-05-3">NPF-05.3</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-06">NPF-06</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-06-1">NPF-06.1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-06-2">NPF-06.2</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-06-3">NPF-06.3</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-06-4">NPF-06.4</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-07">NPF-07</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-07-1">NPF-07.1</a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-07-2">NPF-07.2</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">NPF-01 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-01-1-reviewed-score-0-0">NPF-01.1 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-01-2-reviewed-score-0-0">NPF-01.2 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-01-3-reviewed-score-0-0">NPF-01.3 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-01-4-reviewed-score-0-0">NPF-01.4 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-01-5-reviewed-score-0-0">NPF-01.5 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-reviewed-score-0-0">NPF-02 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-1-reviewed-score-0-0">NPF-02.1 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-10-reviewed-score-0-0">NPF-02.10 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-11-reviewed-score-0-0">NPF-02.11 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-12-reviewed-score-0-0">NPF-02.12 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-2-reviewed-score-0-0">NPF-02.2 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-3-reviewed-score-0-0">NPF-02.3 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-4-reviewed-score-0-0">NPF-02.4 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-5-reviewed-score-0-0">NPF-02.5 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-6-reviewed-score-0-0">NPF-02.6 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-7-reviewed-score-0-0">NPF-02.7 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-8-reviewed-score-0-0">NPF-02.8 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-02-9-reviewed-score-0-0">NPF-02.9 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-reviewed-score-0-0">NPF-03 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-1-reviewed-score-0-0">NPF-03.1 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-2-reviewed-score-0-0">NPF-03.2 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-3-reviewed-score-0-0">NPF-03.3 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-4-reviewed-score-0-0">NPF-03.4 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-5-reviewed-score-0-0">NPF-03.5 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-6-reviewed-score-0-0">NPF-03.6 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-03-7-reviewed-score-0-0">NPF-03.7 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-04-reviewed-score-0-0">NPF-04 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-04-1-reviewed-score-0-0">NPF-04.1 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-04-2-reviewed-score-0-0">NPF-04.2 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-04-3-reviewed-score-0-0">NPF-04.3 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-04-4-reviewed-score-0-0">NPF-04.4 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-05-reviewed-score-0-0">NPF-05 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-05-1-reviewed-score-0-0">NPF-05.1 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-05-2-reviewed-score-0-0">NPF-05.2 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-05-3-reviewed-score-0-0">NPF-05.3 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-06-reviewed-score-0-0">NPF-06 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-06-1-reviewed-score-0-0">NPF-06.1 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-06-2-reviewed-score-0-0">NPF-06.2 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-06-3-reviewed-score-0-0">NPF-06.3 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-06-4-reviewed-score-0-0">NPF-06.4 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-07-reviewed-score-0-0">NPF-07 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-07-1-reviewed-score-0-0">NPF-07.1 | Reviewed: ⨯ | Score: 0.0</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#npf-07-2-reviewed-score-0-0">NPF-07.2 | Reviewed: ⨯ | Score: 0.0</a></li>
 </ul>
 
   </nav></div>

@@ -453,9 +453,9 @@ Scores in the report are indicated by both a numerical score and the colormap be
 <span style="float:left;">&nbsp0.00</span>
 </div>
 <p>The status of an item and its links also affect the score.</p>
-<p>Unreviewed items are indicated by a strikethrough.
+<p>Unreviewed items are indicated by a cross in the status column.
 The score of unreviewed items is always set to zero.</p>
-<p>Suspect links are indicated by italics.
+<p>Suspect links are indicated by a cross in the status column.
 The contribution to the score of a parent item by a suspiciously linked child is always zero, regardless of the child’s own score.</p>
 </section>
 <section id="compliance-for-aou">
@@ -466,108 +466,149 @@ The contribution to the score of a parent item by a suspiciously linked child is
 <tr class="row-odd"><th class="head"><p>Item</p></th>
 <th class="head"><p>Summary</p></th>
 <th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-01"><span class="std std-ref">AOU-01</span></a></p></td>
-<td><p>The integrator shall report problems with nlohmann/json’s implementation to the upstream nlohmann/json project whenever a problem is detected.</p></td>
+<td><p>The integrator shall report problems with eclipse-score/inc_nlohmann_json’s implementation to the upstream nlohmann/json repository whenever a problem is detected.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-02"><span class="std std-ref">AOU-02</span></a></p></td>
-<td><p>The integrator shall ensure that the build environment used for nlohmann/json is supplied with consistent dependencies in every integrating system.</p></td>
+<td><p>The integrator shall ensure that the build environment used for eclipse-score/inc_nlohmann_json is supplied with consistent dependencies in every integrating system.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-03"><span class="std std-ref">AOU-03</span></a></p></td>
-<td><p>The integrator shall ensure that integrator-controlled mirrors of the dependencies are persistently and accessibly stored as long as the library nlohmann/json is used.</p></td>
+<td><p>The integrator shall ensure that integrator-controlled mirrors of the dependencies of the nlohmann/json repository are persistently and accessibly stored as long as the nlohmann/json library is used within eclipse-score/inc_nlohmann_json.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-04"><span class="std std-ref">AOU-04</span></a></p></td>
-<td><p>The integrator shall ensure that exceptions are properly handled or turned off, whenever nlohmann/json is used.</p></td>
+<td><p>The integrator shall ensure that exceptions are properly handled or turned off in eclipse-score/inc_nlohmann_json, whenever eclipse-score/inc_nlohmann_json’s implementation of nlohmann/json is used.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-05"><span class="std std-ref">AOU-05</span></a></p></td>
-<td><p>The integrator shall ensure that input is encoded as UTF-8 (as required by RFC8259) and that exceptions thrown in case other string formats are used are properly handled</p></td>
+<td><p>The integrator shall ensure that in eclipse-score/inc_nlohmann_json, input is encoded as UTF-8 (as required by RFC8259) and that in case other string formats are used, thrown exceptions are properly handled.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-06"><span class="std std-ref">AOU-06</span></a></p></td>
-<td><p>The integrator shall ensure that brace initialization (e.g. json j{true};) is not used with the types basic_json, json, or ordered_json, unless an object or array is created.</p></td>
+<td><p>The integrator shall ensure that in eclipse-score/inc_nlohmann_json brace initialization (e.g. json j{true};) is not used with the types basic_json, json, or ordered_json, unless an object or array is created.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-07"><span class="std std-ref">AOU-07</span></a></p></td>
-<td><p>The integrator shall ensure that exceptions, which are expected during parsing with default parameters, are properly handled whenever the input is no valid JSON.</p></td>
+<td><p>The integrator shall ensure in eclipse-score/inc_nlohmann_json that exceptions, which are expected during parsing with default parameters, are properly handled whenever the input is no valid JSON.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-08"><span class="std std-ref">AOU-08</span></a></p></td>
-<td><p>The integrator shall ensure that all necessary source files and built tools are mirrored, e.g. using a built server without internet access, as long as nlohmann/json is actively used.</p></td>
+<td><p>The integrator shall ensure that all necessary source files and built tools are mirrored in eclipse-score/inc_nlohmann_json, e.g. using a built server without internet access, as long as nlohmann/json is actively used within eclipse-score/inc_nlohmann_json.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-09"><span class="std std-ref">AOU-09</span></a></p></td>
-<td><p>The integrator shall ensure that advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis.</p></td>
+<td><p>The integrator shall ensure inside eclipse-score/inc_nlohmann_json that advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-10_combined"><span class="std std-ref">AOU-10_COMBINED</span></a></p></td>
-<td><p>The integrator shall evaluate the provided evidence and supplement it where necessary, whenever the trustability documentation of nlohmann/json is reviewed.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-10"><span class="std std-ref">AOU-10</span></a></p></td>
+<td><p>The integrator shall, whenever possible, turn any remaining Assumptions-of-Use (AOU) items into statements and add suitable references and/or validators.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-14"><span class="std std-ref">AOU-14</span></a></p></td>
-<td><p>The integrator shall ensure that nlohmann/json library is built with tools from the provided matrix specification, whenever nlohmann/json is used. (not yet provided)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-11"><span class="std std-ref">AOU-11</span></a></p></td>
+<td><p>The integrator shall, whenever possible, replace outdated and/or provide additional references and validators that would further improve the trustability of a statement.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-15"><span class="std std-ref">AOU-15</span></a></p></td>
-<td><p>The integrator shall maintain mirrors for all code and tools utilized in testing as long as nlohmann/json is actively used.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-14"><span class="std std-ref">AOU-14</span></a></p></td>
+<td><p>The integrator shall ensure that the eclipse-score/inc_nlohmann_json is built with tools from the provided matrix specification, whenever nlohmann/json is used within eclipse-score/inc_nlohmann_json. (not yet provided)</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-16"><span class="std std-ref">AOU-16</span></a></p></td>
-<td><p>The integrator shall use C++ versions and compilers that are tested in the CI pipeline, whenever nlohmann/json is used.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-15"><span class="std std-ref">AOU-15</span></a></p></td>
+<td><p>The integrator shall maintain mirrors for all code and tools utilized in testing as long as nlohmann/json is actively used within eclipse-score/inc_nlohmann_json.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-17"><span class="std std-ref">AOU-17</span></a></p></td>
-<td><p>The integrator shall identify misbehaviours for nlohmann/json, define appropriate mitigations, and ensure that these mitigations are thoroughly validated, whenever using nlohmann/json.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-16"><span class="std std-ref">AOU-16</span></a></p></td>
+<td><p>The integrator shall use C++ versions and compilers that are tested in the CI pipeline, whenever nlohmann/json is used within eclipse-score/inc_nlohmann_json.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-18"><span class="std std-ref">AOU-18</span></a></p></td>
-<td><p>The integrator shall ensure that monitoring data from deployed software is accurately captured, securely stored, and well-documented for analysis, as long as nlohmann/json is actively used.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-17"><span class="std std-ref">AOU-17</span></a></p></td>
+<td><p>The integrator shall identify misbehaviours for the nlohmann/json library, define appropriate mitigations, and ensure that these mitigations are thoroughly validated, whenever using eclipse-score/inc_nlohmann_json.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-19"><span class="std std-ref">AOU-19</span></a></p></td>
-<td><p>The integrator shall analyze monitoring data systematically to detect trends and identify issues, as long as nlohmann/json is actively used.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-18"><span class="std std-ref">AOU-18</span></a></p></td>
+<td><p>The integrator shall ensure that monitoring data from deployed software is accurately captured, securely stored, and well-documented for analysis within eclipse-score/inc_nlohmann_json, as long as the nlohmann/json library is actively used within eclipse-score/inc_nlohmann_json.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-20"><span class="std std-ref">AOU-20</span></a></p></td>
-<td><p>The integrator shall ensure that the keys within an object are unique, whenever an object is to be parsed by nlohmann/json.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-19"><span class="std std-ref">AOU-19</span></a></p></td>
+<td><p>The integrator shall analyze monitoring data systematically to detect trends and identify issues,  as long as the nlohmann/json library is actively used within eclipse-score/inc_nlohmann_json.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-21"><span class="std std-ref">AOU-21</span></a></p></td>
-<td><p>The integrator shall ensure that a string does not contain escaped unpaired utf-16 surrogate characters, and that exceptions are properly handled, whenever a string is to be parsed by nlohmann/json.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-20"><span class="std std-ref">AOU-20</span></a></p></td>
+<td><p>The integrator shall ensure that the keys within an object are unique, whenever an object is to be parsed by eclipse-score/inc_nlohmann_json.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-22"><span class="std std-ref">AOU-22</span></a></p></td>
-<td><p>The integrator shall ensure that numbers are written in base 10, and that exceptions and misbehaviours in case that any other base is used are properly handled and mitigated, whenever a number is parsed by nlohmann/json.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-21"><span class="std std-ref">AOU-21</span></a></p></td>
+<td><p>The integrator shall ensure that a string does not contain escaped unpaired utf-16 surrogate characters, and that exceptions are properly handled in eclipse-score/inc_nlohmann_json, whenever a string is to be parsed.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-23"><span class="std std-ref">AOU-23</span></a></p></td>
-<td><p>The integrator shall ensure that data are complete and error-free, whenever they are transmitted to nlohmann/json.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-22"><span class="std std-ref">AOU-22</span></a></p></td>
+<td><p>The integrator shall ensure that numbers are written in base 10, and that exceptions and misbehaviours in case that any other base is used are properly handled and mitigated within eclipse-score/inc_nlohmann_json, whenever a number is parsed.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-24"><span class="std std-ref">AOU-24</span></a></p></td>
-<td><p>The integrator shall ensure that the data do not change during reading, whenever transmitted to nlohmann/json.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-23"><span class="std std-ref">AOU-23</span></a></p></td>
+<td><p>The integrator shall ensure that data are complete and error-free, whenever they are transmitted to eclipse-score/inc_nlohmann_json.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-25"><span class="std std-ref">AOU-25</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-24"><span class="std std-ref">AOU-24</span></a></p></td>
+<td><p>The integrator shall ensure that the data do not change during reading, whenever transmitted to eclipse-score/inc_nlohmann_json.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-25"><span class="std std-ref">AOU-25</span></a></p></td>
 <td><p>The integrator shall convince themselves that the behaviour of the used C++ standard library is known, verified and validated.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-26"><span class="std std-ref">AOU-26</span></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-26"><span class="std std-ref">AOU-26</span></a></p></td>
 <td><p>The integrator shall convince themselves that the misbehaviours of the C++ standard library and mitigations are known, verified and validated.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-27"><span class="std std-ref">AOU-27</span></a></p></td>
-<td><p>The integrator shall ensure that ChangeLog.md is updated whenever the local mirror of nlohmann/json is updated.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-27"><span class="std std-ref">AOU-27</span></a></p></td>
+<td><p>The integrator shall ensure that the ‘Release management’ and ‘Update concepts’ in TSF/README.md are followed whenever any changes are done in eclipse-score/inc_nlohmann_json.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-28"><span class="std std-ref">AOU-28</span></a></p></td>
-<td><p>The integrator shall ensure that the known open bugs of nlohmann/json are regularly reviewed on their impact on the use of the documented version as long as the library is actively used.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-28"><span class="std std-ref">AOU-28</span></a></p></td>
+<td><p>The integrator shall ensure that the known open bugs of the nlohmann/json repository are regularly reviewed on their impact on the use of the documented version of nlohmann/json, as long as the nlohmann/json library is actively used within eclipse-score/inc_nlohmann_json.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="AOU.html#aou-29"><span class="std std-ref">AOU-29</span></a></p></td>
+<td><p>The integrator shall check the security tab in the GitHub UI on a regular basis, analyze and either fix or dismiss any outstanding CVEs.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="AOU.html#aou-30"><span class="std std-ref">AOU-30</span></a></p></td>
+<td><p>The integrator shall review the answers to each of the TSF evidence lists in the TA_CONTEXT files (see e.g., TSF/trustable/assertions/TA-ANALYSIS_CONTEXT.md). For each point that has not already been fulfilled, the integrator shall evaluate it and provide the relevant evidence if possible.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 </tbody>
 </table>
@@ -581,16 +622,19 @@ The contribution to the score of a parent item by a suspiciously linked child is
 <tr class="row-odd"><th class="head"><p>Item</p></th>
 <th class="head"><p>Summary</p></th>
 <th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="JLEX.html#jlex-01"><span class="std std-ref">JLEX-01</span></a></p></td>
 <td><p>The requirement regarding <a class="reference external" href="https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__validation">JSON Validation</a> is fulfilled.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="JLEX.html#jlex-02"><span class="std std-ref">JLEX-02</span></a></p></td>
 <td><p>The requirement regarding <a class="reference external" href="https://eclipse-score.github.io/score/main/modules/baselibs/json/docs/requirements/index.html#comp_req__json__deserialization">JSON Deserialization</a> is fulfilled.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 </tbody>
 </table>
@@ -604,112 +648,179 @@ The contribution to the score of a parent item by a suspiciously linked child is
 <tr class="row-odd"><th class="head"><p>Item</p></th>
 <th class="head"><p>Summary</p></th>
 <th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-01"><span class="std std-ref">JLS-01</span></a></p></td>
-<td><p>The CI pipeline of the main branch executes on each pull request (opened, reopened, synchronized) the integration test suite, and failures in these runs are investigated by contributors.</p></td>
+<td><p>The CI pipeline in nlohmann/json executes the unit and integration test suites on each pull request (opened, reopened, synchronized).</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-02"><span class="std std-ref">JLS-02</span></a></p></td>
 <td><p>Fuzz testing is used in the original nlohmann/json repository (https://github.com/nlohmann/json) to uncover edge cases and failure modes throughout development. (https://github.com/nlohmann/json/blob/develop/tests/fuzzing.md)</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-03"><span class="std std-ref">JLS-03</span></a></p></td>
-<td><p>Automated tests are reviewed by a Subject Matter Expert to verify they test the properties they claim to.</p></td>
+<td><p>Automated tests within the TSF documentation are reviewed by a Subject Matter Expert to verify they test the properties they claim to.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-04"><span class="std std-ref">JLS-04</span></a></p></td>
-<td><p>External dependencies are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved.</p></td>
+<td><p>External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-05"><span class="std std-ref">JLS-05</span></a></p></td>
-<td><p>The OSS nlohmann/json is widely used, actively maintained and uses github issues to track bugs and misbehaviours.</p></td>
+<td><p>The nlohmann/json library is widely used and actively maintained; bugs and misbehaviours are tracked publicly and transparently.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-06"><span class="std std-ref">JLS-06</span></a></p></td>
-<td><p>Changes to the code (main branch) are applied only after code review and passing of all pipelines.</p></td>
+<td><p>Pull requests in the nlohmann/json repository are merged only after code review.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-07"><span class="std std-ref">JLS-07</span></a></p></td>
-<td><p>Main branch is protected, i.e. no direct commits are possible.</p></td>
+<td><p>The develop branch of nlohmann/json is protected, i.e. no direct commits are possible.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-08"><span class="std std-ref">JLS-08</span></a></p></td>
-<td><p>Each statement is scored based on SME reviews or automatic validation functions. (TODO)</p></td>
+<td><p>Each statement within the TSF documentation is scored based on SME reviews or automatic validation functions. (TODO)</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-09"><span class="std std-ref">JLS-09</span></a></p></td>
-<td><p>Scores are reasonably, systematically and repeatably accumulated. (TODO)</p></td>
+<td><p>Scores within the TSF documentation are reasonably, systematically and repeatably accumulated. (TODO)</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-10"><span class="std std-ref">JLS-10</span></a></p></td>
-<td><p>Every release includes source code, build instructions, tests and attestations. (TODO: Test result summary)</p></td>
+<td><p>Every release of nlohmann/json includes source code, build instructions, tests and attestations. (TODO: Test result summary)</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-11"><span class="std std-ref">JLS-11</span></a></p></td>
-<td><p>A score based on outstanding, fixed and mitigated faults is calculated based on github issues in nlohmann/json.</p></td>
+<td><p>Outstanding bugs or misbehaviours are analyzed within eclipse-score/inc_nlohmann_json to determine whether they are relevant for S-CORE’s use cases of the nlohmann/json library.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-12"><span class="std std-ref">JLS-12</span></a></p></td>
-<td><p>The S-Core change process management is followed.</p></td>
+<td><p>The nlohmann/json repository has well-defined community standards, including a contribution guideline and a security policy.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-13"><span class="std std-ref">JLS-13</span></a></p></td>
-<td><p>The S-Core methodologies are followed.</p></td>
+<td><p>The S-Core methodologies are followed in eclipse-score/inc_nlohmann_json.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-14"><span class="std std-ref">JLS-14</span></a></p></td>
-<td><p>The SHA value of the library in use coincides with the SHA value provided by Niels Lohmann for that version.</p></td>
+<td><p>The SHA value of the nlohmann/json library in use within eclipse-score/inc_nlohmann_json coincides with the SHA value provided by Niels Lohmann for that version.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-16"><span class="std std-ref">JLS-16</span></a></p></td>
 <td><p>A list of tests, which is extracted from the test execution, is provided, along with a list of test environments.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-17"><span class="std std-ref">JLS-17</span></a></p></td>
-<td><p>A github workflow calculates the fraction of expectations covered by tests (TODO).</p></td>
+<td><p>A github workflow calculates the fraction of expectations covered by tests in eclipse-score/inc_nlohmann_json (TODO).</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-18"><span class="std std-ref">JLS-18</span></a></p></td>
 <td><p>Results from tests are accurately captured.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-19"><span class="std std-ref">JLS-19</span></a></p></td>
-<td><p>All components, dependencies and tools are listed in a manifest.</p></td>
+<td><p>All library components, build dependencies, and build tools in the nlohmann/json repository are declared in build system manifests.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-20"><span class="std std-ref">JLS-20</span></a></p></td>
-<td><p>A github workflow saves the history of scores in the trustable graph to derive trends.</p></td>
+<td><p>A github workflow of eclipse-score/inc_nlohmann_json saves the history of scores in the trustable graph to derive trends.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-21"><span class="std std-ref">JLS-21</span></a></p></td>
 <td><p>A score is calculated based on the number of mirrored and unmirrored things. (TODO)</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-22"><span class="std std-ref">JLS-22</span></a></p></td>
-<td><p>The github workflow executes the unit tests daily and saves the results as time-series data.</p></td>
+<td><p>A github workflow of eclipse-score/inc_nlohmann_json executes the unit tests daily and saves the results as time-series data.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-23"><span class="std std-ref">JLS-23</span></a></p></td>
 <td><p>The Eclipse S-CORE organization mirrors the nlohmann/json project in a github fork.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-24"><span class="std std-ref">JLS-24</span></a></p></td>
 <td><p>The nlohmann/json library recognizes malformed JSON and returns an exception.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-25"><span class="std std-ref">JLS-25</span></a></p></td>
-<td><p>Malicious code changes are mitigated by code reviews, adhering to Eclipse S-core contribution procedures and vigilance from the open-source community.</p></td>
+<td><p>Malicious code changes in nlohmann/json are mitigated by code reviews, adhering to the contribution guidelines and security policy specified by nlohmann/json.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-26"><span class="std std-ref">JLS-26</span></a></p></td>
-<td><p>Pipeline execution results are analyzed in nlohmann/json.</p></td>
+<td><p>Any failed CI pipeline executions in the master branch of the nlohmann/json repository are analyzed and fixed.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-27"><span class="std std-ref">JLS-27</span></a></p></td>
 <td><p>The test coverage for this version of nlohmann/json is monitored using Coveralls and is not decreasing over time, unless reasonably justified.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-28"><span class="std std-ref">JLS-28</span></a></p></td>
+<td><p>Outstanding bugs and misbehaviours are triaged in the nlohmann/json repository.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-29"><span class="std std-ref">JLS-29</span></a></p></td>
+<td><p>Known bugs, misbehaviours and CVEs are analyzed and either fixed or mitigated in the nlohmann/json repository.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-30"><span class="std std-ref">JLS-30</span></a></p></td>
+<td><p>Outstanding CVEs are analyzed within eclipse-score/inc_nlohmann_json to determine whether they can be dismissed, and/or are relevant for S-CORE’s use cases of the nlohmann/json library.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-31"><span class="std std-ref">JLS-31</span></a></p></td>
+<td><p>The nlohmann/json repository uses a static code analysis tool.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-32"><span class="std std-ref">JLS-32</span></a></p></td>
+<td><p>All pull requests to the develop branch in the nlohmann/json repository trigger a request for review from Niels Lohmann (&#64;nlohmann).</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-33"><span class="std std-ref">JLS-33</span></a></p></td>
+<td><p>Outstanding CVEs are triaged in the nlohmann/json repository.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="JLS.html#jls-34"><span class="std std-ref">JLS-34</span></a></p></td>
+<td><p>The nlohmann/json library has no external components or dependencies besides the C++ standard components.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="JLS.html#jls-35"><span class="std std-ref">JLS-35</span></a></p></td>
+<td><p>Pull requests in the nlohmann/json repository are merged only after running CI-tests and successfully passing the pipeline.</p></td>
+<td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 </tbody>
 </table>
@@ -723,264 +834,329 @@ The contribution to the score of a parent item by a suspiciously linked child is
 <tr class="row-odd"><th class="head"><p>Item</p></th>
 <th class="head"><p>Summary</p></th>
 <th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-01"><span class="std std-ref">NJF-01</span></a></p></td>
-<td><p>The service accepts the literal name null.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts the literal name null.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-02"><span class="std std-ref">NJF-02</span></a></p></td>
-<td><p>The service accepts the literal name true.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts the literal name true.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-03"><span class="std std-ref">NJF-03</span></a></p></td>
-<td><p>The service accepts the literal name false.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts the literal name false.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-04"><span class="std std-ref">NJF-04</span></a></p></td>
-<td><p>The service does not accept any other literal name.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept any other literal name.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-05"><span class="std std-ref">NJF-05</span></a></p></td>
-<td><p>The service accepts and rejects arrays according to RFC8259 §5.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts and rejects arrays according to RFC8259 §5.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-05.1"><span class="std std-ref">NJF-05.1</span></a></p></td>
-<td><p>The service accepts the empty array.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts the empty array.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-05.2"><span class="std std-ref">NJF-05.2</span></a></p></td>
-<td><p>The service accepts the non-empty arrays.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts the non-empty arrays.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-05.3"><span class="std std-ref">NJF-05.3</span></a></p></td>
-<td><p>If every value candidate of a properly bounded array is accepted as singleton, then the service accepts the array.</p></td>
+<td><p>If every value candidate of a properly bounded array is accepted as singleton, then the service provided by the nlohmann/json library accepts the array.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-05.4"><span class="std std-ref">NJF-05.4</span></a></p></td>
-<td><p>The service does not accept any improperly bounded arrays.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept any improperly bounded arrays.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-05.5"><span class="std std-ref">NJF-05.5</span></a></p></td>
-<td><p>The service does not accept arrays with improper values.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept arrays with improper values.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-05.6"><span class="std std-ref">NJF-05.6</span></a></p></td>
-<td><p>The service accepts nested arrays.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts nested arrays.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-05.6.0"><span class="std std-ref">NJF-05.6.0</span></a></p></td>
-<td><p>The acceptance of nested arrays does not depend on the depth of nesting.</p></td>
+<td><p>The acceptance of nested arrays by the service provided by the nlohmann/json library does not depend on the depth of nesting.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-05.7"><span class="std std-ref">NJF-05.7</span></a></p></td>
-<td><p>The service does only accept comma as value separator.</p></td>
+<td><p>The service provided by the nlohmann/json library does only accept comma as value separator.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-05.7.1"><span class="std std-ref">NJF-05.7.1</span></a></p></td>
-<td><p>The service does accept comma as value separator.</p></td>
+<td><p>The service provided by the nlohmann/json library does accept comma as value separator.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-05.7.2"><span class="std std-ref">NJF-05.7.2</span></a></p></td>
-<td><p>The service does not accept any other value separator.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept any other value separator.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-06"><span class="std std-ref">NJF-06</span></a></p></td>
-<td><p>The service accepts and rejects objects according to RFC8259 §4.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts and rejects objects according to RFC8259 §4.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-06.1"><span class="std std-ref">NJF-06.1</span></a></p></td>
-<td><p>The service accepts the empty object.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts the empty object.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-06.2"><span class="std std-ref">NJF-06.2</span></a></p></td>
-<td><p>The service does not accept improperly bounded objects.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept improperly bounded objects.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-06.3"><span class="std std-ref">NJF-06.3</span></a></p></td>
-<td><p>The service accepts the non-empty objects.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts the non-empty objects.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-06.4"><span class="std std-ref">NJF-06.4</span></a></p></td>
-<td><p>The admissible members of an object have the form name : value.</p></td>
+<td><p>The admissible members of an object provided to the eclipse-score/inc_nlohmann_json have the form name : value.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-06.4.1"><span class="std std-ref">NJF-06.4.1</span></a></p></td>
-<td><p>If the service recognises the name candidate as string, then it accepts the name candidate.</p></td>
+<td><p>If the service provided by the nlohmann/json library recognises the name candidate as string, then it accepts the name candidate.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-06.4.2"><span class="std std-ref">NJF-06.4.2</span></a></p></td>
-<td><p>The service does not accept any other token as name.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept any other token as name.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-06.4.3"><span class="std std-ref">NJF-06.4.3</span></a></p></td>
-<td><p>If the service accepts the value-candidate as a singleton, then the value-candidate is accepted.</p></td>
+<td><p>If the service provided by the nlohmann/json library accepts the value-candidate as a singleton, then the value-candidate is accepted.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-06.5"><span class="std std-ref">NJF-06.5</span></a></p></td>
-<td><p>The service does not accept objects with improper members.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept objects with improper members.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-06.5.1"><span class="std std-ref">NJF-06.5.1</span></a></p></td>
-<td><p>If the service does not accept any name candidate as singleton, then the service does not accept the object candidate.</p></td>
+<td><p>If the service provided by the nlohmann/json library does not accept any name candidate as singleton, then the service does not accept the object candidate.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-06.5.2"><span class="std std-ref">NJF-06.5.2</span></a></p></td>
-<td><p>If the service does not accept any value candidate as singleton, then the service does not accept the object candidate.</p></td>
+<td><p>If the service provided by the nlohmann/json library does not accept any value candidate as singleton, then the service does not accept the object candidate.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-06.6"><span class="std std-ref">NJF-06.6</span></a></p></td>
-<td><p>The service accept the nested objects.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts the nested objects.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-06.6.0"><span class="std std-ref">NJF-06.6.0</span></a></p></td>
-<td><p>The acceptance of nested objects does not depend on the depth of nesting.</p></td>
+<td><p>The acceptance of nested objects inside the nlohmann/json library does not depend on the depth of nesting.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-06.7"><span class="std std-ref">NJF-06.7</span></a></p></td>
-<td><p>The service does only accept comma as member separator.</p></td>
+<td><p>The service provided by the nlohmann/json library does only accept comma as member separator.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-06.7.1"><span class="std std-ref">NJF-06.7.1</span></a></p></td>
-<td><p>The service accepts comma as member separator.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts comma as member separator.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-06.7.2"><span class="std std-ref">NJF-06.7.2</span></a></p></td>
-<td><p>The service does not accept any other member separator.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept any other member separator.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-07"><span class="std std-ref">NJF-07</span></a></p></td>
-<td><p>The service accepts and rejects strings according to RFC8259 §7.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts and rejects strings according to RFC8259 §7.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-07.1"><span class="std std-ref">NJF-07.1</span></a></p></td>
-<td><p>The service does accept empty string.</p></td>
+<td><p>The service provided by the nlohmann/json library does accept empty strings.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-07.2"><span class="std std-ref">NJF-07.2</span></a></p></td>
-<td><p>The service does not accept the improperly bounded strings.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept the improperly bounded strings.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-07.3"><span class="std std-ref">NJF-07.3</span></a></p></td>
-<td><p>The service does not accept unescaped control characters.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept unescaped control characters.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-07.4"><span class="std std-ref">NJF-07.4</span></a></p></td>
-<td><p>The service does accept the escaped control characters.</p></td>
+<td><p>The service provided by the nlohmann/json library does accept escaped control characters.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-07.5"><span class="std std-ref">NJF-07.5</span></a></p></td>
-<td><p>The service accepts UTF-16 surrogate pairs.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts UTF-16 surrogate pairs.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-07.6"><span class="std std-ref">NJF-07.6</span></a></p></td>
-<td><p>The service does accept the non-empty strings.</p></td>
+<td><p>The service provided by the nlohmann/json library does accept non-empty strings.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-07.7"><span class="std std-ref">NJF-07.7</span></a></p></td>
-<td><p>The service does not accept escaped invalid characters.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept escaped invalid characters.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-07.8"><span class="std std-ref">NJF-07.8</span></a></p></td>
-<td><p>The service does not accept single unpaired utf-16 surrogates.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept single unpaired utf-16 surrogates.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-07.9"><span class="std std-ref">NJF-07.9</span></a></p></td>
-<td><p>The service does not accept unescaped UTF-16 surrogate pairs.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept unescaped UTF-16 surrogate pairs.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-08"><span class="std std-ref">NJF-08</span></a></p></td>
-<td><p>The service accepts numbers according to RFC8259 §6.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts numbers according to RFC8259 §6.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-08.1"><span class="std std-ref">NJF-08.1</span></a></p></td>
-<td><p>The service does accept integers within the limits of 64-bit double.</p></td>
+<td><p>The service provided by the nlohmann/json library does accept integers within the limits of 64-bit double.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-08.2"><span class="std std-ref">NJF-08.2</span></a></p></td>
-<td><p>The service does accept integers according to IEEE 754 binary64.</p></td>
+<td><p>The service provided by the nlohmann/json library does accept integers according to IEEE 754 binary64.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-08.3"><span class="std std-ref">NJF-08.3</span></a></p></td>
-<td><p>The service does not accept NaN, infinity.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept NaN and infinity.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-08.4"><span class="std std-ref">NJF-08.4</span></a></p></td>
-<td><p>The service does accept e or E for numbers with exponent within the bounds of double.</p></td>
+<td><p>The service provided by the nlohmann/json library does accept e or E for numbers with exponent within the bounds of double.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-08.5"><span class="std std-ref">NJF-08.5</span></a></p></td>
-<td><p>The service does not accept u0415 and u0436 (cyrillic e and E) as exponent signs in numbers with exponent.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept u0415 and u0436 (cyrillic e and E) as exponent signs in numbers with exponent.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-08.6"><span class="std std-ref">NJF-08.6</span></a></p></td>
-<td><p>The service does not accept invalid syntax for numbers.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept invalid syntax for numbers.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-08.7"><span class="std std-ref">NJF-08.7</span></a></p></td>
-<td><p>The service does accept decimal points in numbers within the bounds of double.</p></td>
+<td><p>The service provided by the nlohmann/json library does accept decimal points in numbers within the bounds of double.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-08.8"><span class="std std-ref">NJF-08.8</span></a></p></td>
-<td><p>The service does not accept leading zeroes.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept leading zeroes.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-08.9"><span class="std std-ref">NJF-08.9</span></a></p></td>
-<td><p>The service does not accept any other digit symbol than 0-9.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept any other digit symbol than 0-9.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-12"><span class="std std-ref">NJF-12</span></a></p></td>
-<td><p>The service decodes UTF-8 data.</p></td>
+<td><p>The service provided by the nlohmann/json library decodes UTF-8 data.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-12.1"><span class="std std-ref">NJF-12.1</span></a></p></td>
-<td><p>The service rejects malformed UTF-8 data.</p></td>
+<td><p>The service provided by the nlohmann/json library rejects malformed UTF-8 data.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-12.2"><span class="std std-ref">NJF-12.2</span></a></p></td>
-<td><p>The service rejects “overlong sequences”.</p></td>
+<td><p>The service provided by the nlohmann/json library rejects “overlong sequences”.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-12.3"><span class="std std-ref">NJF-12.3</span></a></p></td>
-<td><p>The service rejects single escaped and unescaped, and paired unescaped utf-16 surrogates.</p></td>
+<td><p>The service provided by the nlohmann/json library rejects single escaped and unescaped, and paired unescaped utf-16 surrogates.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-12.5"><span class="std std-ref">NJF-12.5</span></a></p></td>
-<td><p>The service accepts Non-Characters.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts Non-Characters.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-12.6"><span class="std std-ref">NJF-12.6</span></a></p></td>
-<td><p>The service accepts well-formed UTF-8 data.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts well-formed UTF-8 data.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-13"><span class="std std-ref">NJF-13</span></a></p></td>
-<td><p>The service accepts JSON data consisting of combinations of the data types.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts JSON data consisting of combinations of the data types.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-14"><span class="std std-ref">NJF-14</span></a></p></td>
-<td><p>The service accepts a single complete UTF-8 byte order mark at the beginning of the input only.</p></td>
+<td><p>The service provided by the nlohmann/json library accepts a single complete UTF-8 byte order mark at the beginning of the input only.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-14.1"><span class="std std-ref">NJF-14.1</span></a></p></td>
-<td><p>If the service accepts an input containing no BOM, then it accepts a single UTF-8 byte order mark followed by that input.</p></td>
+<td><p>If the service provided by the nlohmann/json library accepts an input containing no BOM, then it accepts a single UTF-8 byte order mark followed by that input.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-14.2"><span class="std std-ref">NJF-14.2</span></a></p></td>
-<td><p>The service does not accept multiple UTF-8 byte order marks.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept multiple UTF-8 byte order marks.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-14.3"><span class="std std-ref">NJF-14.3</span></a></p></td>
-<td><p>The service does not accept incomplete or perturbed UTF-8 byte order marks within the first three characters of the input.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept incomplete or perturbed UTF-8 byte order marks within the first three characters of the input.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NJF.html#njf-14.4"><span class="std std-ref">NJF-14.4</span></a></p></td>
-<td><p>The service does not accept UTF-16 and UTF-32 byte order marks instead of the UTF-8 byte order mark.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept UTF-16 and UTF-32 byte order marks instead of the UTF-8 byte order mark.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NJF.html#njf-14.5"><span class="std std-ref">NJF-14.5</span></a></p></td>
-<td><p>The service does not accept UTF-8 byte order mark outside of a string and outside of the first three characters of the input.</p></td>
+<td><p>The service provided by the nlohmann/json library does not accept UTF-8 byte order mark outside of a string and outside of the first three characters of the input.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 </tbody>
 </table>
@@ -994,184 +1170,229 @@ The contribution to the score of a parent item by a suspiciously linked child is
 <tr class="row-odd"><th class="head"><p>Item</p></th>
 <th class="head"><p>Summary</p></th>
 <th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-01"><span class="std std-ref">NPF-01</span></a></p></td>
-<td><p>The service ignores the presence of a byte order mark.</p></td>
+<td><p>The service provided by the nlohmann/json library ignores the presence of a byte order mark.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-01.1"><span class="std std-ref">NPF-01.1</span></a></p></td>
-<td><p>The service ignores the presence of a single UTF-8 byte order mark at the very beginning of the input.</p></td>
+<td><p>The service provided by the nlohmann/json library ignores the presence of a single UTF-8 byte order mark at the very beginning of the input.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-01.2"><span class="std std-ref">NPF-01.2</span></a></p></td>
-<td><p>The service does not parse multiple UTF-8 byte order marks at the beginning of the input and throws an exception.</p></td>
+<td><p>The service provided by the nlohmann/json library does not parse multiple UTF-8 byte order marks at the beginning of the input and throws an exception.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-01.3"><span class="std std-ref">NPF-01.3</span></a></p></td>
-<td><p>The service does not parse UTF-8 byte order marks outside of a string and the first three characters of the input, and throws an exception.</p></td>
+<td><p>The service provided by the nlohmann/json library does not parse UTF-8 byte order marks outside of a string and the first three characters of the input, and throws an exception.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-01.4"><span class="std std-ref">NPF-01.4</span></a></p></td>
-<td><p>The service does not parse UTF-16 and UTF-32 byte order mark instead of an UTF-8 byte order mark, and throws an exception.</p></td>
+<td><p>The service provided by the nlohmann/json library does not parse UTF-16 and UTF-32 byte order mark instead of an UTF-8 byte order mark, and throws an exception.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-01.5"><span class="std std-ref">NPF-01.5</span></a></p></td>
-<td><p>The service does not parse partial and perturbed UTF-8 byte order marks within the first three characters of the input and throws an exception.</p></td>
+<td><p>The service provided by the nlohmann/json library does not parse partial and perturbed UTF-8 byte order marks within the first three characters of the input and throws an exception.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-02"><span class="std std-ref">NPF-02</span></a></p></td>
-<td><p>The service parses numbers according to RFC8259.</p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers according to RFC8259.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-02.1"><span class="std std-ref">NPF-02.1</span></a></p></td>
-<td><p>The service parses integers without exponent within the precision of int64_t.</p></td>
+<td><p>The service provided by the nlohmann/json library parses integers without exponent within the precision of int64_t.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-02.10"><span class="std std-ref">NPF-02.10</span></a></p></td>
-<td><p>The service ignores trailing zeroes after the decimal point.</p></td>
+<td><p>The service provided by the nlohmann/json library ignores trailing zeroes after the decimal point.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-02.11"><span class="std std-ref">NPF-02.11</span></a></p></td>
-<td><p>The service parses numbers within the 64-bit double range but outside of the double precision without throwing an exception and without guarantee of precision.</p></td>
+<td><p>The service provided by the nlohmann/json library parses numbers within the 64-bit double range but outside of the double precision without throwing an exception and without guarantee of precision.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-02.12"><span class="std std-ref">NPF-02.12</span></a></p></td>
-<td><p>The service ignores capitalisation of the exponent.</p></td>
+<td><p>The service provided by the nlohmann/json library ignores capitalisation of the exponent.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-02.2"><span class="std std-ref">NPF-02.2</span></a></p></td>
-<td><p>The service parses integers with exponent within the precision of 64-bit double.</p></td>
+<td><p>The service provided by the nlohmann/json library parses integers with exponent within the precision of 64-bit double.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-02.3"><span class="std std-ref">NPF-02.3</span></a></p></td>
-<td><p>The service parses floating point values without exponent within the precision of 64-bit double.</p></td>
+<td><p>The service provided by the nlohmann/json library parses floating point values without exponent within the precision of 64-bit double.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-02.4"><span class="std std-ref">NPF-02.4</span></a></p></td>
-<td><p>The service parses floating point values with exponent within the precision of 64-bit double.</p></td>
+<td><p>The service provided by the nlohmann/json library parses floating point values with exponent within the precision of 64-bit double.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-02.5"><span class="std std-ref">NPF-02.5</span></a></p></td>
-<td><p>The service ignores leading zeroes in the exponent.</p></td>
+<td><p>The service provided by the nlohmann/json library ignores leading zeroes in the exponent.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-02.6"><span class="std std-ref">NPF-02.6</span></a></p></td>
-<td><p>The service parses integers within IEEE 754-2008 binary64.</p></td>
+<td><p>The service provided by the nlohmann/json library parses integers within IEEE 754-2008 binary64.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-02.7"><span class="std std-ref">NPF-02.7</span></a></p></td>
-<td><p>The service ignores leading and trailing whitespace.</p></td>
+<td><p>The service provided by the nlohmann/json library ignores leading and trailing whitespace.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-02.8"><span class="std std-ref">NPF-02.8</span></a></p></td>
-<td><p>The service ignores one singular leading plus of the exponent.</p></td>
+<td><p>The service provided by the nlohmann/json library ignores one singular leading plus of the exponent.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-02.9"><span class="std std-ref">NPF-02.9</span></a></p></td>
-<td><p>The service parses floating point numbers within IEEE 754-2008 binary64 standard.</p></td>
+<td><p>The service provided by the nlohmann/json library parses floating point numbers within IEEE 754-2008 binary64 standard.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-03"><span class="std std-ref">NPF-03</span></a></p></td>
-<td><p>The service parses strings according to RFC8259.</p></td>
+<td><p>The service provided by the nlohmann/json library parses strings according to RFC8259.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-03.1"><span class="std std-ref">NPF-03.1</span></a></p></td>
-<td><p>The service ignores leading and trailing whitespace.</p></td>
+<td><p>The service provided by the nlohmann/json library ignores leading and trailing whitespace.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-03.2"><span class="std std-ref">NPF-03.2</span></a></p></td>
-<td><p>The service parses escaped characters in the basic multilingual plane.</p></td>
+<td><p>The service provided by the nlohmann/json library parses escaped characters in the basic multilingual plane.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-03.3"><span class="std std-ref">NPF-03.3</span></a></p></td>
-<td><p>The service ignores capitalisation in escaped hexadecimal unicode.</p></td>
+<td><p>The service provided by the nlohmann/json library ignores capitalisation in escaped hexadecimal unicode.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-03.4"><span class="std std-ref">NPF-03.4</span></a></p></td>
-<td><p>The service parses all unescaped utf-8 characters except quotation mark, reverse solidus and the control characters.</p></td>
+<td><p>The service provided by the nlohmann/json library parses all unescaped utf-8 characters except quotation marks, reverse solidus and the control characters.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-03.5"><span class="std std-ref">NPF-03.5</span></a></p></td>
-<td><p>The service parses \, \/, \b,\f, \n, \r, \t and escaped quotation marks.</p></td>
+<td><p>The service provided by the nlohmann/json library parses \, \/, \b,\f, \n, \r, \t and escaped quotation marks.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-03.6"><span class="std std-ref">NPF-03.6</span></a></p></td>
-<td><p>The service parses the empty string.</p></td>
+<td><p>The service provided by the nlohmann/json library parses the empty string.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-03.7"><span class="std std-ref">NPF-03.7</span></a></p></td>
-<td><p>The service parses non-empty strings.</p></td>
+<td><p>The service provided by the nlohmann/json library parses non-empty strings.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-04"><span class="std std-ref">NPF-04</span></a></p></td>
-<td><p>The service parses literal names “true”, “false” and “null” according to RFC8259.</p></td>
+<td><p>The service provided by the nlohmann/json library parses literal names “true”, “false” and “null” according to RFC8259.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-04.1"><span class="std std-ref">NPF-04.1</span></a></p></td>
-<td><p>The service ignores leading and trailing whitespace.</p></td>
+<td><p>The service provided by the nlohmann/json library ignores leading and trailing whitespace.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-04.2"><span class="std std-ref">NPF-04.2</span></a></p></td>
-<td><p>The service parses the literal name true.</p></td>
+<td><p>The service provided by the nlohmann/json library parses the literal name true.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-04.3"><span class="std std-ref">NPF-04.3</span></a></p></td>
-<td><p>The service parses the literal name false.</p></td>
+<td><p>The service provided by the nlohmann/json library parses the literal name false.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-04.4"><span class="std std-ref">NPF-04.4</span></a></p></td>
-<td><p>The service parses the literal name null.</p></td>
+<td><p>The service provided by the nlohmann/json library parses the literal name null.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-05"><span class="std std-ref">NPF-05</span></a></p></td>
-<td><p>The service parses arrays according to RFC8259.</p></td>
+<td><p>The service provided by the nlohmann/json library parses arrays according to RFC8259.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-05.1"><span class="std std-ref">NPF-05.1</span></a></p></td>
-<td><p>The service ignores leading and trailing whitespace for each value.</p></td>
+<td><p>The service provided by the nlohmann/json library ignores leading and trailing whitespace for each value.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-05.2"><span class="std std-ref">NPF-05.2</span></a></p></td>
-<td><p>The service parses empty arrays.</p></td>
+<td><p>The service provided by the nlohmann/json library parses empty arrays.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-05.3"><span class="std std-ref">NPF-05.3</span></a></p></td>
-<td><p>The service parses non-empty arrays.</p></td>
+<td><p>The service provided by the nlohmann/json library parses non-empty arrays.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-06"><span class="std std-ref">NPF-06</span></a></p></td>
-<td><p>The service parses objects according to RFC8259.</p></td>
+<td><p>The service provided by the nlohmann/json library parses objects according to RFC8259.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-06.1"><span class="std std-ref">NPF-06.1</span></a></p></td>
-<td><p>The service ignores leading and trailing whitespace for name and value of each member.</p></td>
+<td><p>The service provided by the nlohmann/json library ignores leading and trailing whitespace for name and value of each member.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-06.2"><span class="std std-ref">NPF-06.2</span></a></p></td>
-<td><p>The service parses duplicate names without error and reports the last member with that name only.</p></td>
+<td><p>The service provided by the nlohmann/json library parses duplicate names without error and reports the last member with that name only.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-06.3"><span class="std std-ref">NPF-06.3</span></a></p></td>
-<td><p>The service parses empty objects.</p></td>
+<td><p>The service provided by the nlohmann/json library parses empty objects.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-06.4"><span class="std std-ref">NPF-06.4</span></a></p></td>
-<td><p>The service parses non-empty objects.</p></td>
+<td><p>The service provided by the nlohmann/json library parses non-empty objects.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-07"><span class="std std-ref">NPF-07</span></a></p></td>
-<td><p>The service parses well-formed UTF-8 encoded data only.</p></td>
+<td><p>The service provided by the nlohmann/json library parses well-formed UTF-8 encoded data only.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="NPF.html#npf-07.1"><span class="std std-ref">NPF-07.1</span></a></p></td>
-<td><p>The service parses UTF-8 encoded data.</p></td>
+<td><p>The service provided by the nlohmann/json library parses UTF-8 encoded data.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="NPF.html#npf-07.2"><span class="std std-ref">NPF-07.2</span></a></p></td>
-<td><p>The service throws an exception on ill-formed UTF-8 data.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on ill-formed UTF-8 data.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 </tbody>
 </table>
@@ -1185,20 +1406,24 @@ The contribution to the score of a parent item by a suspiciously linked child is
 <tr class="row-odd"><th class="head"><p>Item</p></th>
 <th class="head"><p>Summary</p></th>
 <th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="PJD.html#pjd-01"><span class="std std-ref">PJD-01</span></a></p></td>
-<td><p>The service provides implementations that parses JSON texts, which ignores the presence of a byte order mark rather than treating it as an error.</p></td>
+<td><p>The service provided by the nlohmann/json library provides implementations that parses JSON texts, which ignores the presence of a byte order mark rather than treating it as an error.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="PJD.html#pjd-02"><span class="std std-ref">PJD-02</span></a></p></td>
-<td><p>The service transforms a JSON text into a C++ representation using C++ containers (for arrays and objects) and primitive datatypes (for strings, numbers, boolean, null).</p></td>
+<td><p>The service provided by the nlohmann/json library transforms a JSON text into a C++ representation using C++ containers (for arrays and objects) and primitive datatypes (for strings, numbers, boolean, null).</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="PJD.html#pjd-03"><span class="std std-ref">PJD-03</span></a></p></td>
-<td><p>The service parses all texts that conform to the JSON grammar.</p></td>
+<td><p>The service provided by the nlohmann/json library parses all texts that conform to the JSON grammar.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 </tbody>
 </table>
@@ -1212,72 +1437,89 @@ The contribution to the score of a parent item by a suspiciously linked child is
 <tr class="row-odd"><th class="head"><p>Item</p></th>
 <th class="head"><p>Summary</p></th>
 <th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-analysis"><span class="std std-ref">TA-ANALYSIS</span></a></p></td>
-<td><p>Collected data from tests and monitoring of deployed software is analysed according to specified objectives.</p></td>
+<td><p>Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TA.html#ta-behaviours"><span class="std std-ref">TA-BEHAVIOURS</span></a></p></td>
-<td><p>Expected or required behaviours for nlohmann/json library are identified, specified, verified and validated based on analysis.</p></td>
+<td><p>Expected or required behaviours for the nlohmann/json library are identified, specified, verified and validated based on analysis.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-confidence"><span class="std std-ref">TA-CONFIDENCE</span></a></p></td>
-<td><p>Confidence in nlohmann/json library is measured based on results of analysis.</p></td>
+<td><p>Confidence in the nlohmann/json library is measured based on results of analysis.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TA.html#ta-constraints"><span class="std std-ref">TA-CONSTRAINTS</span></a></p></td>
-<td><p>Constraints on adaptation and deployment of nlohmann/json library are specified.</p></td>
+<td><p>Constraints on adaptation and deployment of eclipse-score/inc_nlohmann_json are specified.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-data"><span class="std std-ref">TA-DATA</span></a></p></td>
-<td><p>Data is collected from tests, and from monitoring of deployed software, according to specified objectives.</p></td>
+<td><p>Data in eclipse-score/inc_nlohmann_json is collected from tests, and from monitoring of deployed software, according to specified objectives.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TA.html#ta-fixes"><span class="std std-ref">TA-FIXES</span></a></p></td>
-<td><p>Known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied.</p></td>
+<td><p>In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-indicators"><span class="std std-ref">TA-INDICATORS</span></a></p></td>
-<td><p>Advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis.</p></td>
+<td><p>In eclipse-score/inc_nlohmann_json, advanced warning indicators for misbehaviours are identified, and monitoring mechanisms are specified, verified and validated based on analysis.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TA.html#ta-inputs"><span class="std std-ref">TA-INPUTS</span></a></p></td>
-<td><p>All inputs to nlohmann/json library are assessed, to identify potential risks and issues.</p></td>
+<td><p>All inputs to the nlohmann/json library are assessed, to identify potential risks and issues.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-iterations"><span class="std std-ref">TA-ITERATIONS</span></a></p></td>
-<td><p>All constructed iterations of nlohmann/json library include source code, build instructions, tests, results and attestations.</p></td>
+<td><p>All constructed iterations of the nlohmann/json library include source code, build instructions, tests, results and attestations.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TA.html#ta-methodologies"><span class="std std-ref">TA-METHODOLOGIES</span></a></p></td>
-<td><p>Manual methodologies applied for nlohmann/json library by contributors, and their results, are managed according to specified objectives.</p></td>
+<td><p>Manual methodologies applied for the nlohmann/json library by contributors, and their results, are managed according to specified objectives.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-misbehaviours"><span class="std std-ref">TA-MISBEHAVIOURS</span></a></p></td>
-<td><p>Prohibited misbehaviours for nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis.</p></td>
+<td><p>Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TA.html#ta-releases"><span class="std std-ref">TA-RELEASES</span></a></p></td>
-<td><p>Construction of nlohmann/json library releases is fully repeatable and the results are fully reproducible, with any exceptions documented and justified.</p></td>
+<td><p>Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-supply_chain"><span class="std std-ref">TA-SUPPLY_CHAIN</span></a></p></td>
-<td><p>All sources for nlohmann/json library and tools are mirrored in our controlled environment.</p></td>
+<td><p>All sources and tools for the nlohmann/json library are mirrored in our controlled environment.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TA.html#ta-tests"><span class="std std-ref">TA-TESTS</span></a></p></td>
-<td><p>All tests for nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented.</p></td>
+<td><p>All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TA.html#ta-updates"><span class="std std-ref">TA-UPDATES</span></a></p></td>
 <td><p>nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TA.html#ta-validation"><span class="std std-ref">TA-VALIDATION</span></a></p></td>
-<td><p>All specified tests are executed repeatedly, under defined conditions in controlled environments, according to specified objectives.</p></td>
+<td><p>All specified tests are executed repeatedly, under defined conditions in controlled environments, according to specified objectives. (To revisit)</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 </tbody>
 </table>
@@ -1291,112 +1533,139 @@ The contribution to the score of a parent item by a suspiciously linked child is
 <tr class="row-odd"><th class="head"><p>Item</p></th>
 <th class="head"><p>Summary</p></th>
 <th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-01"><span class="std std-ref">TIJ-01</span></a></p></td>
-<td><p>The parsing service throws an exception on ill-formed literal names.</p></td>
+<td><p>The parsing service provided by the nlohmann/json library throws an exception on ill-formed literal names.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-01.1"><span class="std std-ref">TIJ-01.1</span></a></p></td>
-<td><p>The service throws an exception on capitalised literal names.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on capitalised literal names.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-01.2"><span class="std std-ref">TIJ-01.2</span></a></p></td>
-<td><p>The service throws an exception on any other than the three literal names true, false, null.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on any other than the three literal names true, false, null.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-02"><span class="std std-ref">TIJ-02</span></a></p></td>
-<td><p>The parsing service throws an exception on ill-formed numbers.</p></td>
+<td><p>The parsing service provided by the nlohmann/json library throws an exception on ill-formed numbers.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-02.1"><span class="std std-ref">TIJ-02.1</span></a></p></td>
-<td><p>The service throws an exception on leading plus.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on leading plus.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-02.2"><span class="std std-ref">TIJ-02.2</span></a></p></td>
-<td><p>The service throws an exception on leading zeroes.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on leading zeroes.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-02.3"><span class="std std-ref">TIJ-02.3</span></a></p></td>
-<td><p>The service throws an exception on NaN, infinity.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on NaN and infinity.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-02.4"><span class="std std-ref">TIJ-02.4</span></a></p></td>
-<td><p>The service throws an exception on U+0415 and U+0436 instead of U+0045 or U+0065.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on U+0415 and U+0436 instead of U+0045 or U+0065.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-02.5"><span class="std std-ref">TIJ-02.5</span></a></p></td>
-<td><p>The service throws an exception on invalid number syntax.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on invalid number syntax.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-03"><span class="std std-ref">TIJ-03</span></a></p></td>
-<td><p>The parsing service throws an exception on ill-formed strings.</p></td>
+<td><p>The parsing service provided by the nlohmann/json library throws an exception on ill-formed strings.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-03.1"><span class="std std-ref">TIJ-03.1</span></a></p></td>
-<td><p>The service throws an exception on unescaped control characters.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on unescaped control characters.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-03.2"><span class="std std-ref">TIJ-03.2</span></a></p></td>
-<td><p>The service throws an exception on unpaired utf-16 surrogates.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on unpaired utf-16 surrogates.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-03.3"><span class="std std-ref">TIJ-03.3</span></a></p></td>
-<td><p>The service throws an exception on improperly bounded strings.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on improperly bounded strings.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-03.4"><span class="std std-ref">TIJ-03.4</span></a></p></td>
-<td><p>The service throws an exception on escaped invalid characters.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on escaped invalid characters.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-03.5"><span class="std std-ref">TIJ-03.5</span></a></p></td>
-<td><p>The service throws an exception on incorrect surrogate pairs.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on incorrect surrogate pairs.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-04"><span class="std std-ref">TIJ-04</span></a></p></td>
-<td><p>The parsing service throws an exception on ill-formed arrays.</p></td>
+<td><p>The parsing service provided by the nlohmann/json library throws an exception on ill-formed arrays.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-04.1"><span class="std std-ref">TIJ-04.1</span></a></p></td>
-<td><p>The service throws an exception on improperly bounded arrays.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on improperly bounded arrays.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-04.2"><span class="std std-ref">TIJ-04.2</span></a></p></td>
-<td><p>The service throws an exception on improper values within a properly bounded array.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on improper values within a properly bounded array.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-04.3"><span class="std std-ref">TIJ-04.3</span></a></p></td>
-<td><p>The service throws an exception on improper value separators.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on improper value separators.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-05"><span class="std std-ref">TIJ-05</span></a></p></td>
-<td><p>The parsing service throws an exception on ill-formed objects.</p></td>
+<td><p>The parsing service provided by the nlohmann/json library throws an exception on ill-formed objects.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-05.1"><span class="std std-ref">TIJ-05.1</span></a></p></td>
-<td><p>The service throws an exception on improperly bounded objects.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on improperly bounded objects.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-05.2"><span class="std std-ref">TIJ-05.2</span></a></p></td>
-<td><p>The service throws an exception if a non-string is used as name of any member.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception if a non-string is used as name of any member.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-05.3"><span class="std std-ref">TIJ-05.3</span></a></p></td>
-<td><p>The service throws an exception if an improper string is used as name of any member.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception if an improper string is used as name of any member.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-05.4"><span class="std std-ref">TIJ-05.4</span></a></p></td>
-<td><p>The service throws an exception if any member has an improper value.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception if any member has an improper value.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TIJ.html#tij-05.5"><span class="std std-ref">TIJ-05.5</span></a></p></td>
-<td><p>The service throws an exception on improper member separators.</p></td>
+<td><p>The service provided by the nlohmann/json library throws an exception on improper member separators.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TIJ.html#tij-06"><span class="std std-ref">TIJ-06</span></a></p></td>
-<td><p>The service recognises ill-formed byte-order marks and throws an exception.</p></td>
+<td><p>The service provided by the nlohmann/json library recognises ill-formed byte-order marks and throws an exception.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 </tbody>
 </table>
@@ -1410,12 +1679,14 @@ The contribution to the score of a parent item by a suspiciously linked child is
 <tr class="row-odd"><th class="head"><p>Item</p></th>
 <th class="head"><p>Summary</p></th>
 <th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="TRUSTABLE.html#trustable-software"><span class="std std-ref">TRUSTABLE-SOFTWARE</span></a></p></td>
-<td><p>This release of JSON-Library also reffered in the documentation as nlohmann/json library is Trustable.</p></td>
+<td><p>This release of JSON-Library also referred in the documentation as nlohmann/json library is Trustable.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 </tbody>
 </table>
@@ -1429,32 +1700,39 @@ The contribution to the score of a parent item by a suspiciously linked child is
 <tr class="row-odd"><th class="head"><p>Item</p></th>
 <th class="head"><p>Summary</p></th>
 <th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="TT.html#tt-changes"><span class="std std-ref">TT-CHANGES</span></a></p></td>
-<td><p>nlohmann/json library is actively maintained, with regular updates to dependencies, and changes are verified to prevent regressions.</p></td>
+<td><p>The nlohmann/json library is actively maintained, with regular updates to dependencies, and changes are verified to prevent regressions.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TT.html#tt-confidence"><span class="std std-ref">TT-CONFIDENCE</span></a></p></td>
-<td><p>Confidence in nlohmann/json library is achieved by measuring and analysing behaviour and evidence over time.</p></td>
+<td><p>Confidence in the nlohmann/json library is achieved by measuring and analysing behaviour and evidence over time within eclipse-score/inc_nlohmann_json.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TT.html#tt-construction"><span class="std std-ref">TT-CONSTRUCTION</span></a></p></td>
-<td><p>Tools are provided to build nlohmann/json library from trusted sources (also provided) with full reproducibility.</p></td>
+<td><p>Tools are provided to build the nlohmann/json library from trusted sources (also provided) with full reproducibility.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TT.html#tt-expectations"><span class="std std-ref">TT-EXPECTATIONS</span></a></p></td>
-<td><p>Documentation is provided, specifying what nlohmann/json library is expected to do, and what it must not do, and how this is verified.</p></td>
+<td><p>Documentation is provided within eclipse-score/inc_nlohmann_json, specifying what the nlohmann/json library is expected to do, and what it must not do, and how this is verified.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="TT.html#tt-provenance"><span class="std std-ref">TT-PROVENANCE</span></a></p></td>
-<td><p>All inputs (and attestations for claims) for nlohmann/json library are provided with known provenance.</p></td>
+<td><p>All inputs (and attestations for claims) for the nlohmann/json library are provided with known provenance.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="TT.html#tt-results"><span class="std std-ref">TT-RESULTS</span></a></p></td>
-<td><p>Evidence is provided to demonstrate that nlohmann/json library does what it is supposed to do, and does not do what it must not do.</p></td>
+<td><p>Evidence is provided within eclipse-score/inc_nlohmann_json to demonstrate that the nlohmann/json library does what it is supposed to do, and does not do what it must not do.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 </tbody>
 </table>
@@ -1468,40 +1746,49 @@ The contribution to the score of a parent item by a suspiciously linked child is
 <tr class="row-odd"><th class="head"><p>Item</p></th>
 <th class="head"><p>Summary</p></th>
 <th class="head"><p>Score</p></th>
+<th class="head"><p>Status</p></th>
 </tr>
 </thead>
 <tbody>
 <tr class="row-even"><td><p><a class="reference internal" href="WFJ.html#wfj-01"><span class="std std-ref">WFJ-01</span></a></p></td>
-<td><p>The service checks the well-formedness of the literal names.</p></td>
+<td><p>The service provided by the nlohmann/json library checks the well-formedness of the literal names.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="WFJ.html#wfj-02"><span class="std std-ref">WFJ-02</span></a></p></td>
-<td><p>The service checks the well-formedness of strings.</p></td>
+<td><p>The service provided by the nlohmann/json library checks the well-formedness of strings.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="WFJ.html#wfj-03"><span class="std std-ref">WFJ-03</span></a></p></td>
-<td><p>The service checks the well-formedness of numbers.</p></td>
+<td><p>The service provided by the nlohmann/json library checks the well-formedness of numbers.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="WFJ.html#wfj-04"><span class="std std-ref">WFJ-04</span></a></p></td>
-<td><p>The service checks the well-formedness of array.</p></td>
+<td><p>The service provided by the nlohmann/json library checks the well-formedness of array.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="WFJ.html#wfj-05"><span class="std std-ref">WFJ-05</span></a></p></td>
-<td><p>The service checks the well-formedness of objects.</p></td>
+<td><p>The service provided by the nlohmann/json library checks the well-formedness of objects.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="WFJ.html#wfj-06"><span class="std std-ref">WFJ-06</span></a></p></td>
-<td><p>The service checks that a JSON value must be an object, array, number, or string, or one of the lowercase literal names false, null, or true</p></td>
+<td><p>The service provided by the nlohmann/json library checks that a JSON value must be an object, array, number, or string, or one of the lowercase literal names false, null, or true</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>✔ All Children Linked</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="WFJ.html#wfj-07"><span class="std std-ref">WFJ-07</span></a></p></td>
-<td><p>The service checks that JSON is only serialized using UTF-8.</p></td>
+<td><p>The service provided by the nlohmann/json library checks that JSON is only serialized using UTF-8.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="WFJ.html#wfj-08"><span class="std std-ref">WFJ-08</span></a></p></td>
-<td><p>The service ignores byte order marks.</p></td>
+<td><p>The service provided by the nlohmann/json library ignores byte order marks.</p></td>
 <td><p>0.00</p></td>
+<td><p>⨯ Item Reviewed<br>⨯ All Children Linked</p></td>
 </tr>
 </tbody>
 </table>
@@ -1510,9 +1797,9 @@ The contribution to the score of a parent item by a suspiciously linked child is
 <p><em>Generated for: Software</em></p>
 <ul class="simple">
 <li><p><em>Repository root: /home/runner/work/inc_nlohmann_json/inc_nlohmann_json</em></p></li>
-<li><p><em>Commit SHA: f476577c5fb1a05f16f4ceb1c5fcf827a1b723d1</em></p></li>
-<li><p><em>Commit date/time: Thu Nov 13 12:58:27 2025</em></p></li>
-<li><p><em>Commit tag: f476577</em></p></li>
+<li><p><em>Commit SHA: f61e53be2bba6d0e091a9bbe4252190e5e5f8019</em></p></li>
+<li><p><em>Commit date/time: 2025-11-26 12:04:09 UTC</em></p></li>
+<li><p><em>Commit tag: f61e53b</em></p></li>
 </ul>
 </section>
 </section>

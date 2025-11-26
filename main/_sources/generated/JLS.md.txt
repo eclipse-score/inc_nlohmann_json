@@ -1,12 +1,13 @@
 
-### JLS-01 
-
-The CI pipeline of the main branch executes on each pull request (opened, reopened, synchronized) the integration test suite, and failures in these runs are investigated by contributors.
+### JLS-01 | Reviewed: ⨯ | Score: 0.0 
+The CI pipeline in nlohmann/json executes the unit and integration test suites on each pull request (opened, reopened, synchronized).
 
 
 **Supported Requests:**
 
-- [TA-VALIDATION](TA.md#ta-validation)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-VALIDATION](TA.md#ta-validation)  | All specified tests are executed repeatedly, under defined conditions in controlled environments, according to specified objectives. (To revisit) | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -16,167 +17,11 @@ _None_
 
 **References:**
 
-- `.github/workflows/parent-workflow.yml`
+- `website: https://github.com/nlohmann/json/blob/develop/.github/workflows/ubuntu.yml#L9`
 
 
-````yaml
-name: Parent Workflow
-
-on: 
-  pull_request:
-  push: 
-    branches:
-      - main
-  schedule:
-    - cron: '0 0 * * *' # Runs daily at midnight UTC
-
-permissions:
-  contents: read
-
-jobs:
-  labeler:
-    permissions:
-      contents: read
-      pages: write
-      pull-requests: write
-    name: Run Labeler Workflow
-    uses: ./.github/workflows/labeler.yml
-    with:
-      artifact_id: "labeler-${{ github.sha }}"
-
-  check_amalgamation:
-    name: Run Amalgamation Workflow
-    if: ${{ github.event_name == 'pull_request' }} # only run check_amalgamation for PRs
-    uses: ./.github/workflows/check_amalgamation.yml
-    with:
-      artifact_id: "check_amalgamation-${{ github.sha }}"
-      
-  test_trudag_extensions:
-    name: Run Test Trudag Extensions Workflow
-    uses: ./.github/workflows/test_trudag_extensions.yml
-    with:
-      artifact_id: "test_trudag_extensions-${{ github.sha }}"
-
-  codeql:
-    permissions:
-      contents: read
-      security-events: write
-    name: Run Codeql analysis Workflow
-    uses: ./.github/workflows/codeql-analysis.yml
-    with:
-      artifact_id: "codeql-${{ github.sha }}"
-
-  ubuntu:
-    name: Run Ubuntu Workflow
-    permissions:
-      contents: write
-    needs: [codeql] # Error if CodeQL and Ubuntu triggered at the same time due to conflicting priorities
-    uses: ./.github/workflows/ubuntu.yml
-    with:
-      artifact_id: "ubuntu-${{ github.sha }}"
-
-  dependency_review:
-    name: Run dependency_review Workflow
-    if: ${{ github.event_name == 'pull_request' }}  # only run dependency_review for PRs
-    uses: ./.github/workflows/dependency-review.yml
-    with:
-      artifact_id: "dependency_review-${{ github.sha }}"
-
-  collect_artifacts_pr:
-    name: "Collect Results & Deploy (PR)"
-    if: github.event_name == 'pull_request'
-    needs: [labeler, check_amalgamation, test_trudag_extensions, dependency_review, codeql, ubuntu]
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        target: [labeler, check_amalgamation, test_trudag_extensions, dependency_review, codeql, ubuntu]
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-
-      - name: Check child workflow results 
-        run: |
-          echo "=== Checking Child Workflow Results ==="
-          result="${{ needs[matrix.target].result }}"
-          echo "${{ matrix.target }} workflow result: $result"
-
-          if [[ "$result" != "success" ]]; then
-            echo "❌ ${{ matrix.target }} workflow failed! Exiting..."
-            exit 1
-          fi
-          echo "✅ Child workflows completed successfully!" 
-        env:
-          current_workflow: ${{ matrix.target }}
-
-      - name: Download artifacts
-        uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
-        with:
-          name: "${{ matrix.target }}-${{ github.sha }}"
-          path: artifacts/
-
-  collect_artifacts_non_pr:
-    name: "Collect Results & Deploy (Non-PR)"
-    if: github.event_name != 'pull_request'
-    needs: [labeler, test_trudag_extensions, codeql, ubuntu]  # no check_amalgamation or dependency_review if non PR
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        target: [labeler, test_trudag_extensions, codeql, ubuntu]
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-
-      - name: Check child workflow results 
-        run: |
-          echo "=== Checking Child Workflow Results ==="
-          result="${{ needs[matrix.target].result }}"
-          echo "${{ matrix.target }} workflow result: $result"
-
-          if [[ "$result" != "success" ]]; then
-            echo "❌ ${{ matrix.target }} workflow failed! Exiting..."
-            exit 1
-          fi
-          echo "✅ Child workflows completed successfully!" 
-        env:
-          current_workflow: ${{ matrix.target }}
-
-      - name: Download artifacts
-        uses: actions/download-artifact@fa0a91b85d4f404e444e00e005971372dc801d16 # v4.1.8
-        with:
-          name: "${{ matrix.target }}-${{ github.sha }}"
-          path: artifacts/
-
-  test_publish_documentation:
-    permissions:
-      contents: write
-      pages: write
-      pull-requests: write
-      id-token: write
-      security-events: read
-    name: Test publish_documentation Workflow
-    if: github.event_name == 'pull_request'            # Whenever on Pull-request, test publication
-    needs: [collect_artifacts_pr]
-    uses: ./.github/workflows/test_publication.yml
-    with:
-      artifact_id: "ubuntu-${{ github.sha }}"
-
-  publish_documentation:
-    permissions:
-      contents: write
-      pages: write
-      pull-requests: write
-      id-token: write
-      security-events: read
-    name: Run publish_documentation Workflow
-    if: github.event_name == 'push'            # Publish documentation should only run on push to main
-    needs: [collect_artifacts_non_pr]
-    uses: ./.github/workflows/publish_documentation.yml
-    with:
-      artifact_id: "ubuntu-${{ github.sha }}"
-
-````
+`https://github.com/nlohmann/json/blob/develop/.github/workflows/ubuntu.yml#L9`
+	- The trigger condition for the CI workflow that executes the test suites.
 
 
 
@@ -188,19 +33,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-01.svg)
+
+|date-time|JLS-01|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-02 
-
+### JLS-02 | Reviewed: ⨯ | Score: 0.0 
 Fuzz testing is used in the original nlohmann/json repository (https://github.com/nlohmann/json) to uncover edge cases and failure modes throughout development. (https://github.com/nlohmann/json/blob/develop/tests/fuzzing.md)
 
 
 **Supported Requests:**
 
-- [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -231,6 +83,13 @@ _None_
 	- Configuration file for Fuzz-Testing pipeline in the original nlohmann/json repository
 
 
+- `website: https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+
+
+`https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+	- OpenSSF Scorecard Report for nlohmann/json, where score for 'Fuzzing' supports this statement.
+
+
 
 
 
@@ -240,19 +99,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-02.svg)
+
+|date-time|JLS-02|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-03 
-
-Automated tests are reviewed by a Subject Matter Expert to verify they test the properties they claim to.
+### JLS-03 | Reviewed: ⨯ | Score: 0.0 
+Automated tests within the TSF documentation are reviewed by a Subject Matter Expert to verify they test the properties they claim to.
 
 
 **Supported Requests:**
 
-- [TA-BEHAVIOURS](TA.md#ta-behaviours)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-BEHAVIOURS](TA.md#ta-behaviours)  | Expected or required behaviours for the nlohmann/json library are identified, specified, verified and validated based on analysis. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -272,20 +138,27 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-03.svg)
+
+|date-time|JLS-03|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-04 
-
-External dependencies are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved.
+### JLS-04 | Reviewed: ⨯ | Score: 0.0 
+External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved.
 
 
 **Supported Requests:**
 
-- [TA-FIXES](TA.md#ta-fixes)
-- [TA-INPUTS](TA.md#ta-inputs)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -362,19 +235,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-04.svg)
+
+|date-time|JLS-04|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-05 
-
-The OSS nlohmann/json is widely used, actively maintained and uses github issues to track bugs and misbehaviours.
+### JLS-05 | Reviewed: ⨯ | Score: 0.0 
+The nlohmann/json library is widely used and actively maintained; bugs and misbehaviours are tracked publicly and transparently.
 
 
 **Supported Requests:**
 
-- [TA-FIXES](TA.md#ta-fixes)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -430,7 +310,14 @@ _None_
 
 
 `https://json.nlohmann.me/home/customers/`
-	- list of large projects using nlohmann/json
+	- presents a list of a subset of all customers who are using the nlohmann/json library
+
+
+- `website: https://github.com/nlohmann/json/releases/tag/v3.12.0`
+
+
+`https://github.com/nlohmann/json/releases/tag/v3.12.0`
+	- release notes for v3.12.0, listing bugs, CVEs and warnings which were either fixed or mitigated since last release
 
 
 
@@ -442,19 +329,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-05.svg)
+
+|date-time|JLS-05|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-06 
-
-Changes to the code (main branch) are applied only after code review and passing of all pipelines.
+### JLS-06 | Reviewed: ⨯ | Score: 0.0 
+Pull requests in the nlohmann/json repository are merged only after code review.
 
 
 **Supported Requests:**
 
-- [TA-UPDATES](TA.md#ta-updates)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -464,10 +358,12 @@ _None_
 
 **References:**
 
-- `failures on branch master of nlohmann/json`
+- `website: https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
 
 
-0 workflows failed on branch master of nlohmann/json
+`https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+	- OpenSSF Scorecard Report for nlohmann/json, where score for 'Code-Review' reflects this statement.
+
 
 
 
@@ -478,19 +374,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-06.svg)
+
+|date-time|JLS-06|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-07 
-
-Main branch is protected, i.e. no direct commits are possible.
+### JLS-07 | Reviewed: ⨯ | Score: 0.0 
+The develop branch of nlohmann/json is protected, i.e. no direct commits are possible.
 
 
 **Supported Requests:**
 
-- [TA-UPDATES](TA.md#ta-updates)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -500,39 +403,13 @@ _None_
 
 **References:**
 
-_None_
+- `website: https://github.com/nlohmann/json/actions?query=event%3Apush+branch%3Adevelop`
 
 
-
-**Fallacies:**
-
-_None_
-
-**Graph:**
-
-_No Historic Data Found_
+`https://github.com/nlohmann/json/actions?query=event%3Apush+branch%3Adevelop`
+	- List of all pushes to the develop branch in nlohmann/json, showing that all commits are done by nlohmann and indicating that direct commits are not possible.
 
 
----
-
-### JLS-08 
-
-Each statement is scored based on SME reviews or automatic validation functions. (TODO)
-
-
-**Supported Requests:**
-
-- [TA-CONFIDENCE](TA.md#ta-confidence)
-
-**Supporting Items:**
-
-_None_
-
-
-
-**References:**
-
-_None_
 
 
 
@@ -542,51 +419,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-07.svg)
+
+|date-time|JLS-07|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-09 
-
-Scores are reasonably, systematically and repeatably accumulated. (TODO)
-
-
-**Supported Requests:**
-
-- [TA-CONFIDENCE](TA.md#ta-confidence)
-
-**Supporting Items:**
-
-_None_
-
-
-
-**References:**
-
-_None_
-
-
-
-**Fallacies:**
-
-_None_
-
-**Graph:**
-
-_No Historic Data Found_
-
-
----
-
-### JLS-10 
-
-Every release includes source code, build instructions, tests and attestations. (TODO: Test result summary)
+### JLS-08 | Reviewed: ⨯ | Score: 0.0 
+Each statement within the TSF documentation is scored based on SME reviews or automatic validation functions. (TODO)
 
 
 **Supported Requests:**
 
-- [TA-ITERATIONS](TA.md#ta-iterations)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-CONFIDENCE](TA.md#ta-confidence)  | Confidence in the nlohmann/json library is measured based on results of analysis. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -606,19 +458,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-08.svg)
+
+|date-time|JLS-08|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-11 
-
-A score based on outstanding, fixed and mitigated faults is calculated based on github issues in nlohmann/json.
+### JLS-09 | Reviewed: ⨯ | Score: 0.0 
+Scores within the TSF documentation are reasonably, systematically and repeatably accumulated. (TODO)
 
 
 **Supported Requests:**
 
-- [TA-FIXES](TA.md#ta-fixes)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-CONFIDENCE](TA.md#ta-confidence)  | Confidence in the nlohmann/json library is measured based on results of analysis. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -638,19 +497,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-09.svg)
+
+|date-time|JLS-09|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-12 
-
-The S-Core change process management is followed.
+### JLS-10 | Reviewed: ⨯ | Score: 0.0 
+Every release of nlohmann/json includes source code, build instructions, tests and attestations. (TODO: Test result summary)
 
 
 **Supported Requests:**
 
-- [TA-UPDATES](TA.md#ta-updates)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-ITERATIONS](TA.md#ta-iterations)  | All constructed iterations of the nlohmann/json library include source code, build instructions, tests, results and attestations. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -660,11 +526,50 @@ _None_
 
 **References:**
 
-- `website: https://eclipse-score.github.io/process_description/main/process_areas/change_management/index.html`
+_None_
 
 
-`https://eclipse-score.github.io/process_description/main/process_areas/change_management/index.html`
-	- Documentation of S-CORE change process management
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-10.svg)
+
+|date-time|JLS-10|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
+
+
+---
+
+### JLS-11 | Reviewed: ⨯ | Score: 0.0 
+Outstanding bugs or misbehaviours are analyzed within eclipse-score/inc_nlohmann_json to determine whether they are relevant for S-CORE's use cases of the nlohmann/json library.
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/misbehaviours.md`
+
+
+`https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/misbehaviours.md`
+	- List of outstanding bugs as well as fixes for developed code that are outstanding, not yet applied.
 
 
 
@@ -676,19 +581,71 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-11.svg)
+
+|date-time|JLS-11|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-13 
-
-The S-Core methodologies are followed.
+### JLS-12 | Reviewed: ⨯ | Score: 0.0 
+The nlohmann/json repository has well-defined community standards, including a contribution guideline and a security policy.
 
 
 **Supported Requests:**
 
-- [TA-METHODOLOGIES](TA.md#ta-methodologies)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://github.com/nlohmann/json/community`
+
+
+`https://github.com/nlohmann/json/community`
+	- List of defined community standards in nlohmann/json
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-12.svg)
+
+|date-time|JLS-12|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
+
+
+---
+
+### JLS-13 | Reviewed: ⨯ | Score: 0.0 
+The S-Core methodologies are followed in eclipse-score/inc_nlohmann_json.
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-METHODOLOGIES](TA.md#ta-methodologies)  | Manual methodologies applied for the nlohmann/json library by contributors, and their results, are managed according to specified objectives. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -714,19 +671,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-13.svg)
+
+|date-time|JLS-13|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-14 
-
-The SHA value of the library in use coincides with the SHA value provided by Niels Lohmann for that version.
+### JLS-14 | Reviewed: ⨯ | Score: 0.0 
+The SHA value of the nlohmann/json library in use within eclipse-score/inc_nlohmann_json coincides with the SHA value provided by Niels Lohmann for that version.
 
 
 **Supported Requests:**
 
-- [TA-RELEASES](TA.md#ta-releases)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -752,19 +716,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-14.svg)
+
+|date-time|JLS-14|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-16 
-
+### JLS-16 | Reviewed: ⨯ | Score: 0.0 
 A list of tests, which is extracted from the test execution, is provided, along with a list of test environments.
 
 
 **Supported Requests:**
 
-- [TA-TESTS](TA.md#ta-tests)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-TESTS](TA.md#ta-tests)  | All tests for the nlohmann/json library, and its build and test environments, are constructed from controlled/mirrored sources and are reproducible, with any exceptions documented. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -8321,19 +8292,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-16.svg)
+
+|date-time|JLS-16|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-17 
-
-A github workflow calculates the fraction of expectations covered by tests (TODO).
+### JLS-17 | Reviewed: ⨯ | Score: 0.0 
+A github workflow calculates the fraction of expectations covered by tests in eclipse-score/inc_nlohmann_json (TODO).
 
 
 **Supported Requests:**
 
-- [TA-ANALYSIS](TA.md#ta-analysis)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-ANALYSIS](TA.md#ta-analysis)  | Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -8353,19 +8331,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-17.svg)
+
+|date-time|JLS-17|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-18 
-
+### JLS-18 | Reviewed: ⨯ | Score: 0.0 
 Results from tests are accurately captured.
 
 
 **Supported Requests:**
 
-- [TA-DATA](TA.md#ta-data)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-DATA](TA.md#ta-data)  | Data in eclipse-score/inc_nlohmann_json is collected from tests, and from monitoring of deployed software, according to specified objectives. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -9321,19 +9306,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-18.svg)
+
+|date-time|JLS-18|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-19 
-
-All components, dependencies and tools are listed in a manifest.
+### JLS-19 | Reviewed: ⨯ | Score: 0.0 
+All library components, build dependencies, and build tools in the nlohmann/json repository are declared in build system manifests.
 
 
 **Supported Requests:**
 
-- [TA-ITERATIONS](TA.md#ta-iterations)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-ITERATIONS](TA.md#ta-iterations)  | All constructed iterations of the nlohmann/json library include source code, build instructions, tests, results and attestations. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -9343,7 +9335,34 @@ _None_
 
 **References:**
 
-_None_
+- `website: https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/CMakeLists.txt`
+
+
+`https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/CMakeLists.txt`
+	- CMake build manifest file
+
+
+- `website: https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/BUILD.bazel`
+
+
+`https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/BUILD.bazel`
+	- Bazel build manifest file
+
+
+- `website: https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/meson.build`
+
+
+`https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/meson.build`
+	- Meson build manifest file
+
+
+- `website: https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/Package.swift`
+
+
+`https://raw.githubusercontent.com/nlohmann/json/refs/heads/develop/Package.swift`
+	- Swift Package Manager manifest file
+
+
 
 
 
@@ -9353,19 +9372,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-19.svg)
+
+|date-time|JLS-19|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-20 
-
-A github workflow saves the history of scores in the trustable graph to derive trends.
+### JLS-20 | Reviewed: ⨯ | Score: 0.0 
+A github workflow of eclipse-score/inc_nlohmann_json saves the history of scores in the trustable graph to derive trends.
 
 
 **Supported Requests:**
 
-- [TA-CONFIDENCE](TA.md#ta-confidence)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-CONFIDENCE](TA.md#ta-confidence)  | Confidence in the nlohmann/json library is measured based on results of analysis. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -9402,6 +9428,16 @@ jobs:
     uses: ./.github/workflows/labeler.yml
     with:
       artifact_id: "labeler-${{ github.sha }}"
+
+  SME_review_checker:
+    permissions:
+      contents: read
+      pull-requests: read
+    name: Run SME_review_checker Workflow
+    if: ${{ github.event_name == 'pull_request' }} # only run SME_review_checker for PRs
+    uses: ./.github/workflows/SME_review_checker.yml
+    with:
+      artifact_id: "SME_review_checker-${{ github.sha }}"
 
   check_amalgamation:
     name: Run Amalgamation Workflow
@@ -9444,11 +9480,11 @@ jobs:
   collect_artifacts_pr:
     name: "Collect Results & Deploy (PR)"
     if: github.event_name == 'pull_request'
-    needs: [labeler, check_amalgamation, test_trudag_extensions, dependency_review, codeql, ubuntu]
+    needs: [labeler, SME_review_checker, check_amalgamation, test_trudag_extensions, dependency_review, codeql, ubuntu]
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        target: [labeler, check_amalgamation, test_trudag_extensions, dependency_review, codeql, ubuntu]
+        target: [labeler, SME_review_checker, check_amalgamation, test_trudag_extensions, dependency_review, codeql, ubuntu]
 
     steps:
       - name: Checkout code
@@ -9477,7 +9513,7 @@ jobs:
   collect_artifacts_non_pr:
     name: "Collect Results & Deploy (Non-PR)"
     if: github.event_name != 'pull_request'
-    needs: [labeler, test_trudag_extensions, codeql, ubuntu]  # no check_amalgamation or dependency_review if non PR
+    needs: [labeler, test_trudag_extensions, codeql, ubuntu]  # no check_amalgamation, dependency_review or SME_review_checker if non PR
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -9595,12 +9631,14 @@ jobs:
         with:
           python-version: '3.11.2'
 
-      # trudag version 2025.8.5
+      # trudag version v2025.10.22
       - name: Install trudag and dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y graphviz
-          pip install git+https://gitlab.com/CodethinkLabs/trustable/trustable@9957f12171cb898d83df5ae708fdba0a38fece2e
+          pip install --upgrade pip
+          pip install PyYAML requests
+          pip install git+https://gitlab.com/CodethinkLabs/trustable/trustable@v2025.10.22
 
       - name: Install tools
         run: |
@@ -9732,10 +9770,10 @@ jobs:
 
 
 
-- `website: https://github.com/score-json/json/blob/save_historical_data/TSF/TrustableScoring.db`
+- `website: https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/TrustableScoring.db`
 
 
-`https://github.com/score-json/json/blob/save_historical_data/TSF/TrustableScoring.db`
+`https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/TrustableScoring.db`
 	- the database containing the trustable scores
 
 
@@ -9748,19 +9786,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-20.svg)
+
+|date-time|JLS-20|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-21 
-
+### JLS-21 | Reviewed: ⨯ | Score: 0.0 
 A score is calculated based on the number of mirrored and unmirrored things. (TODO)
 
 
 **Supported Requests:**
 
-- [TA-RELEASES](TA.md#ta-releases)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-RELEASES](TA.md#ta-releases)  | Construction of releases for the nlohmann/json library is fully repeatable and the results are fully reproducible, with any exceptions documented and justified. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -9780,19 +9825,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-21.svg)
+
+|date-time|JLS-21|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-22 
-
-The github workflow executes the unit tests daily and saves the results as time-series data.
+### JLS-22 | Reviewed: ⨯ | Score: 0.0 
+A github workflow of eclipse-score/inc_nlohmann_json executes the unit tests daily and saves the results as time-series data.
 
 
 **Supported Requests:**
 
-- [TA-VALIDATION](TA.md#ta-validation)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-VALIDATION](TA.md#ta-validation)  | All specified tests are executed repeatedly, under defined conditions in controlled environments, according to specified objectives. (To revisit) | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -9829,6 +9881,16 @@ jobs:
     uses: ./.github/workflows/labeler.yml
     with:
       artifact_id: "labeler-${{ github.sha }}"
+
+  SME_review_checker:
+    permissions:
+      contents: read
+      pull-requests: read
+    name: Run SME_review_checker Workflow
+    if: ${{ github.event_name == 'pull_request' }} # only run SME_review_checker for PRs
+    uses: ./.github/workflows/SME_review_checker.yml
+    with:
+      artifact_id: "SME_review_checker-${{ github.sha }}"
 
   check_amalgamation:
     name: Run Amalgamation Workflow
@@ -9871,11 +9933,11 @@ jobs:
   collect_artifacts_pr:
     name: "Collect Results & Deploy (PR)"
     if: github.event_name == 'pull_request'
-    needs: [labeler, check_amalgamation, test_trudag_extensions, dependency_review, codeql, ubuntu]
+    needs: [labeler, SME_review_checker, check_amalgamation, test_trudag_extensions, dependency_review, codeql, ubuntu]
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        target: [labeler, check_amalgamation, test_trudag_extensions, dependency_review, codeql, ubuntu]
+        target: [labeler, SME_review_checker, check_amalgamation, test_trudag_extensions, dependency_review, codeql, ubuntu]
 
     steps:
       - name: Checkout code
@@ -9904,7 +9966,7 @@ jobs:
   collect_artifacts_non_pr:
     name: "Collect Results & Deploy (Non-PR)"
     if: github.event_name != 'pull_request'
-    needs: [labeler, test_trudag_extensions, codeql, ubuntu]  # no check_amalgamation or dependency_review if non PR
+    needs: [labeler, test_trudag_extensions, codeql, ubuntu]  # no check_amalgamation, dependency_review or SME_review_checker if non PR
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -10891,10 +10953,10 @@ if __name__ == "__main__":
 
 
 
-- `website: https://github.com/score-json/json/blob/save_historical_data/TSF/MemoryEfficientTestResultData.db`
+- `website: https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/MemoryEfficientTestResultData.db`
 
 
-`https://github.com/score-json/json/blob/save_historical_data/TSF/MemoryEfficientTestResultData.db`
+`https://github.com/eclipse-score/inc_nlohmann_json/blob/save_historical_data/TSF/MemoryEfficientTestResultData.db`
 	- the database containing the test results
 
 
@@ -10907,19 +10969,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-22.svg)
+
+|date-time|JLS-22|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-23 
-
+### JLS-23 | Reviewed: ⨯ | Score: 0.0 
 The Eclipse S-CORE organization mirrors the nlohmann/json project in a github fork.
 
 
 **Supported Requests:**
 
-- [TA-SUPPLY_CHAIN](TA.md#ta-supply_chain)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-SUPPLY_CHAIN](TA.md#ta-supply_chain)  | All sources and tools for the nlohmann/json library are mirrored in our controlled environment. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -10952,29 +11021,38 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-23.svg)
+
+|date-time|JLS-23|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-24 
-
+### JLS-24 | Reviewed: ⨯ | Score: 0.0 
 The nlohmann/json library recognizes malformed JSON and returns an exception.
 
 
 **Supported Requests:**
 
-- [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
-- [NPF-07.2](NPF.md#npf-07.2)
-- [TIJ-01](TIJ.md#tij-01)
-- [TIJ-02](TIJ.md#tij-02)
-- [TIJ-03](TIJ.md#tij-03)
-- [TIJ-04](TIJ.md#tij-04)
-- [TIJ-05](TIJ.md#tij-05)
-- [TIJ-06](TIJ.md#tij-06)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [NPF-07.2](NPF.md#npf-07.2)  | The service provided by the nlohmann/json library throws an exception on ill-formed UTF-8 data. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-01](TIJ.md#tij-01)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed literal names. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-02](TIJ.md#tij-02)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed numbers. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-03](TIJ.md#tij-03)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed strings. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-04](TIJ.md#tij-04)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed arrays. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-05](TIJ.md#tij-05)  | The parsing service provided by the nlohmann/json library throws an exception on ill-formed objects. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TIJ-06](TIJ.md#tij-06)  | The service provided by the nlohmann/json library recognises ill-formed byte-order marks and throws an exception. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -10990,19 +11068,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-24.svg)
+
+|date-time|JLS-24|NPF-07.2|TIJ-01|TIJ-02|TIJ-03|TIJ-04|TIJ-05|TIJ-06|
+|-|-|-|-|-|-|-|-|-|
+|2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+
 
 
 ---
 
-### JLS-25 
-
-Malicious code changes are mitigated by code reviews, adhering to Eclipse S-core contribution procedures and vigilance from the open-source community.
+### JLS-25 | Reviewed: ⨯ | Score: 0.0 
+Malicious code changes in nlohmann/json are mitigated by code reviews, adhering to the contribution guidelines and security policy specified by nlohmann/json.
 
 
 **Supported Requests:**
 
-- [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11012,7 +11097,20 @@ _None_
 
 **References:**
 
-_None_
+- `website: https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+
+
+`https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+	- OpenSSF Scorecard Report for nlohmann/json, where scores for 'Security-Policy' and 'Code-Review' reflect this statement.
+
+
+- `website: https://github.com/nlohmann/json?tab=contributing-ov-file#readme`
+
+
+`https://github.com/nlohmann/json?tab=contributing-ov-file#readme`
+	- Contribution Guidelines for nlohmann/json, where it is indirectly indicated that all changes are reviewed.
+
+
 
 
 
@@ -11022,19 +11120,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-25.svg)
+
+|date-time|JLS-25|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-26 
-
-Pipeline execution results are analyzed in nlohmann/json.
+### JLS-26 | Reviewed: ⨯ | Score: 0.0 
+Any failed CI pipeline executions in the master branch of the nlohmann/json repository are analyzed and fixed.
 
 
 **Supported Requests:**
 
-- [TA-ANALYSIS](TA.md#ta-analysis)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-ANALYSIS](TA.md#ta-analysis)  | Collected data from tests and monitoring of deployed software in eclipse-score/inc_nlohmann_json is analysed according to specified objectives. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11058,19 +11163,26 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-26.svg)
+
+|date-time|JLS-26|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
 
 
 ---
 
-### JLS-27 
-
+### JLS-27 | Reviewed: ⨯ | Score: 0.0 
 The test coverage for this version of nlohmann/json is monitored using Coveralls and is not decreasing over time, unless reasonably justified.
 
 
 **Supported Requests:**
 
-- [TA-BEHAVIOURS](TA.md#ta-behaviours)
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-BEHAVIOURS](TA.md#ta-behaviours)  | Expected or required behaviours for the nlohmann/json library are identified, specified, verified and validated based on analysis. | 0.00 | ⨯ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11090,4 +11202,591 @@ _None_
 
 **Graph:**
 
-_No Historic Data Found_
+![No Image](figs/JLS-27.svg)
+
+|date-time|JLS-27|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
+
+
+---
+
+### JLS-28 | Reviewed: ⨯ | Score: 0.0 
+Outstanding bugs and misbehaviours are triaged in the nlohmann/json repository.
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://github.com/nlohmann/json/discussions/4967`
+
+
+`https://github.com/nlohmann/json/discussions/4967`
+	- Discussion in nlohmann/json showing that no triage processes for bugs are currently in place
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-28.svg)
+
+|date-time|JLS-28|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
+
+
+---
+
+### JLS-29 | Reviewed: ⨯ | Score: 0.0 
+Known bugs, misbehaviours and CVEs are analyzed and either fixed or mitigated in the nlohmann/json repository.
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://github.com/nlohmann/json/releases/tag/v3.12.0`
+
+
+`https://github.com/nlohmann/json/releases/tag/v3.12.0`
+	- release notes for v3.12.0, listing bugs, CVEs and warnings which were either fixed or mitigated since last release
+
+
+- `website: https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+
+
+`https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+	- OpenSSF Scorecard Report for nlohmann/json, where scores for 'Vulnerabilities', 'Pinned-Dependencies' and 'Dangerous-Workflow' support this statement.
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-29.svg)
+
+|date-time|JLS-29|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
+
+
+---
+
+### JLS-30 | Reviewed: ⨯ | Score: 0.0 
+Outstanding CVEs are analyzed within eclipse-score/inc_nlohmann_json to determine whether they can be dismissed, and/or are relevant for S-CORE's use cases of the nlohmann/json library.
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+
+
+`https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+	- OpenSSF Scorecard Report for nlohmann/json, where score for 'Vulnerabilities' shows that there are no outstanding CVEs.
+
+
+- `website: https://github.com/nlohmann/json/discussions/4975`
+
+
+`https://github.com/nlohmann/json/discussions/4975`
+	- Screenshot of dismissed code scanning alerts, which can also be dismissed in S-CORE.
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-30.svg)
+
+|date-time|JLS-30|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
+
+
+---
+
+### JLS-31 | Reviewed: ⨯ | Score: 0.0 
+The nlohmann/json repository uses a static code analysis tool.
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-MISBEHAVIOURS](TA.md#ta-misbehaviours)  | Prohibited misbehaviours for the nlohmann/json library are identified, and mitigations are specified, verified and validated based on analysis. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+
+
+`https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+	- OpenSSF Scorecard Report for nlohmann/json, where score for 'SAST' supports this statement.
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-31.svg)
+
+|date-time|JLS-31|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
+
+
+---
+
+### JLS-32 | Reviewed: ⨯ | Score: 0.0 
+All pull requests to the develop branch in the nlohmann/json repository trigger a request for review from Niels Lohmann (@nlohmann).
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://github.com/nlohmann/json/blob/develop/.github/CODEOWNERS`
+
+
+`https://github.com/nlohmann/json/blob/develop/.github/CODEOWNERS`
+	- CODEOWNERS file specifying that changes to any file requests @nlohmann for code review in case of a pull request
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-32.svg)
+
+|date-time|JLS-32|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
+
+
+---
+
+### JLS-33 | Reviewed: ⨯ | Score: 0.0 
+Outstanding CVEs are triaged in the nlohmann/json repository.
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://github.com/nlohmann/json/security/advisories/new`
+
+
+`https://github.com/nlohmann/json/security/advisories/new`
+	- the vulnerability reporting template used in nlohmann/json, which includes a severity section and CVSS scoring
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-33.svg)
+
+|date-time|JLS-33|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
+
+
+---
+
+### JLS-34 | Reviewed: ⨯ | Score: 0.0 
+The nlohmann/json library has no external components or dependencies besides the C++ standard components.
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `List of included libraries for: single_include/nlohmann/json.hpp`
+
+
+	- Description: file containing all include occurrences of the score-project.
+
+
+	```cpp
+	#include &lt;algorithm&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;functional&gt;
+	#include &lt;initializer_list&gt;
+	    #include &lt;iosfwd&gt;
+	#include &lt;iterator&gt;
+	#include &lt;memory&gt;
+	#include &lt;string&gt;
+	#include &lt;utility&gt;
+	#include &lt;vector&gt;
+	#include &lt;utility&gt;
+	#include &lt;algorithm&gt;
+	#include &lt;array&gt;
+	#include &lt;forward_list&gt;
+	#include &lt;iterator&gt;
+	#include &lt;map&gt;
+	    #include &lt;optional&gt;
+	#include &lt;string&gt;
+	#include &lt;tuple&gt;
+	#include &lt;type_traits&gt;
+	#include &lt;unordered_map&gt;
+	#include &lt;utility&gt;
+	#include &lt;valarray&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;exception&gt;
+	    #include &lt;numeric&gt;
+	#include &lt;stdexcept&gt;
+	#include &lt;string&gt;
+	#include &lt;vector&gt;
+	#include &lt;array&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;cstdint&gt;
+	#include &lt;string&gt;
+	#include &lt;utility&gt;
+	#include &lt;type_traits&gt;
+	    #include &lt;stdint.h&gt;
+	    #include &lt;stdint.h&gt;
+	        #include &lt;version&gt;
+	    #include &lt;cstdlib&gt;
+	    #include &lt;cassert&gt;
+	    #include &lt;compare&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;array&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;type_traits&gt;
+	#include &lt;utility&gt;
+	#include &lt;limits&gt;
+	#include &lt;string&gt;
+	#include &lt;tuple&gt;
+	#include &lt;type_traits&gt;
+	#include &lt;utility&gt;
+	#include &lt;iterator&gt;
+	    #include &lt;cstdint&gt;
+	    #include &lt;map&gt;
+	    #include &lt;memory&gt;
+	    #include &lt;string&gt;
+	    #include &lt;vector&gt;
+	#include &lt;cstring&gt;
+	#include &lt;string&gt;
+	#include &lt;utility&gt;
+	#include &lt;experimental/filesystem&gt;
+	#include &lt;filesystem&gt;
+	    #include &lt;optional&gt;
+	#include &lt;algorithm&gt;
+	#include &lt;iterator&gt;
+	#include &lt;string&gt;
+	#include &lt;tuple&gt;
+	#include &lt;type_traits&gt;
+	#include &lt;utility&gt;
+	#include &lt;valarray&gt;
+	#include &lt;vector&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;iterator&gt;
+	#include &lt;tuple&gt;
+	#include &lt;utility&gt;
+	    #include &lt;ranges&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;string&gt;
+	#include &lt;cstdint&gt;
+	#include &lt;tuple&gt;
+	#include &lt;utility&gt;
+	#include &lt;cstdint&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;functional&gt;
+	#include &lt;algorithm&gt;
+	#include &lt;array&gt;
+	#include &lt;cmath&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;cstdint&gt;
+	#include &lt;cstdio&gt;
+	#include &lt;cstring&gt;
+	#include &lt;iterator&gt;
+	#include &lt;limits&gt;
+	#include &lt;string&gt;
+	#include &lt;utility&gt;
+	#include &lt;vector&gt;
+	    #include &lt;bit&gt;
+	#include &lt;array&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;cstring&gt;
+	#include &lt;iterator&gt;
+	#include &lt;memory&gt;
+	#include &lt;numeric&gt;
+	#include &lt;string&gt;
+	#include &lt;type_traits&gt;
+	#include &lt;utility&gt;
+	    #include &lt;cstdio&gt;
+	    #include &lt;istream&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;string&gt;
+	#include &lt;type_traits&gt;
+	#include &lt;utility&gt;
+	#include &lt;vector&gt;
+	#include &lt;array&gt;
+	#include &lt;clocale&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;cstdio&gt;
+	#include &lt;cstdlib&gt;
+	#include &lt;initializer_list&gt;
+	#include &lt;string&gt;
+	#include &lt;utility&gt;
+	#include &lt;vector&gt;
+	#include &lt;cstdint&gt;
+	#include &lt;utility&gt;
+	#include &lt;string&gt;
+	#include &lt;cmath&gt;
+	#include &lt;cstdint&gt;
+	#include &lt;functional&gt;
+	#include &lt;string&gt;
+	#include &lt;utility&gt;
+	#include &lt;vector&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;limits&gt;
+	#include &lt;iterator&gt;
+	#include &lt;type_traits&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;iterator&gt;
+	#include &lt;utility&gt;
+	#include &lt;type_traits&gt;
+	#include &lt;algorithm&gt;
+	#include &lt;cctype&gt;
+	#include &lt;cerrno&gt;
+	#include &lt;cstdlib&gt;
+	    #include &lt;iosfwd&gt;
+	#include &lt;limits&gt;
+	#include &lt;numeric&gt;
+	#include &lt;string&gt;
+	#include &lt;utility&gt;
+	#include &lt;vector&gt;
+	#include &lt;initializer_list&gt;
+	#include &lt;utility&gt;
+	#include &lt;algorithm&gt;
+	#include &lt;array&gt;
+	#include &lt;map&gt;
+	#include &lt;cmath&gt;
+	#include &lt;cstdint&gt;
+	#include &lt;cstring&gt;
+	#include &lt;limits&gt;
+	#include &lt;string&gt;
+	#include &lt;utility&gt;
+	#include &lt;vector&gt;
+	#include &lt;algorithm&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;iterator&gt;
+	#include &lt;memory&gt;
+	#include &lt;string&gt;
+	#include &lt;vector&gt;
+	    #include &lt;ios&gt;
+	    #include &lt;ostream&gt;
+	#include &lt;algorithm&gt;
+	#include &lt;array&gt;
+	#include &lt;clocale&gt;
+	#include &lt;cmath&gt;
+	#include &lt;cstddef&gt;
+	#include &lt;cstdint&gt;
+	#include &lt;cstdio&gt;
+	#include &lt;limits&gt;
+	#include &lt;string&gt;
+	#include &lt;iomanip&gt;
+	#include &lt;type_traits&gt;
+	#include &lt;utility&gt;
+	#include &lt;array&gt;
+	#include &lt;cmath&gt;
+	#include &lt;cstdint&gt;
+	#include &lt;cstring&gt;
+	#include &lt;limits&gt;
+	#include &lt;type_traits&gt;
+	#include &lt;functional&gt;
+	#include &lt;initializer_list&gt;
+	#include &lt;iterator&gt;
+	#include &lt;memory&gt;
+	#include &lt;stdexcept&gt;
+	#include &lt;type_traits&gt;
+	#include &lt;utility&gt;
+	#include &lt;vector&gt;
+	        #include &lt;any&gt;
+	    #include &lt;string_view&gt;
+	```
+	
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-34.svg)
+
+|date-time|JLS-34|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
+
+
+---
+
+### JLS-35 | Reviewed: ⨯ | Score: 0.0 
+Pull requests in the nlohmann/json repository are merged only after running CI-tests and successfully passing the pipeline.
+
+
+**Supported Requests:**
+
+| Item  | Summary  | Score  | Status  |
+| --- | --- | --- | --- |
+| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+
+**Supporting Items:**
+
+_None_
+
+
+
+**References:**
+
+- `website: https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+
+
+`https://scorecard.dev/viewer/?uri=github.com%2Fnlohmann%2Fjson`
+	- OpenSSF Scorecard Report for nlohmann/json, where score for 'CI-Tests' supports this statement
+
+
+- `website: https://github.com/nlohmann/json/pulls?q=is%3Apr+is%3Aclosed+review%3Aapproved`
+
+
+`https://github.com/nlohmann/json/pulls?q=is%3Apr+is%3Aclosed+review%3Aapproved`
+	- All approved pull requests in the nlohmann/json repository, with the results of the CI pipeline executions.
+
+
+
+
+
+**Fallacies:**
+
+_None_
+
+**Graph:**
+
+![No Image](figs/JLS-35.svg)
+
+|date-time|JLS-35|
+|-|-|
+|2025-11-26 12:04:09|0.00 |
+|2025-11-26 12:52:19.093864|0.00 |
+
