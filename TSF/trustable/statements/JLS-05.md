@@ -38,9 +38,11 @@ evidence:
                     - "https://github.com/nlohmann/json/pulse"
                     - "https://github.com/orgs/score-json/discussions/27#discussion-8594385"
                     - "https://json.nlohmann.me/home/customers/"
+                    - "https://github.com/nlohmann/json/releases/tag/v3.12.0"
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0
+    aschemmel-tech: 1.0
 ---
 
 The nlohmann/json library is widely used and actively maintained; bugs and misbehaviours are tracked publicly and transparently.
