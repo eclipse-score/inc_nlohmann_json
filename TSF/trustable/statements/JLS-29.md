@@ -10,6 +10,9 @@ references:
           description: "OpenSSF Scorecard Report for nlohmann/json, where scores for 'Vulnerabilities', 'Pinned-Dependencies' and 'Dangerous-Workflow' support this statement."
 score:
     Erikhu1: 0.7
+    aschemmel-tech: 0.8
 ---
 
 Known bugs, misbehaviours and CVEs are analyzed and either fixed or mitigated in the nlohmann/json repository.
+
+aschemmel-tech: evidences support bugs and CVE fixing, no mitigation actions are offered.
