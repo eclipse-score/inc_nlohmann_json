@@ -2,12 +2,22 @@
 level: 1.1
 normative: true
 references:
-        - type: website
-          url: "https://eclipse-score.github.io/process_description/main/general_concepts/score_review_concept.html"
-          description: "Documentation of S-CORE methodologies"
-score:
-    Jonas-Kirchhoff: 1.0
-    Erikhu1: 1.0
+  - type: project_website
+    url: "https://json.nlohmann.me/community/contribution_guidelines/#update-the-documentation"
+    description: "Contribution guidelines describing how to update and locally build the mkdocs-based documentation"
+  - type: project_website
+    url: "https://github.com/nlohmann/json/releases"
+    description: "Release notes summarising behavioural changes and documentation updates for each version"
+  - type: web_content
+    url: "https://json.nlohmann.me"
+    description: "Published documentation site for the nlohmann/json library"
+evidence:
+  type: https_response_time
+  configuration:
+    target_seconds: 2
+    urls:
+      - "https://json.nlohmann.me/community/contribution_guidelines/#update-the-documentation"
+      - "https://github.com/nlohmann/json/releases"
 ---
 
-The S-Core methodologies are followed in eclipse-score/inc_nlohmann_json.
+For changes that affect the behaviour or public API of the nlohmann/json library, contributors manually update the library documentation and locally rebuild it for verification.

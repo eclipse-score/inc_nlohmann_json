@@ -23,7 +23,7 @@ references:
         - type: project_website
           url: "https://json.nlohmann.me/home/customers/"
           description: "presents a list of a subset of all customers who are using the nlohmann/json library"
-        - type: web_content
+        - type: project_website
           url: "https://github.com/nlohmann/json/releases/tag/v3.12.0"
           description: "release notes for v3.12.0, listing bugs, CVEs and warnings which were either fixed or mitigated since last release"
 evidence:
@@ -38,6 +38,7 @@ evidence:
                     - "https://github.com/nlohmann/json/pulse"
                     - "https://github.com/orgs/score-json/discussions/27#discussion-8594385"
                     - "https://json.nlohmann.me/home/customers/"
+                    - "https://github.com/nlohmann/json/releases/tag/v3.12.0"
 score:
     Jonas-Kirchhoff: 1.0
     Erikhu1: 1.0

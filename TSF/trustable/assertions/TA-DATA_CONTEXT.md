@@ -25,15 +25,15 @@ Appropriate storage strategies safeguard availability across the product lifecyc
 **Evidence**
 
 - Time-stamped and traceable result records for each test execution, linked to associated system under test version and specification references.
-  - **Answer**: 
+  - **Answer**: Provided by JLS-18 and JLS-45.
 - List of monitored indicators, linked to associated specification version references.
-  - **Answer**: 
+  - **Answer**: Runtime monitoring indicators for deployed instances are not yet implemented and are expected to be defined by the integrator (see AOU-09, AOU-18 and AOU-19).
 - Time-stamped and traceable test-derived data for each indicator, linked to associated system under test version and indicator specifications references.
-  - **Answer**: 
+  - **Answer**: Indicator-level data is not yet collected and should be done by the integrator (see AOU-09).
 - List of monitored deployments, linked to associated version and configuration references.
-  - **Answer**: 
+  - **Answer**: Not available. Monitoring of deployed instances should be specified by the integrator (see AOU-09, AOU-18 and AOU-19).
 - Time-stamped and traceable production data for each indicator, linked to associated deployment metadata and specification references.
-  - **Answer**: 
+  - **Answer**: Not available. Should be done by the integrator (see AOU-09, AOU-18 and AOU-19).
 
 **Confidence scoring**
 
@@ -44,23 +44,22 @@ monitored deployments.
 **Checklist**
 
 - Is all test data stored with long-term accessibility?
-  - **Answer**: 
+  - **Answer**: No. Test results are collected into a persistent database as part of the CI workflows, which is done as a proof of concept. Due to GitHub storage constraints, the storage of this database is currently limited.
 - Is all monitoring data stored with long-term accessibility?
-  - **Answer**: 
+  - **Answer**: No. Dedicated monitoring data from deployed software is not collected yet. But it is expected to be implemented by the integrator (see AOU-09, AOU-18 and AOU-19).
 - Are extensible data models implemented?
-  - **Answer**: 
+  - **Answer**: Test-result data is stored in a SQLite database with separate tables for workflow runs and individual test results (see JLS-18). This schema can be extended with additional fields or tables if needed.
 - Is sensitive data handled correctly (broadcasted, stored, discarded, or anonymised) with appropriate encryption and redundancy?
-  - **Answer**: 
+  - **Answer**: This is not explicitly applicable. The captured test data does not include personal or sensitive data.
 - Are proper backup mechanisms in place?
-  - **Answer**: 
+  - **Answer**: No explicit project-level backup mechanism is defined for the test results database beyond GitHub’s own infrastructure.
 - Are storage and backup limits tested?
-  - **Answer**: 
+  - **Answer**: The `capture_test_data_memory_sensitive.py` script enforces size limits for the persistent database and fails the workflow if they are exceeded. There is no backup mechanism.
 - Are all data changes traceable?
-  - **Answer**: 
+  - **Answer**:  Yes, for test data. Updates to `TSF/MemoryEfficientTestResultData.db` are performed by CI workflows and committed to the `save_historical_data` branch, so Git history records each change.
 - Are concurrent changes correctly managed and resolved?
-  - **Answer**: 
+  - **Answer**: Largely yes for test data. The ubuntu workflow uses a concurrency group that cancels in-progress runs for the same reference, so typically only one job updates the persistent database at a time and remaining conflicts would surface as failed pushes and require manual resolution.
 - Is data accessible only to intended parties?
-  - **Answer**: 
+  - **Answer**: Since the library is open source, there are no unintended parties.
 - Are any subsets of our data being published?
-  - **Answer**: 
-
+  - **Answer**: Yes, as a proof of concept, CI test result data is committed to the `save_historical_data` branch in the SQLite database `TSF/MemoryEfficientTestResultData.db`, which is publicly accessible via this GitHub repository.

@@ -1864,10 +1864,3 @@ Some tests change the installed files and hence make the whole process not repro
 Note you need to call `cmake -LE "not_reproducible|git_required"` to exclude both labels. See [issue #2596](https://github.com/nlohmann/json/issues/2596) for more information.
 
 As Intel compilers use unsafe floating point optimization by default, the unit tests may fail. Use flag [`/fp:precise`](https://www.intel.com/content/www/us/en/docs/cpp-compiler/developer-guide-reference/2021-8/fp-model-fp.html) then.
-
-
-# Documentation for TSF
-
-### Build Docs
-
-You can build and serve the documentation using the following shell script: `scripts/generate_documentation.sh`

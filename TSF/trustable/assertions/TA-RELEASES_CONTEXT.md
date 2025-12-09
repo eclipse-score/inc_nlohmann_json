@@ -39,16 +39,16 @@ to TT-RESULTS analysis.
 **Evidence**
 
 - list of reproducible SHAs
-  - **Answer**: 
+  - **Answer**: JLS-14 ensures that the SHA value of the nlohmann/json library used within eclipse-score/inc_nlohmann_json coincides with the SHA value provided by Niels Lohmann (for the same version).
 - list of non-reproducible elements with:
   - explanation and justification
-    - **Answer**: 
+    - **Answer**: The only elements which are not reproducible are 8 CMake integration tests. The list of these, together with explanation and justification, is provided in TSF/docs/non_reproducible_tests.md.
   - details of what is not reproducible
-    - **Answer**: 
+    - **Answer**: The only elements which are not reproducible are 8 CMake integration tests. The list of these, together with explanation and justification, is provided in TSF/docs/non_reproducible_tests.md.
 - evidence of configuration management for build instructions and infrastructure
-  - **Answer**: 
+  - **Answer**: Provided by JLS-10 and JLS-19.
 - evidence of repeatable builds
-  - **Answer**: 
+  - **Answer**: Provided by JLS-53.
 
 **Confidence scoring**
 
@@ -67,15 +67,17 @@ R / (R + N + B + M / (M + X))
 
 - How confident are we that all components are taken from within our
   controlled environment?
-  - **Answer**: 
+  - **Answer**: We are very confident that all components are taken from within our controlled environment, as there are currently no external components used within the nlohmann/json library (as documented in JLS-34).
 - How confident are we that all of the tools we are using are also under our
   control?
-  - **Answer**: 
+  - **Answer**: All tools used by nlohmann/json are mirrored within our controlled environment eclipse-score/inc_nlohmann_json. Therefore, these tools are under full control of the Eclipse S-Core organisation.
 - Are our builds repeatable on a different server, or in a different context?
-  - **Answer**: 
+  - **Answer**: Since there is no "build" of the header-only library, yes.
 - How sure are we that our builds don't access the internet?
-  - **Answer**: 
+  - **Answer**: We are confident that our builds don't access the internet, since there is no "build" of the header-only library.
 - How many of our components are non-reproducible?
-  - **Answer**: 
+  - **Answer**:  All of our components are reproducible, since we only use a single component, the nlohmann/json library.
 - How confident are we that our reproducibility check is correct?
-  - **Answer**: 
+  - **Answer**: We are very confident that our reproducibility check is correct.
+ 
+    

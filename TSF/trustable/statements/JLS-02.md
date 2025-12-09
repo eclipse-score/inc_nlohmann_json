@@ -25,4 +25,4 @@ score:
     Erikhu1: 1.0
 ---
 
-Fuzz testing is used in the original nlohmann/json repository (https://github.com/nlohmann/json) to uncover edge cases and failure modes throughout development. (https://github.com/nlohmann/json/blob/develop/tests/fuzzing.md)
+Fuzz testing is used in the nlohmann/json repository to uncover edge cases and failure modes throughout development.

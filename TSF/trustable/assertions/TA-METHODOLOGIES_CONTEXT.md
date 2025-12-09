@@ -33,15 +33,15 @@ Any resulting changes from reviews must follow change control, regardless of who
 **Evidence**
 
 - Manual process documentation
-  - **Answer**: 
+  - **Answer**: Manual processes relevant for nlohmann/json have been identified and documented (see JLS-36, 40, 41, 42, 43 and 44).
 - References to methodologies applied as part of these processes
-  - **Answer**: 
+  - **Answer**: The corresponding references are given for each statement (see JLS-36, 40, 41, 42, 43 and 44).
 - Results of applying the processes
-  - **Answer**: 
+  - **Answer**: Results include reviewed and merged pull requests, maintained high test coverage, published security advisories and resolved issues, updated documentation on json.nlohmann.me (see JLS-36, 40, 41, 42, 43 and 44).
 - Criteria used to confirm that the processes were applied correctly
-  - **Answer**: 
+  - **Answer**: The criteria are given in the documentation (see JLS-36, 40, 41, 42, 43 and 44).
 - Review records for results
-  - **Answer**: 
+  - **Answer**: Review records are provided by GitHub pull-request reviews and comments, issue and advisory discussions, as well as release notes describing behavioural and documentation changes (see JLS-36, 40, 41, 42, 43 and 44).
 
 **Confidence scoring**
 
@@ -53,22 +53,22 @@ in comparison to the analysed results
 **Checklist**
 
 - Are the identified gaps documented clearly to justify using a manual process?
-  - **Answer**: 
+  - **Answer**: Manual processes are introduced where automation is not feasible and are clearly documented. While no explicit justification for each manual step is provided, the rationale is generally clear from the surrounding context.
 - Are the goals for each process clearly defined?
-  - **Answer**: 
+  - **Answer**: Yes. For the manual processes that were found the goals are clearly defined in the corresponding documentation. The goals include ensuring that user-facing documentation accurately reflect behavioural and API changes, correctly handling bug and vulnerability reports, and keeping the test suite at (or close to) 100% coverage for non-trivial changes.
 - Is the sequence of procedures documented in an unambiguous manner?
-  - **Answer**: 
+  - **Answer**: Largely yes. Where necessary, examples and templates make the expected sequence explicit.
 - Can improvements to the processes be suggested and implemented?
-  - **Answer**: 
+  - **Answer**: Improvements are proposed via GitHub issues or pull request.
 - How frequently are processes changed?
-  - **Answer**: 
+  - **Answer**: Process changes are infrequent and usually happen with a new nlohmann/json release, when a need for improvement is identified. 
 - How are changes to manual processes communicated?
-  - **Answer**: 
+  - **Answer**: Mostly, changes are communicated through updated documentation in the repository and release notes.
 - Are there any exceptions to the processes?
-  - **Answer**: 
+  - **Answer**: Known exceptions include automatic dependency updates from Dependabot as well as smaller trivial changes (such as fixing typos in documentation). These are exempted from having to manually create issues and explain the rationale behind the change. 
 - How is evidence of process adherence recorded?
-  - **Answer**: 
+  - **Answer**: Evidence in GitHub; PR histories with reviews and passing checks, issue and advisory discussions, audit trails for documentation and test updates
 - How is the effectiveness of the process evaluated?
-  - **Answer**: 
+  - **Answer**: Effectiveness is evaluated indirectly via stable releases, test coverage, and documentation quality.
 - Is ongoing training required to follow these processes?
-  - **Answer**: 
+  - **Answer**: No formal training is required, but contributors are expected to be familiar with the contribution guidelines and security policy.

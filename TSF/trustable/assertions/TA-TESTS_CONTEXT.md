@@ -26,13 +26,13 @@ TA-ITERATIONS.
 **Evidence**
 
 - Test build environment reproducibility
-  - **Answer**: 
+  - **Answer**: Provided by JLS-62.
 - Test build configuration
-  - **Answer**: 
+  - **Answer**: Provided by JLS-16.
 - Test build reproducibility
-  - **Answer**: 
+  - **Answer**: Provided by JLS-62.
 - Test environment configuration
-  - **Answer**: 
+  - **Answer**: Provided by JLS-16.
 
 **Confidence scoring**
 
@@ -42,13 +42,14 @@ tooling and their build environments are repeatable and reproducible.
 **CHECKLIST**
 
 - How confident are we that our test tooling and environment setups used for tests, fault inductions, and analyses are reproducible?
+  - **Answer**:  The test can be reproduced any time on any machine running the versions of the operating systems and compilers as provided, as described in AOU-14.
   - Are any exceptions identified, documented and justified?
-    - **Answer**: 
+    - **Answer**: To the best of our knowledge, there are no exceptions identified.
 - How confident are we that all test components are taken from within our controlled environment?
-  - **Answer**: 
+  - **Answer**: All tests are either self-contained or download test data from [within Eclipse S-CORE](https://github.com/eclipse-score/inc_nlohmann_json/tree/json_test_data_version_3_1_0_mirror).
 - How confident are we that all of the test environments we are using are also under our control?
-  - **Answer**: 
+  - **Answer**: Very confident, as the environments are standard docker images of ubuntu and standard versions of compilers that are executed in our CI pipeline.
 - Do we record all test environment components, including hardware and infrastructure used for exercising tests and processing input/output data?
-  - **Answer**: 
+  - **Answer**: No, since the tests are independent from hardware, there is no record of hardware or infrastructure.
 - How confident are we that all tests scenarios are repeatable?
-  - **Answer**: 
+  - **Answer**: All test scenarios are repeated daily in the CI pipeline.

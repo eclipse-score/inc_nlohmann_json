@@ -32,20 +32,20 @@ binaries present within the repositories of the components and tools used.
 
 - list of all nlohmann/json components including
   - URL of mirrored projects in controlled environment
-    - **Answer**: 
+    - **Answer**: Provided in JLS-23, JLS-49, and complemented by JLS-34. 
   - URL of upstream projects
-    - **Answer**: 
+    - **Answer**: Provided in JLS-23 and JLS-49.
 - successful build of nlohmann/json from source
   - without access to external source projects
-    - **Answer**: 
+    - **Answer**: As a header-only library, the nlohmann/json library requires no compilation. For the build of the test suite, see JLS-49.
   - without access to cached data
-    - **Answer**: 
+    - **Answer**: The library and test suite build require no cached data. CMake configuration runs from scratch, generating all artifacts deterministically as shown in ubuntu.yml workflow clean builds.
 - update logs for mirrored projects
-  - **Answer**: 
+  - **Answer**: Updates of nlohmann/json are documented in release notes (see JLS-13). The update process of eclipse-score/inc_nlohmann_json is detailed in the "Update Concept" section of TSF/README.md.
 - mirrors reject history rewrites
-  - **Answer**: 
+  - **Answer**: The eclipse-score/inc_nlohmann_json main branch is set up with a branch protection rule, which disallows force pushes and requires code reviews for all changes. The branch protection rule prevents history rewrites (see JLS-66).
 - mirroring is configured via infrastructure under direct control
-  - **Answer**: 
+  - **Answer**: The eclipse-score/inc_nlohmann_json repository, which contains the mirrors, is configured by "Otterdog", which is under direct control by eclipse-score maintainers (see JLS-66).
 
 **Confidence scoring**
 
@@ -56,14 +56,14 @@ compromised.
 **Checklist**
 
 - Could there be other components, missed from the list?
-  - **Answer**: 
+  - **Answer**: Yes. The build toolchain is not mirrored (e.g., compilers like GCC and Clang, build tools like Bazel, and CMake, etc). The potential risk of these being deleted or unavailable is however negligible and accepted.
 - Does the list include all toolchain components?
-  - **Answer**: 
+  - **Answer**: See answer above.
 - Does the toolchain include a bootstrap?
-  - **Answer**: 
+  - **Answer**: See answer above.
 - Could the content of a mirrored project be compromised by an upstream change?
-  - **Answer**: 
+  - **Answer**: No. Upstream changes are only introduced into the mirror through manually reviewed merge requests, and not automatically.
 - Are mirrored projects up to date with the upstream project?
-  - **Answer**: 
+  - **Answer**: Yes. As of 4/12/2025 both the nlohmann/json mirror and nlohmann/json_test_data mirror are up to date with the upstream projects.
 - Are mirrored projects based on the correct upstream?
-  - **Answer**: 
+  - **Answer**: Yes.

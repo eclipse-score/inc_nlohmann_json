@@ -49,33 +49,33 @@ As a result, for example, any binary inputs without reproducible build steps or 
 
 - List of components used to build nlohmann/json, including:
   - Whether content is provided as source or binary
-    - **Answer**: 
+    - **Answer**: The nlohmann/json library consists of only source code in the form of a single header file, and has no binary artifacts (see JLS-47).
 - Record of component assessments:
   - Originating project and version
-    - **Answer**: 
+    - **Answer**: The nlohmann/json library has no external components (see JLS-34).
   - Date of assessments and identity of assessors
-    - **Answer**: 
+    - **Answer**: The nlohmann/json library has no external components (see JLS-34).
   - Role of component in nlohmann/json
-    - **Answer**: 
+    - **Answer**: The nlohmann/json library has no external components (see JLS-34).
   - Sources of bug and risk data
-    - **Answer**: 
+    - **Answer**: The nlohmann/json library has no external components (see JLS-34).
   - Potential misbehaviours and risks identified and assessed
-    - **Answer**: 
+    - **Answer**: The nlohmann/json library has no external components (see JLS-34).
 - List of tools used to build and verify nlohmann/json
-  - **Answer**: 
+  - **Answer**: Provided in JLS-48 and JLS-49.
 - Record of tool assessments:
   - Originating project and tool version
-    - **Answer**: 
+    - **Answer**: Provided in JLS-48 and JLS-50.
   - Date of assessments and identity of assessors
-    - **Answer**: 
+    - **Answer**: Provided in JLS-50.
   - Role of the tool in nlohmann/json releases
-    - **Answer**: 
+    - **Answer**: Provided in JLS-48 and JLS-50.
   - Potential misbehaviours and impacts
-    - **Answer**: 
+    - **Answer**: Provided in JLS-50.
   - Detectability and severity of impacts
-    - **Answer**: 
+    - **Answer**: Provided in JLS-50.
 - Tests or measures to address identified impacts
-  - **Answer**: 
+  - **Answer**: Provided in JLS-50.
 
 **Confidence scoring**
 
@@ -86,34 +86,34 @@ and impact for nlohmann/json, and the sources of risk and issue data identified.
 **Checklist**
 
 - Are there components that are not on the list?
-  - **Answer**: 
+  - **Answer**: No, the nlohmann/json library has no components besides the single hpp header file. 
 - Are there assessments for all components?
-  - **Answer**: 
+  - **Answer**: The nlohmann/json library has no components besides the single hpp header file. 
 - Has an assessment been done for the current version of the component?
-  - **Answer**: 
+  - **Answer**: The nlohmann/json library has no components besides the single hpp header file. 
 - Have sources of bug and/or vulnerability data been identified?
-  - **Answer**: 
+  - **Answer**: The nlohmann/json library has no components besides the single hpp header file. 
 - Have additional tests and/or Expectations been documented and linked to
   component assessment?
-  - **Answer**: 
+  - **Answer**: The nlohmann/json library has no components besides the single hpp header file.
 - Are component tests run when integrating new versions of components?
-  - **Answer**: 
+  - **Answer**: The nlohmann/json library has no components besides the single hpp header file.
 - Are there tools that are not on the list?
-  - **Answer**: 
+  - **Answer**: No tools have been identified which are not listed.
 - Are there impact assessments for all tools?
-  - **Answer**: 
+  - **Answer**: Yes, see JLS-50.
 - Have tools with high impact been qualified?
-  - **Answer**: 
+  - **Answer**: Yes, see JLS-50.
 - Were assessments or reviews done for the current tool versions?
-  - **Answer**: 
+  - **Answer**: Yes, see JLS-50.
 - Have additional tests and/or Expectations been documented and linked to
   tool assessments?
-  - **Answer**: 
+  - **Answer**: Yes, the CI-pipeline includes tests on some third party tools, see JLS-50.
 - Are tool tests run when integrating new versions of tools?
-  - **Answer**: 
+  - **Answer**: Yes, the tool tests are integrated into the CI-pipeline, see JLS-50.
 - Are tool and component tests included in release preparation?
-  - **Answer**: 
+  - **Answer**: The tool tests are integrated into the CI-pipeline, see JLS-50.
 - Can patches be applied, and then upstreamed for long-term maintenance?
-  - **Answer**: 
+  - **Answer**: Yes, if ever a misbehaviour is found and patched, then a pull-request to the original project repository can be opened to upstream the changes.
 - Do all dependencies comply with acceptable licensing terms?
-  - **Answer**: 
+  - **Answer**: Yes, the library is licensed under MIT License.

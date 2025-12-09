@@ -28,7 +28,7 @@ The process itself should be analysed to determine score maturity, with meta-ana
 **Evidence**
 
 - Confidence scores from other TA items
-  - **Answer**: 
+  - **Answer**: Provided in JLS-08, JLS-09 and JLS-37
 
 **Confidence scoring**
 
@@ -38,10 +38,10 @@ scores given to Statements
 **Checklist**
 
 - What is the algorithm for combining/comparing the scores?
-  - **Answer**: 
+  - **Answer**: The algorithm behind the scoring in given in JLS-09
 - How confident are we that this algorithm is fit for purpose?
-  - **Answer**: 
+  - **Answer**: We are confident that the scoring algorithm is fit for purpose and is aligned with the TSF methodology described (see also JLS-09). However, at the moment, the statements require a larger number of SME reviewers to profit from the law-of-large-numbers and arrive at statistically significant scores.
 - What are the trends for each score?
-  - **Answer**: 
+  - **Answer**: At the moment, there are no trends as all statements have the review-status 'unreviewed'. However, the infrastructure for saving history of scores is already in place (see JLS-20).
 - How well do our scores correlate with external feedback signals?
-  - **Answer**: 
+  - **Answer**: Such correlation can not be measured yet due to missing data.

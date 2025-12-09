@@ -35,21 +35,21 @@ For releases, additional documentation should summarise all changes across the i
 
 - list of components with source
   - source code
-    - **Answer**: 
+    - **Answer**: Provided by JLS-10.
   - build instructions
-    - **Answer**: 
+    - **Answer**: Provided by JLS-10.
   - test code
-    - **Answer**: 
+    - **Answer**: Provided by JLS-10.
   - test results summary
-    - **Answer**: 
+    - **Answer**: Provided by JLS-10.
   - attestations
-    - **Answer**: 
+    - **Answer**: Provided by JLS-52.
 
 - list of components where source code is not available
   - risk analysis
-    - **Answer**: 
+    - **Answer**: There are no components without source code within this project.
   - attestations
-    - **Answer**: 
+    - **Answer**: There are no components without source code within this project.
 
 **Confidence scoring**
 
@@ -63,16 +63,16 @@ Confidence scoring for TA-ITERATIONS based on
 
 - How much of the software is provided as binary only, expressed as a
   fraction of the BoM list?
-  - **Answer**: 
+  - **Answer**: 0% is provided as binary only. The entire library consists of source code in the form of a single C++ header file.
 - How much is binary, expressed as a fraction of the total storage footprint?
-  - **Answer**: 
+  - **Answer**: 0% is provided as binary. The entire library consists of source code in the form of a single C++ header file.
 - For binaries, what claims are being made and how confident are we in the
   people/organisations making the claims?
-  - **Answer**: 
+  - **Answer**: 0% is provided as binary. The entire library consists of source code in the form of a single C++ header file.
 - For third-party source code, what claims are we making, and how confident
   are we about these claims?
-  - **Answer**: 
+  - **Answer**: The nlohmann/json library has no external dependencies/accesses to third party source code, as stated in JLS-34.
 - For software developed by us, what claims are we making, and how confident
   are we about these claims?
-  - **Answer**:
+  - **Answer**: There is no software developed by us, as we just use the original nlohmann/json library within eclipse_score/inc_nlohmann_json. For the code developed in nlohmann/json, all claims and confidence are provided in the statements. See e.g., all the no-json-faults (NJF) items.
 
