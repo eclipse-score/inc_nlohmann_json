@@ -38,7 +38,8 @@ _None_
 |date-time|JLS-01|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -104,7 +105,8 @@ _None_
 |date-time|JLS-02|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -143,13 +145,14 @@ _None_
 |date-time|JLS-03|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
 ---
 
-### JLS-04 | Reviewed: ⨯ | Score: 0.0 
+### JLS-04 | Reviewed: ✔ | Score: 0.0 
 External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved.
 
 
@@ -157,7 +160,7 @@ External dependencies within nlohmann/json are checked for potential security vu
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.11 | ✔ Item Reviewed<br>✔ Link Reviewed |
 | [TA-INPUTS](TA.md#ta-inputs)  | All inputs to the nlohmann/json library are assessed, to identify potential risks and issues. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
@@ -240,7 +243,8 @@ _None_
 |date-time|JLS-04|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -254,7 +258,7 @@ The nlohmann/json library is widely used and actively maintained; bugs and misbe
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.11 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -334,21 +338,24 @@ _None_
 |date-time|JLS-05|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
 ---
 
-### JLS-06 | Reviewed: ⨯ | Score: 0.0 
+### JLS-06 | Reviewed: ✔ | Score: 0.35 
 Pull requests in the nlohmann/json repository are merged only after code review.
+
+aschemmel-tech: taken over score from "OpenSSF Scorecard Report"
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.38 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -379,21 +386,24 @@ _None_
 |date-time|JLS-06|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.35 |
+|2025-12-10 15:02:43.179491|0.35 |
 
 
 
 ---
 
-### JLS-07 | Reviewed: ⨯ | Score: 0.0 
+### JLS-07 | Reviewed: ✔ | Score: 0.0 
 The develop branch of nlohmann/json is protected, i.e. no direct commits are possible.
+
+aschemmel-tech: no other pushes as from nlohman are observable
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.38 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -424,7 +434,8 @@ _None_
 |date-time|JLS-07|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -463,7 +474,8 @@ _None_
 |date-time|JLS-08|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -502,7 +514,8 @@ _None_
 |date-time|JLS-09|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -541,7 +554,8 @@ _None_
 |date-time|JLS-10|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -550,12 +564,14 @@ _None_
 ### JLS-11 | Reviewed: ⨯ | Score: 0.0 
 Outstanding bugs or misbehaviours are analyzed within eclipse-score/inc_nlohmann_json to determine whether they are relevant for S-CORE's use cases of the nlohmann/json library.
 
+aschemmel-tech: most but not all issues are analyzed for impact on S-CORE.
+
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.11 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -586,7 +602,8 @@ _None_
 |date-time|JLS-11|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -595,12 +612,14 @@ _None_
 ### JLS-12 | Reviewed: ⨯ | Score: 0.0 
 The nlohmann/json repository has well-defined community standards, including a contribution guideline and a security policy.
 
+aschemmel-tech: all community standard are covered.
+
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.38 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -631,7 +650,8 @@ _None_
 |date-time|JLS-12|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -676,7 +696,8 @@ _None_
 |date-time|JLS-13|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -721,7 +742,8 @@ _None_
 |date-time|JLS-14|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -8297,7 +8319,8 @@ _None_
 |date-time|JLS-16|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -8336,7 +8359,8 @@ _None_
 |date-time|JLS-17|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -9311,7 +9335,8 @@ _None_
 |date-time|JLS-18|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -9377,7 +9402,8 @@ _None_
 |date-time|JLS-19|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -9791,7 +9817,8 @@ _None_
 |date-time|JLS-20|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -9830,7 +9857,8 @@ _None_
 |date-time|JLS-21|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -10974,7 +11002,8 @@ _None_
 |date-time|JLS-22|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -11026,7 +11055,8 @@ _None_
 |date-time|JLS-23|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -11073,7 +11103,8 @@ _None_
 |date-time|JLS-24|NPF-07.2|TIJ-01|TIJ-02|TIJ-03|TIJ-04|TIJ-05|TIJ-06|
 |-|-|-|-|-|-|-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-10 14:14:18|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -11125,7 +11156,8 @@ _None_
 |date-time|JLS-25|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -11168,7 +11200,8 @@ _None_
 |date-time|JLS-26|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -11207,21 +11240,24 @@ _None_
 |date-time|JLS-27|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
 ---
 
-### JLS-28 | Reviewed: ⨯ | Score: 0.0 
+### JLS-28 | Reviewed: ✔ | Score: 0.0 
 Outstanding bugs and misbehaviours are triaged in the nlohmann/json repository.
+
+aschemmel-tech: no triage done
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.11 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11252,7 +11288,8 @@ _None_
 |date-time|JLS-28|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -11261,12 +11298,14 @@ _None_
 ### JLS-29 | Reviewed: ⨯ | Score: 0.0 
 Known bugs, misbehaviours and CVEs are analyzed and either fixed or mitigated in the nlohmann/json repository.
 
+aschemmel-tech: evidences support bugs and CVE fixing, no mitigation actions are offered.
+
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.11 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11304,7 +11343,8 @@ _None_
 |date-time|JLS-29|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -11313,12 +11353,14 @@ _None_
 ### JLS-30 | Reviewed: ⨯ | Score: 0.0 
 Outstanding CVEs are analyzed within eclipse-score/inc_nlohmann_json to determine whether they can be dismissed, and/or are relevant for S-CORE's use cases of the nlohmann/json library.
 
+aschemmel-tech: In my understanding bot evidences support the statement completely.
+
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.11 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11356,7 +11398,8 @@ _None_
 |date-time|JLS-30|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -11401,21 +11444,24 @@ _None_
 |date-time|JLS-31|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
 ---
 
-### JLS-32 | Reviewed: ⨯ | Score: 0.0 
+### JLS-32 | Reviewed: ✔ | Score: 1.0 
 All pull requests to the develop branch in the nlohmann/json repository trigger a request for review from Niels Lohmann (@nlohmann).
+
+aschemmel-tech: nlohman is the repository codeowner
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.38 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11446,21 +11492,24 @@ _None_
 |date-time|JLS-32|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|1.00 |
+|2025-12-10 15:02:43.179491|1.00 |
 
 
 
 ---
 
-### JLS-33 | Reviewed: ⨯ | Score: 0.0 
+### JLS-33 | Reviewed: ✔ | Score: 0.75 
 Outstanding CVEs are triaged in the nlohmann/json repository.
+
+aschemmel-tech: Security vulnerabilities reporting asks for severities, but this is given by the reporter
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-FIXES](TA.md#ta-fixes)  | In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied. | 0.11 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11491,21 +11540,24 @@ _None_
 |date-time|JLS-33|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.75 |
+|2025-12-10 15:02:43.179491|0.75 |
 
 
 
 ---
 
-### JLS-34 | Reviewed: ⨯ | Score: 0.0 
+### JLS-34 | Reviewed: ✔ | Score: 0.9 
 The nlohmann/json library has no external components or dependencies besides the C++ standard components.
+
+aschemmel-tech: I saw dependency to the "Hedley" header but with fixed version.
 
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.38 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11736,7 +11788,8 @@ _None_
 |date-time|JLS-34|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.90 |
+|2025-12-10 15:02:43.179491|0.90 |
 
 
 
@@ -11745,12 +11798,14 @@ _None_
 ### JLS-35 | Reviewed: ⨯ | Score: 0.0 
 Pull requests in the nlohmann/json repository are merged only after running CI-tests and successfully passing the pipeline.
 
+aschemmel-tech: evidences support statement
+
 
 **Supported Requests:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TA-UPDATES](TA.md#ta-updates)  | nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls. | 0.38 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 **Supporting Items:**
 
@@ -11788,5 +11843,6 @@ _None_
 |date-time|JLS-35|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 

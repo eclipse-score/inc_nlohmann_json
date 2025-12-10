@@ -35,7 +35,8 @@ _None_
 |date-time|TA-ANALYSIS|JLS-17|JLS-26|
 |-|-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |
+|2025-12-10 14:14:18|0.00 |0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.00 |0.00 |0.00 |
 
 
 
@@ -170,7 +171,8 @@ _None_
 |date-time|TA-BEHAVIOURS|JLEX-01|JLEX-02|JLS-03|JLS-27|
 |-|-|-|-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-10 14:14:18|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -302,7 +304,8 @@ _None_
 |date-time|TA-CONFIDENCE|JLS-08|JLS-09|JLS-20|
 |-|-|-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |
+|2025-12-10 14:14:18|0.00 |0.00 |0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -416,7 +419,8 @@ _None_
 |date-time|TA-CONSTRAINTS|AOU-04|AOU-05|AOU-06|AOU-07|AOU-14|AOU-16|AOU-20|AOU-21|AOU-01|AOU-02|AOU-03|AOU-08|AOU-09|AOU-15|AOU-17|AOU-18|AOU-19|AOU-22|AOU-23|AOU-24|AOU-25|AOU-26|AOU-27|AOU-28|AOU-29|AOU-10|AOU-11|AOU-30|
 |-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-10 14:14:18|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -548,7 +552,8 @@ _None_
 |date-time|TA-DATA|JLS-18|
 |-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |
+|2025-12-10 14:14:18|0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.00 |0.00 |
 
 
 
@@ -618,7 +623,7 @@ monitored deployments.
 
 ---
 
-### TA-FIXES | Reviewed: ⨯ | Score: 0.0 
+### TA-FIXES | Reviewed: ✔ | Score: 0.10714 
 In the nlohmann/json repository, known bugs or misbehaviours are analysed and triaged, and critical fixes or mitigations are implemented or applied.
 
 
@@ -626,19 +631,19 @@ In the nlohmann/json repository, known bugs or misbehaviours are analysed and tr
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TT-CHANGES](TT.md#tt-changes)  | The nlohmann/json library is actively maintained, with regular updates to dependencies, and changes are verified to prevent regressions. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TT-CHANGES](TT.md#tt-changes)  | The nlohmann/json library is actively maintained, with regular updates to dependencies, and changes are verified to prevent regressions. | 0.24 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
 | [JLS-05](JLS.md#jls-05)  | The nlohmann/json library is widely used and actively maintained; bugs and misbehaviours are tracked publicly and transparently. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [JLS-04](JLS.md#jls-04)  | External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-04](JLS.md#jls-04)  | External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved. | 0.00 | ✔ Item Reviewed<br>✔ Link Reviewed |
 | [JLS-11](JLS.md#jls-11)  | Outstanding bugs or misbehaviours are analyzed within eclipse-score/inc_nlohmann_json to determine whether they are relevant for S-CORE's use cases of the nlohmann/json library. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 | [JLS-30](JLS.md#jls-30)  | Outstanding CVEs are analyzed within eclipse-score/inc_nlohmann_json to determine whether they can be dismissed, and/or are relevant for S-CORE's use cases of the nlohmann/json library. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 | [JLS-29](JLS.md#jls-29)  | Known bugs, misbehaviours and CVEs are analyzed and either fixed or mitigated in the nlohmann/json repository. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [JLS-28](JLS.md#jls-28)  | Outstanding bugs and misbehaviours are triaged in the nlohmann/json repository. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [JLS-33](JLS.md#jls-33)  | Outstanding CVEs are triaged in the nlohmann/json repository. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-28](JLS.md#jls-28)  | Outstanding bugs and misbehaviours are triaged in the nlohmann/json repository. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-33](JLS.md#jls-33)  | Outstanding CVEs are triaged in the nlohmann/json repository. | 0.75 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -659,7 +664,8 @@ _None_
 |date-time|TA-FIXES|JLS-05|JLS-04|JLS-11|JLS-30|JLS-29|JLS-28|JLS-33|
 |-|-|-|-|-|-|-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-10 14:14:18|0.11 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.75 |
+|2025-12-10 15:02:43.179491|0.11 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.75 |
 
 
 
@@ -803,7 +809,8 @@ _None_
 |date-time|TA-INDICATORS|
 |-|-|
 |2025-11-26 12:04:09|0.00 |
-|2025-11-26 12:52:19.093864|0.00 |
+|2025-12-10 14:14:18|0.00 |
+|2025-12-10 15:02:43.179491|0.00 |
 
 
 
@@ -928,7 +935,7 @@ All inputs to the nlohmann/json library are assessed, to identify potential risk
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLS-04](JLS.md#jls-04)  | External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-04](JLS.md#jls-04)  | External dependencies within nlohmann/json are checked for potential security vulnerabilities with each pull request to main. Merging is blocked until all warnings are resolved. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -949,7 +956,8 @@ _None_
 |date-time|TA-INPUTS|JLS-04|
 |-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |
+|2025-12-10 14:14:18|0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.00 |0.00 |
 
 
 
@@ -1109,7 +1117,8 @@ _None_
 |date-time|TA-ITERATIONS|JLS-10|JLS-19|
 |-|-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |
+|2025-12-10 14:14:18|0.00 |0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.00 |0.00 |0.00 |
 
 
 
@@ -1226,7 +1235,8 @@ _None_
 |date-time|TA-METHODOLOGIES|JLS-13|
 |-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |
+|2025-12-10 14:14:18|0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.00 |0.00 |
 
 
 
@@ -1343,7 +1353,8 @@ _None_
 |date-time|TA-MISBEHAVIOURS|JLS-02|JLS-24|JLS-25|JLS-31|
 |-|-|-|-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-10 14:14:18|0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.00 |0.00 |0.00 |0.00 |0.00 |
 
 
 
@@ -1524,7 +1535,8 @@ _None_
 |date-time|TA-RELEASES|JLS-14|JLS-21|
 |-|-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |
+|2025-12-10 14:14:18|0.00 |0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.00 |0.00 |0.00 |
 
 
 
@@ -1645,7 +1657,8 @@ _None_
 |date-time|TA-SUPPLY_CHAIN|JLS-23|
 |-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |
+|2025-12-10 14:14:18|0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.00 |0.00 |
 
 
 
@@ -1754,7 +1767,8 @@ _None_
 |date-time|TA-TESTS|JLS-16|
 |-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |
+|2025-12-10 14:14:18|0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.00 |0.00 |
 
 
 
@@ -1813,7 +1827,7 @@ tooling and their build environments are repeatable and reproducible.
 
 ---
 
-### TA-UPDATES | Reviewed: ⨯ | Score: 0.0 
+### TA-UPDATES | Reviewed: ✔ | Score: 0.375 
 nlohmann/json library components, configurations and tools are updated under specified change and configuration management controls.
 
 
@@ -1821,18 +1835,18 @@ nlohmann/json library components, configurations and tools are updated under spe
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TT-CHANGES](TT.md#tt-changes)  | The nlohmann/json library is actively maintained, with regular updates to dependencies, and changes are verified to prevent regressions. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TT-CHANGES](TT.md#tt-changes)  | The nlohmann/json library is actively maintained, with regular updates to dependencies, and changes are verified to prevent regressions. | 0.24 | ✔ Item Reviewed<br>✔ Link Reviewed |
 
 **Supporting Items:**
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [JLS-06](JLS.md#jls-06)  | Pull requests in the nlohmann/json repository are merged only after code review. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [JLS-07](JLS.md#jls-07)  | The develop branch of nlohmann/json is protected, i.e. no direct commits are possible. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-06](JLS.md#jls-06)  | Pull requests in the nlohmann/json repository are merged only after code review. | 0.35 | ✔ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-07](JLS.md#jls-07)  | The develop branch of nlohmann/json is protected, i.e. no direct commits are possible. | 0.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 | [JLS-12](JLS.md#jls-12)  | The nlohmann/json repository has well-defined community standards, including a contribution guideline and a security policy. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [JLS-32](JLS.md#jls-32)  | All pull requests to the develop branch in the nlohmann/json repository trigger a request for review from Niels Lohmann (@nlohmann). | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-32](JLS.md#jls-32)  | All pull requests to the develop branch in the nlohmann/json repository trigger a request for review from Niels Lohmann (@nlohmann). | 1.00 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 | [JLS-35](JLS.md#jls-35)  | Pull requests in the nlohmann/json repository are merged only after running CI-tests and successfully passing the pipeline. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
-| [JLS-34](JLS.md#jls-34)  | The nlohmann/json library has no external components or dependencies besides the C++ standard components. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [JLS-34](JLS.md#jls-34)  | The nlohmann/json library has no external components or dependencies besides the C++ standard components. | 0.90 | ✔ Item Reviewed<br>⨯ Link Reviewed |
 
 
 
@@ -1853,7 +1867,8 @@ _None_
 |date-time|TA-UPDATES|JLS-06|JLS-07|JLS-12|JLS-32|JLS-35|JLS-34|
 |-|-|-|-|-|-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-10 14:14:18|0.38 |0.35 |0.00 |0.00 |1.00 |0.00 |0.90 |
+|2025-12-10 15:02:43.179491|0.38 |0.35 |0.00 |0.00 |1.00 |0.00 |0.90 |
 
 
 
@@ -1961,7 +1976,8 @@ _None_
 |date-time|TA-VALIDATION|JLS-01|JLS-22|
 |-|-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |
+|2025-12-10 14:14:18|0.00 |0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.00 |0.00 |0.00 |
 
 
 

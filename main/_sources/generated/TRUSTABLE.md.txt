@@ -1,5 +1,5 @@
 
-### TRUSTABLE-SOFTWARE | Reviewed: ⨯ | Score: 0.0 
+### TRUSTABLE-SOFTWARE | Reviewed: ✔ | Score: 0.04018 
 This release of JSON-Library also referred in the documentation as nlohmann/json library is Trustable.
 
 
@@ -11,7 +11,7 @@ _None_
 
 | Item  | Summary  | Score  | Status  |
 | --- | --- | --- | --- |
-| [TT-CHANGES](TT.md#tt-changes)  | The nlohmann/json library is actively maintained, with regular updates to dependencies, and changes are verified to prevent regressions. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
+| [TT-CHANGES](TT.md#tt-changes)  | The nlohmann/json library is actively maintained, with regular updates to dependencies, and changes are verified to prevent regressions. | 0.24 | ✔ Item Reviewed<br>✔ Link Reviewed |
 | [TT-CONFIDENCE](TT.md#tt-confidence)  | Confidence in the nlohmann/json library is achieved by measuring and analysing behaviour and evidence over time within eclipse-score/inc_nlohmann_json. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 | [TT-CONSTRUCTION](TT.md#tt-construction)  | Tools are provided to build the nlohmann/json library from trusted sources (also provided) with full reproducibility. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
 | [TT-EXPECTATIONS](TT.md#tt-expectations)  | Documentation is provided within eclipse-score/inc_nlohmann_json, specifying what the nlohmann/json library is expected to do, and what it must not do, and how this is verified. | 0.00 | ⨯ Item Reviewed<br>⨯ Link Reviewed |
@@ -37,5 +37,6 @@ _None_
 |date-time|TRUSTABLE-SOFTWARE|TT-CHANGES|TT-CONFIDENCE|TT-CONSTRUCTION|TT-EXPECTATIONS|TT-PROVENANCE|TT-RESULTS|
 |-|-|-|-|-|-|-|-|
 |2025-11-26 12:04:09|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
-|2025-11-26 12:52:19.093864|0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-10 14:14:18|0.04 |0.24 |0.00 |0.00 |0.00 |0.00 |0.00 |
+|2025-12-10 15:02:43.179491|0.04 |0.24 |0.00 |0.00 |0.00 |0.00 |0.00 |
 
