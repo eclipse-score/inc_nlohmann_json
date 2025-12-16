@@ -14,11 +14,6 @@ evidence:
         sources:
             - "./tests/src"
             - "./TSF/tests"
-    type: https_response_time
-    configuration:
-        target_seconds: 2.0
-        urls:
-            - https://github.com/eclipse-score/inc_nlohmann_json/actions
 ---
 
 A list of tests, which is extracted from the test execution, is provided, along with a list of test environments.

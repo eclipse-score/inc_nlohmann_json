@@ -108,12 +108,26 @@ This file provides an assessment of all third-party tools used in the developmen
 - **Mitigation**:
   - Coverage is also generated locally and in CI using `lcov` and viewed as HTML reports, so Coveralls results can be cross-checked against these local reports.
 
+### clang-tidy
+- **Role**: Clang-Tidy is used as static analysis tool to detect bug patterns, unsafe constructs, and style/performance issues in the code base. In nlohmann/json it is explicitly part of the project’s “Static analysis” quality assurance activities, and it is configured via a repository-wide [.clang-tidy](https://github.com/nlohmann/json/blob/develop/.clang-tidy) configuration file.
+- **Potential Misbehaviours**: 
+  - False positives (reporting issues that are not real problems) or false negatives (missing real issues).
+  - Results can vary between Clang-Tidy versions and depending on compile flags / include paths.
+- **Severity**: Medium - Clang-Tidy findings are advisory and incorrect or missing findings can reduce confidence and leave issues undiscovered, but the tool does not modify shipped artefacts by itself.
+- **Detectability**: Medium - False positives are usually spotted during review and false negatives are harder to detect and may only surface through other analyzers, tests, fuzzing, or user reports.
+- **Mitigation**: 
+  - Clang-Tidy is not the only analysis gate, results are complemented by other static analyzers (e.g. cppcheck, Coverity, Clang Static Analyzer) and dynamic testing (unit tests, fuzzing, sanitizers). 
+  - The .clang-tidy configuration is version-controlled and reviewed like normal code changes. 
+  - CI uses a controlled toolchain environment (e.g. the project CI image), reducing version drift and improving reproducibility.
+
 ### Coverity Scan
 - **Role**: Coverity Scan is a hosted static analysis service that regularly analyzes the nlohmann/json code base for potential defects. The nlohmann/json repo has a dedicated Coverity Scan entry (linked via the “Coverity Scan Build Status” badge in `README.md`), where findings are listed and tracked in a web dashboard.
 - **Potential Misbehaviours**: Could miss bugs (false negatives) or report non-issues (false positives)
 - **Severity**: Medium - Missed bugs or misinterpreted reports can affect the quality of the library.
 - **Detectability**: High - Coverity Scan findings are compared with results from other static analyzers (such as cppcheck and Codacy), compiler warnings, and the behaviour observed in tests and fuzzing. 
-- **Mitigation**: Multiple static analyzers (cppcheck, clang-tidy, Codacy), extensive testing.
+- **Mitigation**: 
+  - Multiple static analyzers (cppcheck, clang-tidy, Codacy), extensive testing. 
+  - Coverity Scan is used within S-CORE, where tool qualification evidence is maintained.
 
 ### cppcheck
 - **Role**: Cppcheck is a static analysis tool for C++ that is used to scan the nlohmann/json library code base for potential problems such as null dereferences, uninitialized variables, dead code, or suspicious constructs.
@@ -175,7 +189,9 @@ This file provides an assessment of all third-party tools used in the developmen
 - **Potential Misbehaviours**: lcov can misinterpret or partially ignore `gcov` data, so that some lines are shown as covered or uncovered incorrectly and generate incomplete or inconsistent HTML reports.
 - **Severity**: Low - lcov only reads coverage data and creates reports; it does not affect any code or the functionality of the lirary. 
 - **Detectability**: High - Inconsistencies can be detected by comparing lcov's HTML output with the coverage data uploaded to Coveralls.
-- **Mitigation**: Mitigation through cross-validation with Coveralls and manual inspection of coverage data.
+- **Mitigation**: 
+  - Mitigation through cross-validation with Coveralls and manual inspection of coverage data. 
+  - lcov is used within S-CORE, where tool qualification evidence is maintained.
 
 ### libFuzzer
 - **Role**: libFuzzer is LLVM's fuzzing engine that runs inside the test binary and uses code-coverage feedback to generate new inputs. In nlohmann/json it is used as the fuzzing backend for the fuzz harnesses under `tests/src/` (e.g. `fuzzer-parse_json.cpp`), each implementing `LLVMFuzzerTestOneInput` and calling APIs such as `json::parse` and the `from_*` functions for CBOR, MessagePack, UBJSON, and BJData. The same libFuzzer-based targets are also built and run by Google OSS-Fuzz, which executes them continuously with sanitizers to find crashes and undefined behaviour.
@@ -263,6 +279,7 @@ The highest-severity tools are those that directly affect the build and test art
 | cppcheck                   | Medium   | High          |
 | AppVeyor                   | Medium   | High          |
 | Coveralls                  | Medium   | Medium        |
+| clang-tidy                 | Medium   | Medium        |
 | AFL                        | Medium   | Low           |
 | libFuzzer                  | Medium   | Low           |
 | OSS-Fuzz                   | Medium   | Low           |
@@ -308,6 +325,7 @@ The nlohmann/json project employs a multi validation strategy with multiple redu
 - [Coveralls page for nlohmann/json](https://coveralls.io/github/nlohmann/json)
 - [Codacy project for nlohmann/json](https://app.codacy.com/gh/nlohmann/json)
 - [lcov project documentation](https://github.com/linux-test-project/lcov)
+- [clang-tidy](https://clang.llvm.org/extra/clang-tidy/)
 
 ### Tool-specific external documentation
 

@@ -37,7 +37,7 @@ For releases, additional documentation should summarise all changes across the i
   - source code
     - **Answer**: Provided by JLS-10.
   - build instructions
-    - **Answer**: Provided by JLS-10.
+    - **Answer**: Provided by JLS-10 and JLS-19.
   - test code
     - **Answer**: Provided by JLS-10.
   - test results summary
